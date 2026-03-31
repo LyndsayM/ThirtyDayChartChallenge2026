@@ -1,0 +1,35 @@
+---
+title: "cc_2026_day1"
+author: "Lyndsay Miles"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+30 Day Chart Challenge 2026 Day 1: Part to Whole
+Topic: Global Health Spending (tidytuesday)
+```{r}
+library(tidyverse)
+library(ggplot2)
+```
+
+```{r}
+financing_schemes <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2026/2026-04-21/financing_schemes.csv')
+health_spending <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2026/2026-04-21/health_spending.csv')
+spending_purpose <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2026/2026-04-21/spending_purpose.csv')
+```
+
+Question: 
+```{r}
+spending_purpose_usa <- spending_purpose %>% 
+  filter(iso3_code == "USA")
+
+unique(spending_purpose_usa$spending_purpose)
+```
+
+```{r}
+ggplot(data = spending_purpose_usa, aes(x=spending_purpose, y = value)) + geom_col()+ coord_flip()
+```
+
