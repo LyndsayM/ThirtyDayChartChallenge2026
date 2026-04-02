@@ -1,0 +1,158 @@
+---
+title: "cc_2026_day2"
+author: "Lyndsay Miles"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+30 Day Chart Challenge 2026 Day 2: Pictogram
+Topic: Global Health Spending (tidytuesday)
+We're going to build on Day 1's visualization by calculating the per-capita spending on each spending type for USA, UK, Canada, Germany
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(RColorBrewer)
+library(extrafont)
+library(showtext)
+```
+
+```{r}
+spending_purpose <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2026/2026-04-21/spending_purpose.csv')
+```
+Cleaning 
+```{r}
+category_order <- c("Curative care", 
+                     "Ancillary services (non-specified by function)",
+                     "Long-term care",
+                     "Medical goods",
+                     "Other health care",
+                     "Rehabilitative care",
+                     "Governance & admin",
+                     "Preventive care")
+
+spending_purpose_na <- spending_purpose %>%
+  filter(country_name %in% c("United States of America", "Canada", "Mexico"), 
+         unit == "% of current health expenditure", 
+         #selected 2022 because this is the most recent year that had data for all 3 countries
+         year == "2022") %>%
+  group_by(country_name, spending_purpose) %>%
+  summarize(pct_raw = sum(value)) %>%
+  mutate(
+    spending_purpose = recode(spending_purpose,
+                              "Governance, and health system and financing administration" = "Governance & admin",
+                              "Medical goods (non-specified by function)" = "Medical goods",
+                              "Other health care services not elsewhere classified (n.e.c.)" = "Other health care",
+                              "Long-term care (health)"   = "Long-term care"
+    ),
+    country_name = if_else(country_name == "United States of America", "United States", country_name)
+  )
+```
+Add dyslexic-friendly fonts
+```{r}
+font_add_google("Atkinson Hyperlegible", "atkinson")
+showtext_auto()
+```
+Plot
+```{r}
+pictogram_data <- spending_purpose_na %>%
+  mutate(
+    country_name = factor(country_name,
+                          levels = c("United States", "Canada", "Mexico"))
+  ) %>%
+  group_by(country_name) %>%
+  mutate(pct_rescaled = pct_raw) %>%
+  ungroup()
+
+# --- Define color order left to right ---
+category_order <- c("Curative care",
+                     "Ancillary services (non-specified by function)",
+                     "Long-term care",
+                     "Medical goods",
+                     "Other health care",
+                     "Rehabilitative care",
+                     "Governance & admin",
+                     "Preventive care")
+
+pictogram_grid <- pictogram_data %>%
+  mutate(
+    icons_floor = floor(pct_rescaled / 100 * 20),
+    remainder   = (pct_rescaled / 100 * 20) - icons_floor
+  ) %>%
+  group_by(country_name) %>%
+  arrange(country_name, desc(remainder)) %>%
+  mutate(
+    extra      = as.integer(row_number() <= (20 - sum(icons_floor))),
+    icon_count = icons_floor + extra
+  ) %>%
+  ungroup() %>%
+  mutate(spending_purpose = factor(spending_purpose, levels = category_order)) %>%
+  arrange(country_name, spending_purpose) %>%
+  select(country_name, spending_purpose, icon_count)
+
+grid_df <- pictogram_grid %>%
+  uncount(icon_count) %>%
+  group_by(country_name) %>%
+  mutate(
+    icon_num = row_number() - 1,
+    x        = icon_num %% 20,
+    y        = 0
+  ) %>%
+  ungroup() %>%
+  mutate(
+    country_name = factor(country_name,
+                          levels = c("Mexico", "Canada", "United States")),
+    spending_purpose = factor(spending_purpose, levels = category_order)
+  )
+
+# --- Plot ---
+ggplot(grid_df, aes(x = x, y = country_name, color = spending_purpose)) +
+  geom_point(size = 8, shape = 16) +
+  scale_color_manual(
+    values = c(
+      "Curative care"                                  = "#a6611a",
+      "Governance & admin"                             = "#80cdc1",
+      "Preventive care"                                = "#018571",
+      "Ancillary services (non-specified by function)" = "#d0d0d0",
+      "Long-term care"                                 = "#d0d0d0",
+      "Medical goods"                                  = "#d0d0d0",
+      "Other health care"                              = "#d0d0d0",
+      "Rehabilitative care"                            = "#d0d0d0"
+    ),
+    breaks = c("Curative care", "Governance & admin", "Preventive care"),
+    labels = c("Curative care", "Governance & admin", "Preventive care")
+  ) +
+  labs(
+    title    = "How U.S. Health Spending Compares to its North American Neighbors",
+    subtitle = "Each circle = 5% of total health spending | Grey = all other categories",
+    caption  = "Source: WHO Global Health Expenditure Database (GHED) | #30DayChartChallenge Day 2 | #tidytuesday\nCreated by: Lyndsay Miles",
+    color    = NULL
+  ) +
+  theme_void() +
+  theme(
+    text                  = element_text(family = "atkinson"),
+    plot.title            = element_text(face = "bold", size = 14, hjust = 0,
+                                         margin = margin(b = 6)),
+    plot.subtitle         = element_text(size = 10, hjust = 0,
+                                         margin = margin(b = 16)),
+    plot.caption          = element_text(size = 7, color = "gray50", hjust = 0,
+                                         margin = margin(t = 12)),
+    plot.title.position   = "plot",
+    plot.caption.position = "plot",
+    plot.background       = element_rect(fill = "#f5ebe0", color = NA),
+    axis.text.y           = element_text(size = 10, face = "bold", hjust = 1,
+                                         margin = margin(r = 8)),
+    legend.position       = "bottom",
+    legend.text           = element_text(size = 9),
+    plot.margin           = margin(20, 20, 20, 20)
+  ) +
+  guides(color = guide_legend(override.aes = list(size = 5)))
+```
+
+For Day 2 of the #30DayChartChallenge (Pictogram) I wanted to see how U.S. % of current health expenditure compares to that of Canada and Mexico using 2022 data from the WHO Global Health Expenditure Database (#tidytuesday).
+
+It is striking how similar all three countries are in terms of Preventive Care spending. In fact, when I switched to 10% per circle, preventive care disappeared entirely for the U.S. and Mexico.
+
+#Rstats #ggplot2
