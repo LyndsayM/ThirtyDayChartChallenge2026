@@ -15,6 +15,7 @@ library(tidyverse)
 library(ggplot2)
 library(RColorBrewer)
 library(extrafont)
+library(showtext)
 ```
 
 ```{r}
@@ -38,6 +39,26 @@ spending_purpose_usa <- spending_purpose %>%
       "Long-term care (health)"                                       = "Long-term care"
     )
   )
+
+grid_df <- spending_purpose_usa %>%
+  mutate(
+    pct_floor = floor(pct_raw),
+    remainder = pct_raw - pct_floor
+  ) %>%
+  arrange(desc(remainder)) %>%
+  mutate(
+    extra       = as.integer(row_number() <= (100 - sum(pct_floor))),
+    pct_rounded = pct_floor + extra
+  ) %>%
+  arrange(desc(pct_raw)) %>%
+  mutate(spending_purpose = factor(spending_purpose, levels = spending_purpose)) %>%
+  select(-pct_floor, -remainder, -extra) %>%
+  uncount(pct_rounded) %>%
+  mutate(
+    sq = row_number() - 1,
+    x  = sq %% 10,
+    y  = sq %/% 10
+  )
 ```
 Add dyslexic-friendly fonts
 ```{r}
@@ -59,7 +80,7 @@ ggplot(grid_df, aes(x = x, y = y, fill = spending_purpose)) +
   theme_void() +
   theme(
     text       = element_text(family = "atkinson"),
-    plot.title      = element_text(family = "atkinson", face = "bold", size = 16, hjust = 0,
+    plot.title      = element_text(family = "atkinson", face = "bold", size = 14, hjust = 0,
                                    margin = margin(b = 10)),
     plot.subtitle      = element_text(face = "bold", size = 12, hjust = 0,
                                    margin = margin(b = 10)),
