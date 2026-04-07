@@ -1,0 +1,139 @@
+---
+title: "cc_2026_day7"
+author: "Lyndsay Miles"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+30 Day Chart Challenge 2026 Day 7: Multiscale
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(RColorBrewer)
+library(extrafont)
+library(showtext)
+library(countrycode)
+
+```
+
+```{r}
+#PRESS FREEDOM INDEX RANK. Data retrieved from  https://data360.worldbank.org/en/prosperity
+df_pfi <- read.csv("data/RWB_PFI_RANK.csv")
+```
+
+```{r}
+df_pfi_clean <- df_pfi %>% select(REF_AREA, REF_AREA_LABEL, TIME_PERIOD, OBS_VALUE) %>%
+  
+  rename(
+    iso3_code = REF_AREA,
+    country   = REF_AREA_LABEL,
+    year      = TIME_PERIOD,
+    rank      = OBS_VALUE
+  )
+```
+
+```{r}
+df_pfi_clean %>%
+  group_by(country) %>%
+  summarize(
+    rank_2002 = rank[year == min(year)],
+    rank_2025 = rank[year == max(year)],
+    change    = rank_2025 - rank_2002,  # positive = declined (higher rank number = worse)
+    pct_change = ((rank_2025 - rank_2002) / rank_2002) * 100
+  ) %>%
+  arrange(desc(change))
+
+df_pfi_region <- df_pfi_clean %>%
+  filter(!iso3_code %in% c("CSS", "SCG", "XKX", "YUG")) %>%
+  mutate(
+    region = countrycode(iso3_code,
+                         origin      = "iso3c",
+                         destination = "region"),
+    region = case_when(
+      iso3_code == "MEX" ~ "North America",
+      TRUE               ~ region
+    ),
+    is_usa = iso3_code == "USA"
+  ) %>%
+  mutate(region = gsub("&", "and", region))
+```
+
+```{r}
+df_pfi_region %>%
+  distinct(country, region) %>%
+  count(region) 
+
+```
+
+```{r}
+#regional average rankings
+regional_avg <- df_pfi_region %>%
+  group_by(region, year) %>%
+  summarize(avg_rank = mean(rank, na.rm = TRUE), .groups = "drop")%>%
+  mutate(region = gsub("&", "and", region))
+
+```
+
+
+```{r}
+font_add_google("Playfair Display", "playfair")
+showtext_auto()
+```
+
+```{r}
+ggplot() +
+  # Individual country lines  faint
+  geom_line(
+    data  = df_pfi_region %>% filter(!is_usa),
+    aes(x = year, y = rank, group = country),
+    color = "#c0c0c0", linewidth = 0.4, alpha = 0.5
+  ) +
+  # Regional average line
+  geom_line(
+    data     = regional_avg,
+    aes(x = year, y = avg_rank),
+    color    = "#3C3B6E", linewidth = 0.75, linetype = "dashed"
+  ) +
+  # USA line
+  geom_line(
+    data  = df_pfi_region %>% filter(is_usa),
+    aes(x = year, y = rank, group = country),
+    color = "#B22234", linewidth = 0.75
+  ) +
+  scale_y_reverse() +
+  scale_x_continuous(breaks = c(2005, 2015, 2025)) +
+  facet_wrap(~ region, ncol = 2) +
+  labs(
+    title    = "Zooming Out: U.S. Press Freedom in a Global Context",
+    subtitle = "Grey lines = individual countries | Dashed navy = regional average | Red = United States",
+    caption = "Source: Reporters Without Borders Press Freedom Index | #30DayChartChallenge Day 7\nNote: North America regional average includes USA, Canada and Mexico only\nCreated by: Lyndsay Miles",
+    x        = NULL,
+    y        = "Rank (lower = more press freedom)"
+  ) +
+  theme_minimal() +
+  theme(
+    text                  = element_text(family = "playfair"),
+    plot.title            = element_text(face = "bold", size = 14, hjust = 0,
+                                         margin = margin(b = 6)),
+    plot.subtitle         = element_text(size = 9, hjust = 0,
+                                         margin = margin(b = 16)),
+    plot.caption          = element_text(size = 7, color = "#2d2d2d", hjust = 0,
+                                         margin = margin(t = 12)),
+    plot.title.position   = "plot",
+    plot.caption.position = "plot",
+    plot.background       = element_rect(fill = "#ffffff", color = NA),
+    panel.background      = element_rect(fill = "#ffffff", color = NA),
+    panel.grid.minor      = element_blank(),
+    panel.grid.major      = element_line(color = "#f0f0f0"),
+    strip.text            = element_text(face = "bold", size = 10),
+    axis.text             = element_text(size = 7),
+    plot.margin           = margin(20, 20, 20, 20)
+  )
+```
+Day 7 of the #30DayChartChallenge (Multiscale). Staying with the Reporters Without Borders dataset, today I'm zooming out to look at U.S. Press Freedom Rank in a regional and global context.
+
+Each panel shows individual country press freedom trends alongside the regional average (dashed line). The red line is the United States in the North America panel.
