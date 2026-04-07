@@ -1,0 +1,139 @@
+---
+title: "cc_2026_day3"
+author: "Lyndsay Miles"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+30 Day Chart Challenge 2026 Day 6: Reporters Without Borders
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(RColorBrewer)
+library(extrafont)
+library(showtext)
+library(countrycode)
+
+```
+
+```{r}
+#PRESS FREEDOM INDEX RANK 
+df_pfi <- read.csv("data/RWB_PFI_RANK.csv")
+```
+
+```{r}
+df_pfi_clean <- df_pfi %>% select(REF_AREA, REF_AREA_LABEL, TIME_PERIOD, OBS_VALUE) %>%
+  
+  rename(
+    iso3_code = REF_AREA,
+    country   = REF_AREA_LABEL,
+    year      = TIME_PERIOD,
+    rank      = OBS_VALUE
+  )
+```
+
+```{r}
+df_pfi_clean %>%
+  group_by(country) %>%
+  summarize(
+    rank_2002 = rank[year == min(year)],
+    rank_2025 = rank[year == max(year)],
+    change    = rank_2025 - rank_2002,  # positive = declined (higher rank number = worse)
+    pct_change = ((rank_2025 - rank_2002) / rank_2002) * 100
+  ) %>%
+  arrange(desc(change))
+
+df_pfi_clean %>%
+  filter(country %in% c("United States", "Russian Federation")) %>%
+  group_by(country) %>%
+  summarize(
+    rank_2002 = rank[year == min(year)],
+    rank_2025 = rank[year == max(year)],
+    change    = rank_2025 - rank_2002
+  )
+```
+
+
+```{r}
+rsf <- df_pfi_clean %>%
+  filter(country %in% c("United States", "Denmark", "Norway",
+                         "Finland", "Sweden", "Germany",
+                        "Switzerland", "Netherlands", "New Zealand", 
+                        "Belgium", "Costa Rica")) %>%
+  mutate(
+    highlight = case_when(
+      country == "United States" ~ "United States",
+      TRUE                       ~ "Other"
+    ),
+    highlight = factor(highlight, levels = c("United States", "Other"))
+  )
+```
+
+```{r}
+library(showtext)
+font_add_google("Playfair Display", "playfair")
+showtext_auto()
+# Plot
+ggplot(rsf, aes(x = year, y = rank, group = country)) +
+  geom_line(data = rsf %>% filter(highlight == "Other"),
+            color = "#c0c0c0", linewidth = 0.8, alpha = 0.7) +
+  geom_line(data = rsf %>% filter(highlight == "United States"),
+            color = "#0A3161", linewidth = 1) +
+  geom_point(data = rsf %>% filter(highlight == "United States"),
+             color = "#0A3161", size = 2) +
+  geom_text(
+  data = rsf %>% 
+    filter(country == "United States", year == max(year)),
+  aes(label = "Rank: 57"),
+  hjust = 0.5,      # push left of the point
+  vjust = 1.5,     # slightly above the line
+  size = 3.5,
+  color = "#3C3B6E",
+  family = "playfair",
+  fontface = "bold"
+)+
+  scale_y_reverse()+
+
+  labs(
+    title   = "US Press Freedom Index Rank out of 180 Countries, 2002-2025",
+    subtitle = "Compared to the 10 Most Democratic Countries According to Democracy Matrix",
+    caption  = "Grey lines: Denmark, Norway, Finland, Sweden, Germany, Switzerland, Netherlands, New Zealand, Belgium & Costa Rica\n Data Source: Reporters Without Borders (RSF) Press Freedom Index | Democracy Matrix, University of Würzburg\n#30DayChartChallenge Day 6 | Created by: Lyndsay Miles",
+
+    x       = NULL,
+    y       = NULL,
+    color   = NULL
+  ) +
+  theme_minimal() +
+  theme(
+    text                  = element_text(family = "playfair"),
+    plot.title            = element_text(face = "bold", size = 16, hjust = 0,
+                                         margin = margin(b = 6)),
+    plot.subtitle         = element_text(size = 12, hjust = 0,
+                                         margin = margin(b = 16)),
+    plot.caption          = element_text(size = 10, color = "#2d2d2d", hjust = 0,
+                                         margin = margin(t = 12)),
+    plot.title.position   = "plot",
+    plot.caption.position = "plot",
+    plot.background       = element_rect(fill = "#ffffff", color = NA),
+    panel.background      = element_rect(fill = "#ffffff", color = NA),
+    panel.grid.major.x    = element_blank(),
+    panel.grid.minor      = element_blank(),
+    axis.text             = element_text(size = 9),
+    legend.position       = "bottom",
+    legend.text           = element_text(size = 9),
+    plot.margin           = margin(20, 100, 20, 20)
+  )
+```
+#30DayChartChallenge | Day 6 — Data Day, Reporters Without Borders 🗞️
+
+I started perusing the Press Freedom Index ranking and went down a bit of a rabbit hole. Press freedom makes me think of democracy, and democracy makes me think of the United States — which made me wonder how the US press freedom rank compares to those countries ranked highest in terms of being a "Working Democracy", which led me to the Democracy Matrix, which ranks countries by quality of democracy.
+
+Here's where my story landed: since 2002, the U.S. has fallen significantly in press freedom rankings, while most of the top 10 democracies have remained in the top 20 out of 180 countries. The U.S., meanwhile, sits at rank 57 — and the trend is not encouraging.
+
+Data: Reporters Without Borders Press Freedom Index | Democracy Matrix, University of Würzburg (2020) | #Rstats #30DayChartChallenge
+
+
