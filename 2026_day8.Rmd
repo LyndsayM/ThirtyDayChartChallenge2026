@@ -1,0 +1,243 @@
+---
+title: "cc_2026_day8"
+author: "Lyndsay Miles"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+30 Day Chart Challenge 2026 Day 8: Circle
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(RColorBrewer)
+library(extrafont)
+library(showtext)
+library(countrycode)
+
+```
+
+```{r}
+#PRESS FREEDOM INDEX RANK. Data retrieved from  https://data360.worldbank.org/en/prosperity
+df_pfi <- read.csv("data/RWB_PFI_RANK.csv")
+```
+
+```{r}
+df_pfi_clean <- df_pfi %>% select(REF_AREA, REF_AREA_LABEL, TIME_PERIOD, OBS_VALUE) %>%
+  
+  rename(
+    iso3_code = REF_AREA,
+    country   = REF_AREA_LABEL,
+    year      = TIME_PERIOD,
+    rank      = OBS_VALUE
+  )
+```
+
+```{r}
+df_pfi_clean %>%
+  group_by(country) %>%
+  summarize(
+    rank_2002 = rank[year == min(year)],
+    rank_2025 = rank[year == max(year)],
+    change    = rank_2025 - rank_2002,  # positive = declined (higher rank number = worse)
+    pct_change = ((rank_2025 - rank_2002) / rank_2002) * 100
+  ) %>%
+  arrange(desc(change))
+
+df_pfi_region <- df_pfi_clean %>%
+  filter(!iso3_code %in% c("CSS", "SCG", "XKX", "YUG")) %>%
+  mutate(
+    region = countrycode(iso3_code,
+                         origin      = "iso3c",
+                         destination = "region"),
+    region = case_when(
+      iso3_code == "MEX" ~ "North America",
+      TRUE               ~ region
+    ),
+    is_usa = iso3_code == "USA"
+  ) %>%
+  mutate(region = gsub("&", "and", region))
+```
+
+```{r}
+df_pfi_region %>%
+  distinct(country, region) %>%
+  count(region) 
+
+```
+
+```{r}
+#regional average rankings
+regional_avg <- df_pfi_region %>%
+  group_by(region, year) %>%
+  summarize(avg_rank = mean(rank, na.rm = TRUE), .groups = "drop")%>%
+  mutate(region = gsub("&", "and", region))
+
+```
+
+```{r}
+rsf_change <- df_pfi_region %>%
+  group_by(country, region) %>%
+  summarize(
+    rank_start = rank[year == min(year)],
+    rank_end   = rank[year == max(year)],
+    change     = rank_end - rank_start,
+    .groups    = "drop"
+  ) %>%
+  arrange(region, desc(change))
+
+print(rsf_change, n = 20)
+
+# Summary by region
+rsf_change %>%
+  group_by(region) %>%
+  summarize(
+    avg_change    = mean(change),
+    most_declined = country[which.max(change)],
+    max_decline   = max(change),
+    most_improved = country[which.min(change)],
+    max_improve   = min(change)
+  ) %>%
+  arrange(desc(avg_change))
+
+rsf_change %>% filter(region == "North America")
+# Order countries within each region by change (largest first)
+rsf_change <- rsf_change %>%
+  group_by(region) %>%
+  mutate(country_order = row_number()) %>%
+  ungroup() %>%
+  arrange(region, desc(change)) %>%
+  mutate(
+    country_id = row_number(),
+    # flag notable countries
+    label_flag = case_when(
+      country == "United States"        ~ "USA",
+      country == "Hong Kong SAR, China" ~ "Hong Kong",
+      country == "Nicaragua"            ~ "Nicaragua",
+      change >= 80                      ~ country,
+      change <= -50                     ~ country,
+      TRUE                              ~ ""
+    )
+  )
+```
+
+```{r, fig.width=10, fig.height=10}
+font_add_google("Atkinson Hyperlegible", "atkinson")
+showtext_auto()
+
+# --- Prep ---
+rsf_polar <- rsf_change %>%
+  arrange(region, desc(change)) %>%
+  mutate(
+    change_capped = pmin(change, 100),
+    country_id    = row_number(),
+    label_flag    = case_when(
+  country == "Hong Kong SAR, China" ~ "HKG",
+  country == "Nicaragua"            ~ "NIC",
+  country == "El Salvador"          ~ "SLV",
+  TRUE                              ~ ""
+)
+  ) %>%
+  mutate(region = recode(region,
+    "East Asia and Pacific"        = "E. Asia/Pacific",
+    "Europe and Central Asia"      = "Europe/C. Asia",
+    "Latin America and Caribbean"  = "Latin America",
+    "Middle East and North Africa" = "Middle East/N. Africa",
+    "Sub-Saharan Africa"           = "Sub-Saharan Africa",
+    "South Asia"                   = "South Asia",
+    "North America"                = "North America"
+  ))
+
+region_labels <- rsf_polar %>%
+  group_by(region) %>%
+  summarize(
+    mid_id = mean(country_id),  # midpoint of region's bars
+    .groups = "drop"
+  ) %>%
+  mutate(
+    text_color = case_when(
+      region %in% c("E. Asia/Pacific", 
+                     "Latin America",
+                     "North America")  ~ "#2d2d2d",  # dark text on light boxes
+      TRUE                             ~ "white"      # white text on dark boxes
+    )
+  )
+
+# --- Plot ---
+ggplot(rsf_polar, aes(x = country_id, y = change_capped, fill = region)) +
+  geom_col(width = 0.8, color = "white", linewidth = 0.2) +
+  geom_text(
+    data = rsf_polar %>% 
+      filter(label_flag != "") %>%
+      mutate(
+        nudge_y = case_when(
+          label_flag == "SLV" ~ change_capped + 15,
+          TRUE                ~ change_capped + 5
+        )
+      ),
+    aes(label = label_flag, y = nudge_y),
+    size   = 2.8,
+    family = "atkinson",
+    color  = "#2d2d2d",
+    hjust  = 0.5
+  ) +
+  geom_label(
+    data          = region_labels,
+    aes(x         = mid_id, y = 108, label = region,
+        fill      = region,
+        color     = text_color),
+    size          = 2.5,
+    family        = "atkinson",
+    fontface      = "bold",
+    label.padding = unit(0.15, "lines"),
+    label.r       = unit(0.1, "lines"),
+    label.size    = 0
+  ) +
+  geom_hline(yintercept = 100, linetype = "dashed",
+             color = "#2d2d2d", linewidth = 0.4, alpha = 0.5) +
+  coord_polar(clip = "off") +
+  scale_fill_brewer(palette = "Paired") +
+  scale_color_identity() +
+  scale_y_continuous(
+    limits = c(-5, 115),
+    breaks = c(0, 25, 50, 75, 100)
+  ) +
+  labs(
+    title    = "Which Countries Have Lost the Most Press Freedom?",
+    subtitle = "Change in Press Freedom Index rank 2002–2025\nLonger bars = greater loss of press freedom",
+    caption  = "Note: Bars capped at 100 (Nicaragua +138, Hong Kong +122, El Salvador +101)\nSource: Reporters Without Borders (RSF) Press Freedom Index\nCreated by: Lyndsay Miles | #30DayChartChallenge Day 8",
+    fill     = NULL,
+    x        = NULL,
+    y        = NULL
+  ) +
+  theme_minimal() +
+  theme(
+    aspect.ratio          = 1,
+    text                  = element_text(family = "atkinson"),
+    plot.title            = element_text(face = "bold", size = 14, hjust = 0.5,
+                                         margin = margin(b = 6)),
+    plot.subtitle         = element_text(size = 9, hjust = 0.5,
+                                         margin = margin(b = 16)),
+    plot.caption          = element_text(size = 7, color = "#2d2d2d", hjust = 0,
+                                         margin = margin(t = 12)),
+    plot.title.position   = "plot",
+    plot.caption.position = "plot",
+    plot.background       = element_rect(fill = "#f2f0ed", color = NA),
+    panel.background      = element_rect(fill = "#f2f0ed", color = NA),
+    panel.grid.major      = element_line(color = "#d8d8d8", linewidth = 0.3),
+    panel.grid.minor      = element_blank(),
+    panel.spacing         = unit(0, "cm"),
+    axis.text.x           = element_blank(),
+    axis.text.y           = element_text(size = 7, color = "gray50",
+                                         family = "atkinson"),
+    legend.position       = "none",
+    plot.margin           = margin(10, 10, 10, 10)
+  )
+```
+Day 8 of the #30DayChartChallenge (Circular) 🌐
+A starburst chart showing which countries have lost the most press freedom between 2002 and 2025, grouped by region. Each bar = one country. Longer bar = bigger decline.
+Hong Kong, Nicaragua, and El Salvador all lost more than 100 places in rank.
+Data: Reporters Without Borders Press Freedom Index
