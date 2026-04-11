@@ -1,0 +1,131 @@
+---
+title: "cc_2026_day10"
+author: "Lyndsay Miles"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+30 Day Chart Challenge 2026 Day 9: Pop Culture
+
+https://www.kaggle.com/datasets/sarahvitvitskiy/great-british-bake-off-results-seasons-1-14
+```{r}
+library(tidyverse)
+```
+
+```{r}
+s1 <- read.csv("data/Season_1.csv")
+s2 <- read.csv("data/Season_2.csv")
+s3 <- read.csv("data/Season_3.csv")
+s4 <- read.csv("data/Season_4.csv")
+s5 <- read.csv("data/Season_5.csv")
+s6 <- read.csv("data/Season_6.csv")
+s7 <- read.csv("data/Season_7.csv")
+s8 <- read.csv("data/Season_8.csv")
+s9 <- read.csv("data/Season_9.csv")
+s10 <- read.csv("data/Season_10.csv")
+s11 <- read.csv("data/Season_11.csv")
+s12 <- read.csv("data/Season_12.csv")
+s13 <- read.csv("data/Season_13.csv")
+s14 <- read.csv("data/Season_14.csv")
+
+```
+Day 10 #30DayChartChallenge : Pop Culture
+"Do bakers who perform well in technicals make it to the final?"
+```{r}
+df14 <- s14 %>% select(Baker, Round_1_Technical, Round_1, Round_2_Technical, Round_2, Round_3_Technical, Round_3, Round_4_Technical, Round_4, Round_5_Technical, Round_5, Round_6_Technical, Round_6, Round_7_Technical, Round_7, Round_8_Technical, Round_8, Round_9_Technical, Round_9, Round_10_Technical, Round_10, Technicals, Star_Bakers) %>% 
+  mutate(series = "14")
+
+df13 <- s13 %>% select(Baker, Round_1_Technical, Round_1, Round_2_Technical, Round_2, Round_3_Technical, Round_3, Round_4_Technical, Round_4, Round_5_Technical, Round_5, Round_6_Technical, Round_6, Round_7_Technical, Round_7, Round_8_Technical, Round_8, Round_9_Technical, Round_9, Round_10_Technical, Round_10, Technicals, Star_Bakers) %>% 
+  mutate(series = "13")
+
+df12 <- s12 %>% select(Baker, Round_1_Technical, Round_1, Round_2_Technical, Round_2, Round_3_Technical, Round_3, Round_4_Technical, Round_4, Round_5_Technical, Round_5, Round_6_Technical, Round_6, Round_7_Technical, Round_7, Round_8_Technical, Round_8, Round_9_Technical, Round_9, Round_10_Technical, Round_10, Technicals, Star_Bakers) %>% 
+  mutate(series = "12")
+
+df11 <- s11 %>% select(Baker, Round_1_Technical, Round_1, Round_2_Technical, Round_2, Round_3_Technical, Round_3, Round_4_Technical, Round_4, Round_5_Technical, Round_5, Round_6_Technical, Round_6, Round_7_Technical, Round_7, Round_8_Technical, Round_8, Round_9_Technical, Round_9, Round_10_Technical, Round_10, Technicals, Star_Bakers) %>% 
+  mutate(series = "11")
+
+df10 <- s10 %>% select(Baker, Round_1_Technical, Round_1, Round_2_Technical, Round_2, Round_3_Technical, Round_3, Round_4_Technical, Round_4, Round_5_Technical, Round_5, Round_6_Technical, Round_6, Round_7_Technical, Round_7, Round_8_Technical, Round_8, Round_9_Technical, Round_9, Round_10_Technical, Round_10, Technicals, Star_Bakers) %>% 
+  mutate(series = "10")
+
+df9 <- s9 %>% select(Baker, Round_1_Technical, Round_1, Round_2_Technical, Round_2, Round_3_Technical, Round_3, Round_4_Technical, Round_4, Round_5_Technical, Round_5, Round_6_Technical, Round_6, Round_7_Technical, Round_7, Round_8_Technical, Round_8, Round_9_Technical, Round_9, Round_10_Technical, Round_10, Technicals, Star_Bakers) %>%
+  mutate(series = "9")
+
+df8 <- s8 %>% select(Baker, Round_1_Technical, Round_1, Round_2_Technical, Round_2, Round_3_Technical, Round_3, Round_4_Technical, Round_4, Round_5_Technical, Round_5, Round_6_Technical, Round_6, Round_7_Technical, Round_7, Round_8_Technical, Round_8, Round_9_Technical, Round_9, Round_10_Technical, Round_10, Technicals, Star_Bakers) %>%
+  mutate(series = "8")
+
+df7 <- s7 %>% select(Baker, Round_1_Technical, Round_1, Round_2_Technical, Round_2, Round_3_Technical, Round_3, Round_4_Technical, Round_4, Round_5_Technical, Round_5, Round_6_Technical, Round_6, Round_7_Technical, Round_7, Round_8_Technical, Round_8, Round_9_Technical, Round_9, Round_10_Technical, Round_10, Technicals, Star_Bakers) %>% 
+  mutate(Round_1_Technical = as.integer(str_remove_all(Round_1_Technical, "[^0-9]"))) %>%
+  mutate(series = "7")
+
+df6 <- s6 %>% select(Baker, Round_1_Technical, Round_1, Round_2_Technical, Round_2, Round_3_Technical, Round_3, Round_4_Technical, Round_4, Round_5_Technical, Round_5, Round_6_Technical, Round_6, Round_7_Technical, Round_7, Round_8_Technical, Round_8, Round_9_Technical, Round_9, Round_10_Technical, Round_10, Technicals, Star_Bakers) %>%
+  mutate(series = "6")
+
+df5 <- s5 %>% select(Baker, Round_1_Technical, Round_1, Round_2_Technical, Round_2, Round_3_Technical, Round_3, Round_4_Technical, Round_4, Round_5_Technical, Round_5, Round_6_Technical, Round_6, Round_7_Technical, Round_7, Round_8_Technical, Round_8, Round_9_Technical, Round_9, Round_10_Technical, Round_10, Technicals, Star_Bakers) %>%
+  mutate(series = "5")
+
+df <- bind_rows(df5, df6, df7, df8, df9, df10, df11, df12, df13, df14) %>%
+  mutate(across(where(is.character), ~str_remove_all(., "[^a-zA-Z0-9 ]")))
+
+write.csv(df, "data/gbbo_data.csv")
+```
+
+```{r}
+gbbo <- df
+# Identify finalists
+gbbo_long <- gbbo %>%
+  pivot_longer(
+    cols = matches("Round_\\d+_Technical"),
+    names_to = "round",
+    values_to = "technical_rank"
+  ) %>%
+  filter(!is.na(technical_rank)) %>%
+  mutate(
+    star_baker_group = if_else(Star_Bakers > 0, "Won Star Baker ≥ Once", "Never Won Star Baker"),
+    finalist = if_else(grepl("WINNER|Runnerup", Round_10), "Finalist",
+               if_else(grepl("WINNER|Runnerup", Round_9), "Finalist", "Eliminated"))
+  )
+# Check group sizes
+gbbo_long %>% count(star_baker_group, finalist)
+```
+
+```{r}
+library(ggplot2)
+library(tibble)
+
+windowsFonts(georgia = windowsFont("Georgia"))
+
+# Create a 5x6 grid of 30 bakers
+pictogram_data <- tibble(
+  x = rep(1:6, times = 5),
+  y = rep(5:1, each = 6),
+  group = c(rep("Won Star Baker", 29), "Never Won Star Baker")
+)
+
+ggplot(pictogram_data, aes(x = x, y = y, color = group)) +
+  geom_text(label = "🧁", size = 10, family = "EmojiOne") +
+  scale_y_continuous(expand = expansion(mult = 0.1)) +
+  scale_x_continuous(expand = expansion(mult = 0.1)) +
+  scale_color_manual(values = c(
+    "Won Star Baker" = "#7B4F2E",
+    "Never Won Star Baker" = "#E63946"
+  ),
+  breaks = c("Won Star Baker", "Never Won Star Baker"),
+  labels = c("Won Star Baker", "Never Won Star Baker")) +
+  labs(
+    title = "To Get That Cake Plate, You Have to Win Star Baker",
+    subtitle = "Each cupcake = 1 Finalist in Great British Bake Off, Series 5–14",
+    caption = "Data: Kaggle GBBO | #30DayChartChallenge Day 10\nCreated by: Lyndsay Miles",
+    color = NULL
+  ) +
+  theme_void() +
+  theme(
+    plot.title = element_text(family = "georgia", hjust = 0.5, size = 14),
+    plot.subtitle = element_text(hjust = 0.5),
+    legend.position = "bottom"
+  )
+```
+
+

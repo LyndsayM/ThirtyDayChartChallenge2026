@@ -1,0 +1,114 @@
+---
+title: "cc_2026_day9"
+author: "Lyndsay Miles"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+30 Day Chart Challenge 2026 Day 9: Wealth
+Source: Forbes Fictional 15 (2011) https://www.forbes.com/sites/michaelnoer/2011/03/08/the-forbes-fictional-15-help-us-identify-the-richest-fictional-characters/
+
+```{r}
+
+library(ggplot2)
+library(dplyr)
+library(showtext)
+font_add_google("Playfair Display", "playfair")
+font_add_google("Lato", "lato")
+showtext_auto()
+
+# --- Data ---
+fictional_15 <- tibble(
+  character   = c("Carlisle Cullen", "Scrooge McDuck", "Richie Rich",
+                  "Tony Stark", "Jed Clampett", "Adrian Veidt",
+                  "Bruce Wayne", "Tooth Fairy", "Thurston Howell III",
+                  "Sir Topham Hatt", "Artemis Fowl", "C. Montgomery Burns",
+                  "Chuck Bass", "Jay Gatsby", "Lucille Bluth"),
+  source      = c("Compound Interest", "Mining", "Inheritance",
+                  "Defense", "Oil & Gas", "Marketing",
+                  "Defense", "Inheritance", "Howell Industries",
+                  "Railroads", "Crime", "Nuclear Energy",
+                  "Real Estate", "Racketeering", "Real Estate"),
+  net_worth_b = c(34.1, 33.5, 11.5, 8.8, 7.2, 7.0,
+                  6.5, 3.9, 2.1, 2.0, 1.9, 1.3,
+                  1.1, 1.0, 0.95)
+) %>%
+  mutate(character = reorder(character, net_worth_b))
+
+# --- Plot ---
+ggplot(fictional_15, aes(x = net_worth_b, y = character)) +
+  geom_segment(
+    aes(x = 0, xend = net_worth_b,
+        y = character, yend = character),
+    color     = "#1B3A5C",
+    linewidth = 0.8
+  ) +
+  geom_point(
+  aes(x = net_worth_b, y = character),
+  shape  = 21,        # filled circle with border
+  fill   = "#F4A261", # gold fill
+  color  = "#C17A3A", # darker gold border
+  size   = 6,
+  stroke = 1.2
+) +
+geom_text(
+  aes(x = net_worth_b, y = character,
+      label = "$"),
+  size   = 2.8,
+  fontface = "bold",
+  family = "lato",
+  color  = "white"
+) +
+  geom_text(
+    aes(label = paste0("$", net_worth_b, "B")),
+    hjust  = -0.9, size = 2.8,
+    family = "lato", color = "#2d2d2d"
+  ) +
+  geom_text(
+    aes(x = 0, label = source),
+    hjust  = 1.1, size = 2.5,
+    family = "lato", color = "gray50"
+  ) +
+  scale_x_continuous(
+    limits = c(-12, 42),
+    labels = scales::dollar_format(suffix = "B", prefix = "$")
+  ) +
+  labs(
+    title    = "The World's Wealthiest Fictional Characters",
+    caption  = "Source: Forbes Fictional 15 (2011) | #30DayChartChallenge Day 9\nCreated by: Lyndsay Miles",
+    x        = NULL,
+    y        = NULL
+  ) +
+  theme_minimal() +
+  theme(
+    text                  = element_text(family = "lato"),
+    plot.title            = element_text(family = "playfair", face = "bold",
+                                         size = 16, hjust = 0,
+                                         margin = margin(b = 6)),
+   
+    plot.caption          = element_text(size = 9, color = "#2d2d2d", hjust = 0,
+                                         margin = margin(t = 12)),
+    plot.title.position   = "plot",
+    plot.caption.position = "plot",
+    plot.background       = element_rect(fill = "#eeeef2", color = NA),
+    panel.background      = element_rect(fill = "#eeeef2", color = NA),
+    panel.grid.major.y    = element_line(color = "#dddde8"),
+    panel.grid.major.x    = element_blank(),
+    panel.grid.minor      = element_blank(),
+    axis.text.y           = element_text(size = 9, color = "#2d2d2d"),
+    axis.text.x           = element_blank(),
+    legend.position       = "none",
+    plot.margin           = margin(20, 20, 20, 60)
+  )
+
+```
+
+
+Day 9 #30DayChartChallenge : Wealth
+This is a bit of throwback, but I just found out Forbes had an annual list of the richest fictional characters that they posted from 2002-2013. Here's fiction's wealthiest from 2011. 
+
+Data source: https://www.forbes.com/sites/michaelnoer/2011/03/08/the-forbes-fictional-15-help-us-identify-the-richest-fictional-characters/
+
