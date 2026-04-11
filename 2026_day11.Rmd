@@ -1,0 +1,67 @@
+---
+title: "cc_2026_day11"
+author: "Lyndsay Miles"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+30 Day Chart Challenge 2026 Day 10: Physical
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+```
+
+
+```{r}
+NHANES <- read_csv("https://raw.githubusercontent.com/GTPB/PSLS20/master/data/NHANES.csv")
+```
+
+```{r}
+library(tidyverse)
+
+# Check the variables we care about
+NHANES %>%
+  select(Poverty, DaysPhysHlthBad, HealthGen) %>%
+  summary()
+
+# Check HealthGen categories and counts
+NHANES %>%
+  count(HealthGen)
+
+nhanes_clean <- NHANES %>%
+  filter(SurveyYr == "2011_12") %>%
+  select(SleepHrsNight, DaysPhysHlthBad, HealthGen) %>%
+  drop_na(HealthGen, SleepHrsNight) %>%
+  mutate(HealthGen = factor(recode(HealthGen, "Vgood" = "Very Good"),
+                            levels = c("Excellent", "Very Good", "Good", "Fair", "Poor"),
+                            ordered = TRUE))
+
+nhanes_clean %>% count(HealthGen)
+```
+
+```{r}
+library(ggthemes)
+
+ggplot(nhanes_clean, aes(x = HealthGen, y = SleepHrsNight, fill = HealthGen)) +
+  geom_violin(trim = FALSE, alpha = 0.8, scale = "width") +
+  geom_boxplot(width = 0.1, fill = "white", outlier.shape = NA) +
+scale_fill_brewer(palette = "YlGnBu", direction = -1)  +
+
+  labs(
+    title = "Better Sleep, Better Health; Or Is It the Other Way Around?",
+    subtitle = "Distribution of hours of sleep per night by self-reported health status | NHANES 2011–12",
+    x = "",
+    y = "",
+    caption = "Data: NHANES R package | #30DayChartChallenge Day 11\nCreated by: Lyndsay Miles"
+  ) +
+  theme_gdocs()+
+  theme(legend.position = "none",
+        plot.caption = element_text(hjust = 1)
+
+)
+```
+
