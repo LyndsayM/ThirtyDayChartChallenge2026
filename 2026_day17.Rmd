@@ -1,0 +1,142 @@
+---
+title: "30 Day Chart Challenge 2026: Day 17"
+author: "Lyndsay Miles"
+date: "`r Sys.Date()`"
+output: html_document
+---
+#30DayChartChallenge, #Day17 : Makeover
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(countrycode)
+library(tidyverse)
+library(WDI)
+```
+
+```{r}
+#2014 data
+cia_factbook <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2024/2024-10-22/cia_factbook.csv')
+```
+
+
+```{r}
+cia_factbook <- cia_factbook %>% 
+  mutate(
+    region = countrycode(country, origin = "country.name", destination = "continent"),
+         est_maternal_deaths = (maternal_mortality_rate / 100000) * 
+                                (birth_rate / 1000) * population)%>% 
+  na.omit(region)
+
+# Check how many NAs we have in key variables
+cia_factbook %>%
+  select(country, region, maternal_mortality_rate, birth_rate, est_maternal_deaths) %>%
+  summarise(across(everything(), ~sum(is.na(.))))
+
+# Check the range of both variables
+cia_factbook %>%
+  select(maternal_mortality_rate, birth_rate) %>%
+  summary()
+
+cia_factbook %>%
+  arrange(desc(maternal_mortality_rate)) %>%
+  select(country, maternal_mortality_rate, birth_rate, region) %>%
+  head(10)
+
+cia_factbook %>%
+  arrange(maternal_mortality_rate) %>%
+  select(country, maternal_mortality_rate, birth_rate, region) %>%
+  head(10)
+```
+
+Plot
+```{r}
+windowsFonts(georgia = windowsFont("Georgia"))
+
+# Calculate medians for crosshairs
+median_birth <- median(cia_factbook$birth_rate, na.rm = TRUE)
+median_mmr <- median(cia_factbook$maternal_mortality_rate, na.rm = TRUE)
+
+# Countries to annotate
+annotate_countries <- c("Chad", "Estonia", "India")
+
+cia_plot <- cia_factbook %>%
+  mutate(label = if_else(country %in% annotate_countries, country, NA_character_))
+
+p <- ggplot(cia_plot, aes(x = birth_rate, y = maternal_mortality_rate, color = region)) +
+  # Quadrant crosshairs
+  geom_vline(xintercept = median_birth, linetype = "dashed",
+             color = "grey60", linewidth = 0.4) +
+  geom_hline(yintercept = median_mmr, linetype = "dashed",
+             color = "grey60", linewidth = 0.4) +
+  # Quadrant labels
+  annotate("text", x = 8, y = 1000,
+           label = "Low birth rate + High MMR", size = 3,
+           color = "grey50", hjust = 0, family = "georgia") +
+  annotate("text", x = 20, y = 1000,
+           label = "High birth rate + High MMR",
+           size = 3, color = "grey50", hjust = 0, family = "georgia") +
+  #annotate("text", x = 20, y = 3,
+   #        label = "High birth rate + Low MMR",
+    #       size = 3, color = "grey50", hjust = 0, family = "georgia") +
+  # Points
+  geom_point(size = 3, alpha = 0.6) +
+# Chad arrow and label
+annotate("segment", x = 36, xend = 37.3, y = 800, yend = 1100,
+         arrow = arrow(length = unit(0.2, "cm"), type = "closed"),
+         color = "#1d3557", linewidth = 0.5) +
+annotate("text", x = 36, y = 550,
+         label = "Chad\nMMR: 1,100", size = 3,
+         hjust = 1, family = "georgia", color = "#1d3557") +
+
+# India arrow and label  
+annotate("segment", x = 21, xend = 19.9, y = 300, yend = 200,
+         arrow = arrow(length = unit(0.2, "cm"), type = "closed"),
+         color = "#1d3557", linewidth = 0.5) +
+annotate("text", x = 21.5, y = 350,
+         label = "India\nMMR: 200", size = 3,
+         hjust = 0, family = "georgia", color = "#1d3557") +
+
+# Estonia arrow and label
+annotate("segment", x = 13, xend = 10.3, y = 3, yend = 2,
+         arrow = arrow(length = unit(0.2, "cm"), type = "closed"),
+         color = "#1d3557", linewidth = 0.5) +
+annotate("text", x = 12, y = 3,
+         label = "Estonia\nMMR: 2", size = 3,
+         hjust = 0, family = "georgia", color = "#1d3557") +
+
+  # Log scale y axis
+  scale_y_log10(breaks = c(2, 10, 50, 100, 500, 1000),
+                labels = c("2", "10", "50", "100", "500", "1,000")) +
+  scale_x_continuous(limits = c(7, 45), breaks = c(10, 20, 30, 40))+
+  scale_color_brewer(palette = "Set2", name = "Region") +
+  labs(
+    title = "The Global Divide in Maternal Mortality Risk, 2014",
+    subtitle = "Maternal mortality rate vs. birth rate by country | CIA Factbook 2014",
+    x = "Birth Rate (per 1,000 people)",
+    y = "Maternal Mortality Rate\n(per 100,000 live births, log scale)",
+    caption = "Dashed lines show global medians | #30DayChartChallenge Day 17\nData: CIA Factbook via TidyTuesday | Created by: Lyndsay Miles"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA),
+    legend.background = element_rect(fill = "white", color = NA),
+    panel.grid.minor = element_blank(),
+    panel.grid.major = element_line(color = "grey85", linewidth = 0.3),
+    plot.title = element_text(family = "georgia", size = 24, face = "bold"),
+    plot.subtitle = element_text(family = "georgia", size = 16),
+    plot.caption = element_text(family = "georgia", hjust = 1, size = 12),
+    axis.text = element_text(family = "georgia", size = 12),
+    axis.title = element_text(family = "georgia", size = 10),
+    legend.text = element_text(family = "georgia", size = 8),
+    legend.title = element_text(family = "georgia", size = 9),
+    legend.position = "bottom"
+  )
+
+p
+ggsave("img/cc_2026_day17.png", p,
+       width = 10, height = 6, 
+       dpi = 300)
+
+```
+

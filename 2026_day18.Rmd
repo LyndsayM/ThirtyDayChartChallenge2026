@@ -1,0 +1,228 @@
+---
+title: "cc_2026_day18"
+author: "Lyndsay Miles"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+30 Day Chart Challenge 2026 Day 14: Trade
+https://rtais.wto.org/UI/PublicMaintainRTAHome.aspx
+WTO Regional Trade Agreements Database, accessed 4/13/2026
+```{r}
+library(tidyverse)
+library(lubridate)
+library(ggthemes)
+```
+
+```{r}
+df <- read.csv("data/AllRTAs.csv") 
+```
+
+```{r}
+df_clean <- df %>%
+  rename_with(~ tolower(gsub(" ", "", gsub(".", "", .x, fixed = TRUE), fixed = TRUE))) %>%
+  mutate(
+    date_parsed = lubridate::dmy(dateofentryintoforceg),
+    # Fix two-digit years: if parsed year is after 2025, subtract 100
+    date_parsed = if_else(year(date_parsed) > 2025, 
+                          date_parsed - lubridate::years(100), 
+                          date_parsed),
+    year = lubridate::year(date_parsed)
+  )
+
+df_clean %>%
+  count(year) %>%
+  arrange(year)
+
+# First recategorize status
+df_clean <- df_clean %>%
+  mutate(
+    status_clean = case_when(
+      status %in% c("In Force", "In force for at least one Party") ~ "In Force",
+      status == "Inactive" ~ "Inactive",
+      status %in% c("Early announcement-Under negotiation", 
+                    "Early announcement-Signed ") ~ "In Negotiation",
+      TRUE ~ "Other"
+    ),
+    year_inactive = lubridate::year(lubridate::dmy(inactivedate)),
+    # Fix two digit years
+    year_inactive = if_else(year_inactive > 2025,
+                            year_inactive - 100,
+                            year_inactive)
+  )
+
+# Check inactive year parsing
+df_clean %>%
+  filter(status_clean == "Inactive") %>%
+  select(rtaname, year, year_inactive) %>%
+  head(10)
+
+```
+
+```{r}
+#how long does it take to get from notification to in force? 
+df_clean %>%
+  filter(status_clean == "In Force") %>%
+  mutate(
+    date_signature = lubridate::dmy(dateofsignatureg),
+    # Fix two digit years
+    date_signature = if_else(year(date_signature) > 2025,
+                             date_signature - lubridate::years(100),
+                             date_signature),
+    days_to_force = as.numeric(date_parsed - date_signature),
+    years_to_force = days_to_force / 365.25
+  ) %>%
+  filter(!is.na(years_to_force), years_to_force > 0) %>%  # remove negatives/NAs
+  summarise(
+    mean_years = round(mean(years_to_force), 1),
+    median_years = round(median(years_to_force), 1),
+    min_years = round(min(years_to_force), 1),
+    max_years = round(max(years_to_force), 1),
+    n = n()
+  )
+
+df_clean <- df_clean %>%
+  mutate(composition_clean = case_when(
+    rtacomposition %in% c("Bilateral", 
+                          "Bilateral; All Parties are RTAs") ~ "Bilateral",
+    rtacomposition == "Bilateral; One Party is an RTA" ~ "Bilateral (with Bloc)",
+    rtacomposition %in% c("Plurilateral", 
+                          "Plurilateral; One Party is an RTA") ~ "Plurilateral",
+    TRUE ~ "Other"
+  ))
+
+df_clean %>% count(composition_clean)
+```
+
+```{r}
+library(tidyverse)
+# Step 1: Filter to Asia-Pacific agreements
+df_asia <- df_clean %>%
+  mutate(year = lubridate::year(lubridate::dmy(dateofentryintoforceg)),
+         year = if_else(year > 2025, year - 100, year)) %>%
+  mutate(composition_clean = case_when(
+    rtacomposition %in% c("Bilateral", 
+                          "Bilateral; All Parties are RTAs") ~ "Bilateral",
+    rtacomposition == "Bilateral; One Party is an RTA" ~ "Bilateral (with Bloc)",
+    rtacomposition %in% c("Plurilateral", 
+                          "Plurilateral; One Party is an RTA") ~ "Plurilateral",
+    TRUE ~ "Other"
+  )) %>%
+  filter(str_detect(region, regex("east asia|oceania", ignore_case = TRUE)),
+         status_clean == "In Force") %>%
+  mutate(year = lubridate::year(lubridate::dmy(dateofentryintoforceg)),
+         year = if_else(year > 2025, year - 100, year)) %>%
+  drop_na(year)
+
+# Step 2: Parse region into pairs
+region_pairs <- df_asia %>%
+  select(rtaname, region, composition_clean) %>%
+  mutate(region = str_split(region, ";\\s*")) %>%
+  unnest(region) %>%
+  mutate(region = str_trim(region))
+
+# Step 3: Create from-to pairs
+chord_data <- df_asia %>%
+  select(rtaname, region) %>%
+  mutate(
+    region_list = map(str_split(region, ";\\s*"), str_trim),
+    from = map_chr(region_list, ~.x[1]),
+    to = map_chr(region_list, ~if(length(.x) >= 2) .x[2] else .x[1])
+  ) %>%
+  count(from, to) %>%
+  arrange(desc(n))
+
+# Step 4: Simplify small regions into "Other"
+chord_data_clean <- chord_data %>%
+  mutate(
+    from = case_when(
+      from %in% c("Africa", "Central Asia", "Caribbean",
+                  "Middle East", "Central America",
+                  "North America") ~ "Other",
+      TRUE ~ from
+    ),
+    to = case_when(
+      to %in% c("Africa", "Central Asia", "Caribbean",
+                "Middle East", "Central America",
+                "North America") ~ "Other",
+      TRUE ~ to
+    )
+  ) %>%
+  group_by(from, to) %>%
+  summarise(n = sum(n), .groups = "drop") %>%
+  arrange(desc(n))
+
+chord_data_clean
+
+chord_data_alluvial <- chord_data_clean %>%
+  filter(from != "Other", to != "Other") %>%
+  filter(!(from == to)) %>%  # remove self-loops
+  mutate(
+    from_label = paste0(from, " "),   # add trailing space to from
+    to_label = paste0(" ", to)        # add leading space to to
+  )
+```
+
+```{r}
+# Step 5: Build chord diagram
+library(ggalluvial)
+library(ggtext)
+
+
+windowsFonts(georgia = windowsFont("Georgia"))
+
+ggplot(chord_data_alluvial,
+       aes(axis1 = from_label, axis2 = to_label, y = n)) +
+  geom_alluvium(aes(fill = from), 
+                alpha = 0.8, 
+                width = 1/3) +
+  geom_stratum(width = 1/3, fill = "white", color = NA) +
+  geom_text(stat = "stratum",
+            aes(label = after_stat(stratum)),
+            size = 6, family = "georgia") +
+  scale_fill_manual(values = c(
+    "East Asia"     = "#4a90a4",
+    "Oceania"       = "#c9a84c",
+    "Europe"        = "#e8a598",
+    "South America" = "#7ab648",
+    "West Asia"     = "#9b6ea8"
+  )) +
+  labs(
+    title = "<span style='color:#4a90a4'>Asia-Pacific's Web of Trade Relationships</span>",
+    subtitle = "Regional trade agreements in force involving East Asia or Oceania | WTO 2026",
+    x = NULL, y = NULL,
+    caption = "Data: WTO Regional Trade Agreements Database | Intra-regional agreements removed for clarity.\n#30DayChartChallenge Day 18 | Created by: Lyndsay Miles"
+  ) +
+  theme_void(base_size = 14) +
+  theme(
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.border = element_blank(),
+    panel.background = element_rect(fill = "white", color = NA),
+    plot.title = element_markdown(family = "georgia", size = 24,
+                              face = "bold", hjust = 0.5),
+    plot.subtitle = element_text(family = "georgia", size = 14,
+                                 color = "grey40", hjust = 0.5),
+    plot.caption = element_text(family = "georgia", size = 10,
+                                hjust = 1, color = "grey50"),
+    legend.position = "none",
+    plot.margin = margin(30, 20, 20, 20)
+  )
+
+ggsave("img/cc_2026_day18.png", 
+       width = 10, height = 8, 
+       dpi = 300,
+       bg = "white")
+```
+
+#Day18 of the #30DayChartChallenge | Theme Day: South China Morning Post 🌏
+
+Today I went back to the WTO Regional Trade Agreements data from #Day14, filtered to agreements involving East Asia or Oceania, and visualized with SCMP's style.
+
+The Sankey diagram shows which regions are connected through formal trade relationships. East Asia dominates — its largest connections are with Europe and Oceania. South America also has a strong trading relationship with East Asia (10 agreements). There were 4 agreements involving North America, but I left these, as well as intra-regional agreements, out for clarity.
+
+#Rstats #30DayChartChallenge #DataVisualization #TradePolicy
+Data: WTO Regional Trade Agreements Database (2026)
+https://rtais.wto.org/UI/PublicMaintainRTAHome.aspx. 

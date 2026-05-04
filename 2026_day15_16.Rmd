@@ -1,0 +1,225 @@
+---
+title: "cc_2026_day15"
+author: "Lyndsay Miles"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+30 Day Chart Challenge 2026 Day 15: Correlation
+
+```{r}
+library(tidyverse)
+library(ggthemes)
+library(mosaicData)
+library(ggplot2)
+library(patchwork)
+```
+
+```{r}
+df <- mosaicData::Whickham
+```
+
+```{r}
+df %>% 
+  group_by(smoker) %>%
+  summarise(
+    n = n(),
+    pct_alive = round(mean(outcome == "Alive") * 100, 1)
+  ) 
+#Correlation - when age is not taken into account, it appears that smoking is protective; 76.1% of smokers are alive compared t0 68.6 non smokers
+
+```
+
+```{r}
+df %>%
+  summarise(
+    min_age = min(age),
+    max_age = max(age),
+    mean_age = mean(age),
+    median_age = median(age)
+  )
+
+# And a histogram to see the shape
+ggplot(df, aes(x = age)) +
+  geom_histogram(binwidth = 5, fill = "#457b9d", color = "white") +
+  theme_minimal()
+```
+
+Causation
+First bar chart includes dots at random, indicating individuals colored by age group but grouped by smokers and non-smokers. Second one redistributes those folks into their age groups, showing the truth about relationship between mortality and smoking.
+```{r}
+windowsFonts(georgia = windowsFont("Georgia"))
+# Individual level data with all variables
+dot_data <- df %>%
+  mutate(
+    age_group = cut(age,
+                    breaks = c(18, 24, 44, 54, 64, 84),
+                    labels = c("18-24", "25-44", "45-54", "55-64", "65+"),
+                    include.lowest = TRUE),
+    dead = if_else(outcome == "Dead", 1, 0),
+    smoker_label = if_else(smoker == "Yes", "Smoker", "Non-Smoker")
+  )
+
+bar_data <- dot_data %>%
+  group_by(smoker_label) %>%
+  summarise(
+    pct_dead = round(mean(dead) * 100, 1),
+    .groups = "drop"
+  )
+dot_data_chart1 <- dot_data %>%
+  left_join(bar_data, by = "smoker_label") %>%
+  mutate(
+    y_pos = runif(n(), 0, pct_dead),
+    x_jitter = runif(n(), -0.25, 0.25),  # change -0.25, 0.25 to -0.15, 0.15
+    x_pos = if_else(smoker_label == "Smoker", 2 + x_jitter, 1 + x_jitter)
+  )
+#Change -0.25, 0.25 to -0.15, 0.15 on the x_jitter line!
+
+# Summary for bar heights
+# Make bar_data numeric
+bar_data_numeric <- bar_data %>%
+  mutate(x_numeric = if_else(smoker_label == "Smoker", 2, 1))
+
+p1 <- ggplot() +
+  # Bars using numeric x
+  geom_col(data = bar_data_numeric,
+           aes(x = x_numeric, y = pct_dead),
+           fill = "#a8dadc", alpha = 0.4, width = 0.5) +
+  # Dots using numeric x_pos
+  geom_point(data = dot_data_chart1,
+           aes(x = x_pos, y = y_pos, color = age_group),
+           alpha = 0.5, size = 1.5) +
+scale_color_manual(values = c(
+  "18-24" = "#2a9d8f",
+  "25-44" = "#57cc99",
+  "45-54" = "#e9c46a",
+  "55-64" = "#f4a261",
+  "65+"   = "#e63946"
+)) +
+theme(legend.position = "bottom",
+      legend.title = element_blank())+
+  # Labels using numeric x
+  geom_text(data = bar_data_numeric,
+            aes(x = x_numeric, y = pct_dead + 1.5,
+                label = paste0(pct_dead, "%")),
+            size = 4, fontface = "bold", color = "#1d3557") +
+  scale_x_continuous(breaks = c(1, 2),
+                   labels = c("Non-Smoker\n(n=732)", "Smoker\n(n=582)"),
+                     limits = c(0.5, 2.5)) +
+  labs(
+    title = "The Simpson's Paradox: Smokers Outlive Non-Smokers?",
+    subtitle = "20-year all-cause mortality proportion | Dot count reflects sample size",
+    color = "Age Group",
+    x = NULL, y = NULL
+    
+  ) +
+  theme_minimal() +
+    theme(
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA),
+    panel.grid = element_blank(),
+    axis.text.y = element_blank(),
+    axis.text.x = element_text(size = 11, face = "bold", family = "georgia"),
+    plot.title = element_text(size = 16, face = "bold", family = "georgia"),
+    plot.subtitle = element_text(size = 11, family = "georgia"),
+    plot.caption = element_text(hjust = 1, size = 8, family = "georgia"),
+    legend.text = element_text(family = "georgia"),
+    legend.position = "bottom"
+      )
+
+p1
+
+#Day 16: Correlation. % who died at 20-year follow-up by age group
+# Summary for bar heights by age group and smoker status
+bar_data2 <- dot_data %>%
+  group_by(age_group, smoker_label) %>%
+  summarise(pct_dead = round(mean(dead) * 100, 1), .groups = "drop")
+
+age_levels <- c("18-24", "25-44", "45-54", "55-64", "65+")
+
+set.seed(100)
+
+dot_data_chart2 <- dot_data %>%
+  left_join(bar_data2, by = c("age_group", "smoker_label")) %>%
+  mutate(
+    age_numeric = as.numeric(factor(age_group, levels = age_levels)),
+    x_offset = if_else(smoker_label == "Smoker", 0.22, -0.22),
+    x_jitter = runif(n(), -0.15, 0.15),
+    x_pos = age_numeric + x_offset + (x_jitter * 0.8),
+    y_pos = runif(n(), 0, pct_dead * 0.9)
+    #y_pos = runif(n(), 0, pct_dead)
+  )
+
+bar_data2_numeric <- bar_data2 %>%
+  mutate(
+    age_numeric = as.numeric(factor(age_group, levels = age_levels)),
+    x_offset = if_else(smoker_label == "Smoker", 0.22, -0.22),
+    x_pos = age_numeric + x_offset
+  )
+
+p2 <- ggplot() +
+  geom_col(data = bar_data2_numeric,
+           aes(x = x_pos, y = pct_dead, fill = smoker_label),
+           alpha = 0.3, width = 0.4) +
+  scale_fill_manual(values = c(
+    "Non-Smoker" = "#2a9d8f",
+    "Smoker"     = "#e63946"
+  )) +
+  geom_point(data = dot_data_chart2,
+             aes(x = x_pos, y = y_pos, color = smoker_label),
+             alpha = 0.5, size = 1.5) +
+  geom_text(data = bar_data2_numeric,
+          aes(x = x_pos, y = pct_dead + 2,
+              label = paste0(pct_dead, "%")),
+          size = 3, fontface = "bold", color = "#1d3557") +
+  scale_color_manual(values = c(
+    "Non-Smoker" = "#2a9d8f",
+    "Smoker"     = "#e63946"
+  )) +
+  scale_x_continuous(breaks = 1:5,
+                     labels = age_levels) +
+  labs(
+    title = "Stratifying By Age Reveals the Truth.",
+    subtitle = "20-year all-cause mortality proportion, by age group",
+    x = NULL, y = NULL,
+    color = NULL,
+    fill = NULL,
+    caption = "Data: Whickham Study, 1972-1974 (Appleton et al. 1996) | #30DayChartChallenge Day 15 & 16 (Correlation & Causation)\nCreated by: Lyndsay Miles"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA),
+    panel.grid = element_blank(),
+    axis.text.y = element_blank(),
+    axis.text.x = element_text(size = 11, face = "bold", family = "georgia"),
+    plot.title = element_text(size = 22, face = "bold", family = "georgia"),
+    plot.subtitle = element_text(size = 14, family = "georgia"),
+    plot.caption = element_text(hjust = 1, size = 10, family = "georgia"),
+    legend.text = element_text(family = "georgia"),
+    legend.position = "bottom"
+      )
+
+p2
+
+p3 <- p1/p2
+ggsave("img/cc_2026_day15.png", p1,
+       width = 10, height = 6, 
+       dpi = 300)
+
+ggsave("img/cc_2026_day16.png", p2,
+       width = 10, height = 6, 
+       dpi = 300)
+```
+
+```{r}
+ggsave("img/cc_2026_day15_16.png", p3,
+       width = 10, height = 6, 
+       dpi = 300)
+p3
+```
+
+Initial analysis of the data on women showed that over the 20-year follow-up, 31.4% of non-smokers had died, while only 23.9% of smokers had died
