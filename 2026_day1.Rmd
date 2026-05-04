@@ -59,15 +59,12 @@ grid_df <- spending_purpose_usa %>%
     x  = sq %% 10,
     y  = sq %/% 10
   )
-```
-Add dyslexic-friendly fonts
-```{r}
+
+#plot
 font_add_google("Atkinson Hyperlegible", "atkinson")
 showtext_auto()
-```
-Plot
-```{r}
-ggplot(grid_df, aes(x = x, y = y, fill = spending_purpose)) +
+showtext_opts(dpi = 300)
+p <- ggplot(grid_df, aes(x = x, y = y, fill = spending_purpose)) +
   geom_tile(color = "white", linewidth = 0.8) +
   scale_fill_brewer(palette = "BrBG")+
   coord_equal() +
@@ -80,19 +77,25 @@ ggplot(grid_df, aes(x = x, y = y, fill = spending_purpose)) +
   theme_void() +
   theme(
     text       = element_text(family = "atkinson"),
-    plot.title      = element_text(family = "atkinson", face = "bold", size = 14, hjust = 0,
+    plot.title      = element_text(family = "atkinson", face = "bold", size = 24, hjust = 0,
                                    margin = margin(b = 10)),
-    plot.subtitle      = element_text(face = "bold", size = 12, hjust = 0,
+    plot.subtitle      = element_text(face = "bold", size = 16, hjust = 0,
                                    margin = margin(b = 10)),
-    plot.caption    = element_text(size = 8, color = "gray50", hjust = 0,
+    plot.caption    = element_text(size = 12, color = "gray50", hjust = 0,
                                    margin = margin(t = 10)),
     legend.position = "right",
-    legend.text     = element_text(size = 9),
+    legend.text     = element_text(size = 12),
     plot.margin     = margin(15, 15, 15, 15),
     panel.background = element_rect(fill = "#FAF0E6", colour = "#704214"),
     plot.background = element_rect(fill = "#FAF0E6", colour = NA)
   ) +
   guides(fill = guide_legend(ncol = 1)) 
+
+ggsave("img/cc_2026_day1.png",p,
+       width = 10,
+       height = 12,    
+       dpi = 300,
+       bg = "#FAF0E6") 
 ```
 Text: Day 1 of the #30DayChartChallenge, Part to Whole. Here is a waffle chart made with #Rstats (#ggplot2) that shows how health funds were spent in the U.S. in 2023. 
 I used this week's #tidytuesday dataset for this chart.

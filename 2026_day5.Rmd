@@ -56,9 +56,6 @@ df %>% filter(is.na(region))
 ```
 
 ```{r}
-font_add_google("Atkinson Hyperlegible", "atkinson")
-showtext_auto()
-
 # Highlight USA, CAN, MEX
 df <- df %>%
   mutate(
@@ -75,7 +72,11 @@ df <- df %>%
 ```
 
 ```{r}
-ggplot(df, aes(x = region, y = value)) +
+font_add_google("Atkinson Hyperlegible", "atkinson")
+showtext_auto()
+showtext_opts(dpi = 300)
+
+p <- ggplot(df, aes(x = region, y = value)) +
   geom_beeswarm(
     data  = df %>% filter(highlight == "Other"),
     size  = 1.2, alpha = 0.5, cex = 1.5, 
@@ -105,11 +106,11 @@ ggplot(df, aes(x = region, y = value)) +
   theme_minimal() +
   theme(
     text                  = element_text(family = "atkinson"),
-    plot.title            = element_text(face = "bold", size = 14, hjust = 0,
+    plot.title            = element_text(face = "bold", size = 24, hjust = 0,
                                          margin = margin(b = 6)),
-    plot.subtitle         = element_text(size = 10, hjust = 0,
+    plot.subtitle         = element_text(size = 16, hjust = 0,
                                          margin = margin(b = 16)),
-    plot.caption          = element_text(size = 7, color = "gray50", hjust = 0,
+    plot.caption          = element_text(size = 12, color = "gray50", hjust = 0,
                                          margin = margin(t = 12)),
     plot.title.position   = "plot",
     plot.caption.position = "plot",
@@ -117,13 +118,16 @@ ggplot(df, aes(x = region, y = value)) +
     panel.background      = element_rect(fill = "#f5ebe0", color = NA),
     panel.grid.major.x    = element_blank(),
     panel.grid.major.y    = element_line(color = "#e0d5c8"),
-    axis.text.x           = element_text(size = 8, face = "bold"),
-    axis.text.y           = element_text(size = 9),
+    axis.text.x           = element_text(size = 12, face = "bold"),
+    axis.text.y           = element_text(size = 12),
     legend.position       = "bottom",
     legend.text           = element_text(size = 9),
     plot.margin           = margin(20, 20, 5, 20)
   ) +
   guides(color = guide_legend(override.aes = list(size = 4)))
+
+ggsave("img/cc_2026_day5.png", p, width = 16, height = 7, dpi = 300) 
+p
 ```
 Day 5 of the #30DayChartChallenge (Experimental) 🐝
 

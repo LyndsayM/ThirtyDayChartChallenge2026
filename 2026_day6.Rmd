@@ -78,7 +78,7 @@ library(showtext)
 font_add_google("Playfair Display", "playfair")
 showtext_auto()
 # Plot
-ggplot(rsf, aes(x = year, y = rank, group = country)) +
+p <- ggplot(rsf, aes(x = year, y = rank, group = country)) +
   geom_line(data = rsf %>% filter(highlight == "Other"),
             color = "#c0c0c0", linewidth = 0.8, alpha = 0.7) +
   geom_line(data = rsf %>% filter(highlight == "United States"),
@@ -110,23 +110,26 @@ ggplot(rsf, aes(x = year, y = rank, group = country)) +
   theme_minimal() +
   theme(
     text                  = element_text(family = "playfair"),
-    plot.title            = element_text(face = "bold", size = 16, hjust = 0,
+    plot.title            = element_text(face = "bold", size = 24, hjust = 0,
                                          margin = margin(b = 6)),
-    plot.subtitle         = element_text(size = 12, hjust = 0,
+    plot.subtitle         = element_text(size = 16, hjust = 0,
                                          margin = margin(b = 16)),
-    plot.caption          = element_text(size = 10, color = "#2d2d2d", hjust = 0,
+    plot.caption          = element_text(size = 12, color = "#2d2d2d", hjust = 0,
                                          margin = margin(t = 12)),
     plot.title.position   = "plot",
     plot.caption.position = "plot",
-    plot.background       = element_rect(fill = "#ffffff", color = NA),
-    panel.background      = element_rect(fill = "#ffffff", color = NA),
+    plot.background       = element_rect(fill = "#f5ebe0", color = NA),
+    panel.background      = element_rect(fill = "#f5ebe0", color = NA),
     panel.grid.major.x    = element_blank(),
     panel.grid.minor      = element_blank(),
-    axis.text             = element_text(size = 9),
+    axis.text             = element_text(size = 12),
     legend.position       = "bottom",
-    legend.text           = element_text(size = 9),
+    legend.text           = element_text(size = 12),
     plot.margin           = margin(20, 100, 20, 20)
   )
+
+ggsave("img/cc_2026_day6.png", p, width = 16, height = 7, dpi = 300) 
+p
 ```
 #30DayChartChallenge | Day 6 — Data Day, Reporters Without Borders 🗞️
 

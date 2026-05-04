@@ -167,7 +167,7 @@ region_labels <- rsf_polar %>%
   )
 
 # --- Plot ---
-ggplot(rsf_polar, aes(x = country_id, y = change_capped, fill = region)) +
+p <- ggplot(rsf_polar, aes(x = country_id, y = change_capped, fill = region)) +
   geom_col(width = 0.8, color = "white", linewidth = 0.2) +
   geom_text(
     data = rsf_polar %>% 
@@ -217,25 +217,28 @@ ggplot(rsf_polar, aes(x = country_id, y = change_capped, fill = region)) +
   theme(
     aspect.ratio          = 1,
     text                  = element_text(family = "atkinson"),
-    plot.title            = element_text(face = "bold", size = 14, hjust = 0.5,
+    plot.title            = element_text(face = "bold", size = 24, hjust = 0.5,
                                          margin = margin(b = 6)),
-    plot.subtitle         = element_text(size = 9, hjust = 0.5,
+    plot.subtitle         = element_text(size = 16, hjust = 0.5,
                                          margin = margin(b = 16)),
-    plot.caption          = element_text(size = 7, color = "#2d2d2d", hjust = 0,
+    plot.caption          = element_text(size = 12, color = "#2d2d2d", hjust = 0,
                                          margin = margin(t = 12)),
     plot.title.position   = "plot",
     plot.caption.position = "plot",
-    plot.background       = element_rect(fill = "#f2f0ed", color = NA),
-    panel.background      = element_rect(fill = "#f2f0ed", color = NA),
-    panel.grid.major      = element_line(color = "#d8d8d8", linewidth = 0.3),
+    plot.background       = element_rect(fill = "#EAF4FB", color = NA),
+    panel.background      = element_rect(fill = "#EAF4FB", color = NA),
+    panel.grid.major      = element_line(color = "#C5DCF0", linewidth = 0.3),
     panel.grid.minor      = element_blank(),
     panel.spacing         = unit(0, "cm"),
     axis.text.x           = element_blank(),
-    axis.text.y           = element_text(size = 7, color = "gray50",
+    axis.text.y           = element_text(size = 12, color = "gray50",
                                          family = "atkinson"),
     legend.position       = "none",
     plot.margin           = margin(10, 10, 10, 10)
   )
+
+ggsave("img/cc_2026_day8.png", p, width = 16, height = 7, dpi = 300)
+p
 ```
 Day 8 of the #30DayChartChallenge (Circular) 🌐
 A starburst chart showing which countries have lost the most press freedom between 2002 and 2025, grouped by region. Each bar = one country. Longer bar = bigger decline.

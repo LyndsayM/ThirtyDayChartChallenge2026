@@ -37,7 +37,7 @@ fictional_15 <- tibble(
                   1.1, 1.0, 0.95)
 ) %>%
   mutate(character = reorder(character, net_worth_b))
-
+p <- 
 # --- Plot ---
 ggplot(fictional_15, aes(x = net_worth_b, y = character)) +
   geom_segment(
@@ -86,24 +86,25 @@ geom_text(
   theme(
     text                  = element_text(family = "lato"),
     plot.title            = element_text(family = "playfair", face = "bold",
-                                         size = 16, hjust = 0,
+                                         size = 24, hjust = 0,
                                          margin = margin(b = 6)),
    
-    plot.caption          = element_text(size = 9, color = "#2d2d2d", hjust = 0,
+    plot.caption          = element_text(size = 12, color = "#2d2d2d", hjust = 0,
                                          margin = margin(t = 12)),
     plot.title.position   = "plot",
     plot.caption.position = "plot",
-    plot.background       = element_rect(fill = "#eeeef2", color = NA),
-    panel.background      = element_rect(fill = "#eeeef2", color = NA),
-    panel.grid.major.y    = element_line(color = "#dddde8"),
+    plot.background       = element_rect(fill = "#EAF4FB", color = NA),
+    panel.background      = element_rect(fill = "#EAF4FB", color = NA),
+    panel.grid.major.y    = element_line(color = "#C5DCF0"),
     panel.grid.major.x    = element_blank(),
     panel.grid.minor      = element_blank(),
-    axis.text.y           = element_text(size = 9, color = "#2d2d2d"),
+    axis.text.y           = element_text(size = 12, color = "#2d2d2d"),
     axis.text.x           = element_blank(),
     legend.position       = "none",
     plot.margin           = margin(20, 20, 20, 60)
   )
-
+ggsave("img/cc_2026_day9.png", p, width = 16, height = 7, dpi = 300)
+p
 ```
 
 

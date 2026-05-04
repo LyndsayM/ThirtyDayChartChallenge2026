@@ -82,10 +82,8 @@ regional_avg <- df_pfi_region %>%
 ```{r}
 font_add_google("Playfair Display", "playfair")
 showtext_auto()
-```
-
-```{r}
-ggplot() +
+showtext_opts(dpi = 300)
+p <- ggplot() +
   # Individual country lines  faint
   geom_line(
     data  = df_pfi_region %>% filter(!is_usa),
@@ -110,29 +108,32 @@ ggplot() +
   labs(
     title    = "Zooming Out: U.S. Press Freedom in a Global Context",
     subtitle = "Grey lines = individual countries | Dashed navy = regional average | Red = United States",
-    caption = "Source: Reporters Without Borders Press Freedom Index | #30DayChartChallenge Day 7\nNote: North America regional average includes USA, Canada and Mexico only\nCreated by: Lyndsay Miles",
+    caption = "Source: Reporters Without Borders Press Freedom Index. Note: North America regional average includes USA, Canada and Mexico only\n#30DayChartChallenge Day 7 | Created by: Lyndsay Miles",
     x        = NULL,
     y        = "Rank (lower = more press freedom)"
   ) +
   theme_minimal() +
   theme(
     text                  = element_text(family = "playfair"),
-    plot.title            = element_text(face = "bold", size = 14, hjust = 0,
+    plot.title            = element_text(face = "bold", size = 24, hjust = 0,
                                          margin = margin(b = 6)),
-    plot.subtitle         = element_text(size = 9, hjust = 0,
+    plot.subtitle         = element_text(size = 16, hjust = 0,
                                          margin = margin(b = 16)),
-    plot.caption          = element_text(size = 7, color = "#2d2d2d", hjust = 0,
+    plot.caption          = element_text(size = 12, color = "#2d2d2d", hjust = 0,
                                          margin = margin(t = 12)),
     plot.title.position   = "plot",
     plot.caption.position = "plot",
-    plot.background       = element_rect(fill = "#ffffff", color = NA),
-    panel.background      = element_rect(fill = "#ffffff", color = NA),
+    plot.background       = element_rect(fill = "#EAF4FB", color = NA),
+    panel.background      = element_rect(fill = "#EAF4FB", color = NA),
     panel.grid.minor      = element_blank(),
-    panel.grid.major      = element_line(color = "#f0f0f0"),
+    panel.grid.major      = element_line(color = "#C5DCF0"),
     strip.text            = element_text(face = "bold", size = 10),
-    axis.text             = element_text(size = 7),
+    axis.text             = element_text(size = 12),
     plot.margin           = margin(20, 20, 20, 20)
   )
+
+ggsave("img/cc_2026_day7.png", p, width = 16, height = 7, dpi = 300)
+p
 ```
 Day 7 of the #30DayChartChallenge (Multiscale). Staying with the Reporters Without Borders dataset, today I'm zooming out to look at U.S. Press Freedom Rank in a regional and global context.
 

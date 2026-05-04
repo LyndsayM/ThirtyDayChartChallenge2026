@@ -46,7 +46,7 @@ nhanes_clean %>% count(HealthGen)
 ```{r}
 library(ggthemes)
 
-ggplot(nhanes_clean, aes(x = HealthGen, y = SleepHrsNight, fill = HealthGen)) +
+p<-ggplot(nhanes_clean, aes(x = HealthGen, y = SleepHrsNight, fill = HealthGen)) +
   geom_violin(trim = FALSE, alpha = 0.8, scale = "width") +
   geom_boxplot(width = 0.1, fill = "white", outlier.shape = NA) +
 scale_fill_brewer(palette = "YlGnBu", direction = -1)  +
@@ -60,8 +60,15 @@ scale_fill_brewer(palette = "YlGnBu", direction = -1)  +
   ) +
   theme_gdocs()+
   theme(legend.position = "none",
-        plot.caption = element_text(hjust = 1)
+        plot.title = element_text(size = 24),
+        plot.subtitle = element_text(size = 16),
+        plot.caption = element_text(hjust = 1, size = 12),
+        plot.background       = element_rect(fill = "#EAF4FB", color = NA),
+        panel.background      = element_rect(fill = "#EAF4FB", color = NA)
 
 )
+
+ggsave("img/cc_2026_day11.png", p, width = 16, height = 7, dpi = 300,
+       device = ragg::agg_png)
 ```
 

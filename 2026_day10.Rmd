@@ -104,8 +104,8 @@ pictogram_data <- tibble(
   group = c(rep("Won Star Baker", 29), "Never Won Star Baker")
 )
 
-ggplot(pictogram_data, aes(x = x, y = y, color = group)) +
-  geom_text(label = "🧁", size = 10, family = "EmojiOne") +
+p <- ggplot(pictogram_data, aes(x = x, y = y, color = group)) +
+  geom_text(label = "🧁", size = 24, family = "EmojiOne") +
   scale_y_continuous(expand = expansion(mult = 0.1)) +
   scale_x_continuous(expand = expansion(mult = 0.1)) +
   scale_color_manual(values = c(
@@ -120,12 +120,18 @@ ggplot(pictogram_data, aes(x = x, y = y, color = group)) +
     caption = "Data: Kaggle GBBO | #30DayChartChallenge Day 10\nCreated by: Lyndsay Miles",
     color = NULL
   ) +
-  theme_void() +
+  theme_void(base_size = 12) +
   theme(
-    plot.title = element_text(family = "georgia", hjust = 0.5, size = 14),
-    plot.subtitle = element_text(hjust = 0.5),
+    plot.title = element_text(family = "georgia", hjust = 0.5, size = 24),
+    plot.subtitle = element_text(hjust = 0.5, size = 16),
+    plot.caption = element_text(hjust = 0.5, size = 12),
+    plot.background       = element_rect(fill = "#EAF4FB", color = NA),
+    panel.background      = element_rect(fill = "#EAF4FB", color = NA),
     legend.position = "bottom"
   )
+
+ggsave("img/cc_2026_day10.png", p, width = 16, height = 7, dpi = 300,
+       device = ragg::agg_png)
 ```
 
 

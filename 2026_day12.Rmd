@@ -1,0 +1,222 @@
+---
+title: "cc_2026_day12"
+author: "Lyndsay Miles"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+30 Day Chart Challenge 2026 Day 12: Flowing Data
+
+https://www.kaggle.com/datasets/sarahvitvitskiy/great-british-bake-off-results-seasons-1-14
+```{r}
+library(tidyverse)
+```
+
+```{r}
+s1 <- read.csv("data/Season_1.csv")
+s2 <- read.csv("data/Season_2.csv")
+s3 <- read.csv("data/Season_3.csv")
+s4 <- read.csv("data/Season_4.csv")
+s5 <- read.csv("data/Season_5.csv")
+s6 <- read.csv("data/Season_6.csv")
+s7 <- read.csv("data/Season_7.csv")
+s8 <- read.csv("data/Season_8.csv")
+s9 <- read.csv("data/Season_9.csv")
+s10 <- read.csv("data/Season_10.csv")
+s11 <- read.csv("data/Season_11.csv")
+s12 <- read.csv("data/Season_12.csv")
+s13 <- read.csv("data/Season_13.csv")
+s14 <- read.csv("data/Season_14.csv")
+
+```
+Day 10 #30DayChartChallenge : Pop Culture
+"Do bakers who perform well in technicals make it to the final?"
+```{r}
+df14 <- s14 %>% select(Baker, Occupation, Round_1_Technical, Round_1, Round_2_Technical, Round_2, Round_3_Technical, Round_3, Round_4_Technical, Round_4, Round_5_Technical, Round_5, Round_6_Technical, Round_6, Round_7_Technical, Round_7, Round_8_Technical, Round_8, Round_9_Technical, Round_9, Round_10_Technical, Round_10, Technicals, Star_Bakers) %>% 
+  mutate(series = "14")
+
+df13 <- s13 %>% select(Baker, Occupation,Round_1_Technical, Round_1, Round_2_Technical, Round_2, Round_3_Technical, Round_3, Round_4_Technical, Round_4, Round_5_Technical, Round_5, Round_6_Technical, Round_6, Round_7_Technical, Round_7, Round_8_Technical, Round_8, Round_9_Technical, Round_9, Round_10_Technical, Round_10, Technicals, Star_Bakers) %>% 
+  mutate(series = "13")
+
+df12 <- s12 %>% select(Baker, Occupation, Round_1_Technical, Round_1, Round_2_Technical, Round_2, Round_3_Technical, Round_3, Round_4_Technical, Round_4, Round_5_Technical, Round_5, Round_6_Technical, Round_6, Round_7_Technical, Round_7, Round_8_Technical, Round_8, Round_9_Technical, Round_9, Round_10_Technical, Round_10, Technicals, Star_Bakers) %>% 
+  mutate(series = "12")
+
+df11 <- s11 %>% select(Baker, Occupation, Round_1_Technical, Round_1, Round_2_Technical, Round_2, Round_3_Technical, Round_3, Round_4_Technical, Round_4, Round_5_Technical, Round_5, Round_6_Technical, Round_6, Round_7_Technical, Round_7, Round_8_Technical, Round_8, Round_9_Technical, Round_9, Round_10_Technical, Round_10, Technicals, Star_Bakers) %>% 
+  mutate(series = "11")
+
+df10 <- s10 %>% select(Baker, Occupation, Round_1_Technical, Round_1, Round_2_Technical, Round_2, Round_3_Technical, Round_3, Round_4_Technical, Round_4, Round_5_Technical, Round_5, Round_6_Technical, Round_6, Round_7_Technical, Round_7, Round_8_Technical, Round_8, Round_9_Technical, Round_9, Round_10_Technical, Round_10, Technicals, Star_Bakers) %>% 
+  mutate(series = "10")
+
+df9 <- s9 %>% select(Baker, Occupation, Round_1_Technical, Round_1, Round_2_Technical, Round_2, Round_3_Technical, Round_3, Round_4_Technical, Round_4, Round_5_Technical, Round_5, Round_6_Technical, Round_6, Round_7_Technical, Round_7, Round_8_Technical, Round_8, Round_9_Technical, Round_9, Round_10_Technical, Round_10, Technicals, Star_Bakers) %>%
+  mutate(series = "9")
+
+df8 <- s8 %>% select(Baker, Occupation, Round_1_Technical, Round_1, Round_2_Technical, Round_2, Round_3_Technical, Round_3, Round_4_Technical, Round_4, Round_5_Technical, Round_5, Round_6_Technical, Round_6, Round_7_Technical, Round_7, Round_8_Technical, Round_8, Round_9_Technical, Round_9, Round_10_Technical, Round_10, Technicals, Star_Bakers) %>%
+  mutate(series = "8")
+
+df7 <- s7 %>% select(Baker, Occupation, Round_1_Technical, Round_1, Round_2_Technical, Round_2, Round_3_Technical, Round_3, Round_4_Technical, Round_4, Round_5_Technical, Round_5, Round_6_Technical, Round_6, Round_7_Technical, Round_7, Round_8_Technical, Round_8, Round_9_Technical, Round_9, Round_10_Technical, Round_10, Technicals, Star_Bakers) %>% 
+  mutate(Round_1_Technical = as.integer(str_remove_all(Round_1_Technical, "[^0-9]"))) %>%
+  mutate(series = "7")
+
+df6 <- s6 %>% select(Baker, Occupation, Round_1_Technical, Round_1, Round_2_Technical, Round_2, Round_3_Technical, Round_3, Round_4_Technical, Round_4, Round_5_Technical, Round_5, Round_6_Technical, Round_6, Round_7_Technical, Round_7, Round_8_Technical, Round_8, Round_9_Technical, Round_9, Round_10_Technical, Round_10, Technicals, Star_Bakers) %>%
+  mutate(series = "6")
+
+df5 <- s5 %>% select(Baker, Occupation, Round_1_Technical, Round_1, Round_2_Technical, Round_2, Round_3_Technical, Round_3, Round_4_Technical, Round_4, Round_5_Technical, Round_5, Round_6_Technical, Round_6, Round_7_Technical, Round_7, Round_8_Technical, Round_8, Round_9_Technical, Round_9, Round_10_Technical, Round_10, Technicals, Star_Bakers) %>%
+  mutate(series = "5")
+
+gbbo <- bind_rows(df5, df6, df7, df8, df9, df10, df11, df12, df13, df14) %>%
+  mutate(across(where(is.character), ~str_remove_all(., "[^a-zA-Z0-9 ]")))%>%
+  rename(occupation = Occupation)
+
+```
+
+```{r}
+gbbo <- gbbo %>%
+  mutate(occupation_category = case_when(
+    # Catch the two stragglers first
+    str_detect(occupation, regex("retirement living|shared lives", ignore_case = TRUE)) ~ "Public Service & Charity",
+    
+    # Main categories
+    str_detect(occupation, regex("engineer|scientist|physicist|researcher|radiographer|nuclear|aerospace|electronics|chemical|cardiovascular|diagnostic|database|intelligence analyst|software|IT|digital|technology", ignore_case = TRUE)) ~ "STEM & Tech",
+    
+    str_detect(occupation, regex("nurse|doctor|anaesthetist|pharmacy|mental health|speech therap|veterinar|midwife|health adviser|blood courier", ignore_case = TRUE)) ~ "Healthcare",
+    
+    str_detect(occupation, regex("teacher|teaching|student|lecturer|education|tutor", ignore_case = TRUE)) ~ "Education & Students",
+    
+    str_detect(occupation, regex("designer|musician|photographer|sculptor|artist|art|pantomime|theatre|architect|garden designer", ignore_case = TRUE)) ~ "Creative & Arts",
+    
+    str_detect(occupation, regex("accountant|banker|finance|manager|consultant|HR|sales|marketer|project|broker|administrator|PA |personal assistant|client|print shop", ignore_case = TRUE)) ~ "Business & Finance",
+    
+    str_detect(occupation, regex("builder|driver|hairdresser|carpenter|plumber|operative|waiter|cashier|shop assistant|sampling", ignore_case = TRUE)) ~ "Trades & Service",
+    
+    str_detect(occupation, regex("police|fire|welfare|civil servant|prison|army|military|security|inspector|officer|pastor|charity|countryside|support worker", ignore_case = TRUE)) ~ "Public Service & Charity",
+    
+    # Combined category
+    str_detect(occupation, regex("mother|parent|nanny|carer|homemaker|retired|semiretired", ignore_case = TRUE)) ~ "Retired & Homemaker",
+    
+    TRUE ~ "Other"
+  )) %>%
+  mutate(
+    total_episodes = case_when(
+      Round_10 %in% c("WINNER", "Runnerup") ~ 10,
+      Round_10 == "OUT" ~ 10,
+      Round_9  == "OUT" ~ 9,
+      Round_8  == "OUT" ~ 8,
+      Round_7  == "OUT" ~ 7,
+      Round_6  == "OUT" ~ 6,
+      Round_5  == "OUT" ~ 5,
+      Round_4  == "OUT" ~ 4,
+      Round_3  == "OUT" ~ 3,
+      Round_2  == "OUT" ~ 2,
+      Round_1  == "OUT" ~ 1,
+      TRUE ~ NA_real_
+    )
+  )
+
+gbbo %>% count(occupation_category) %>% arrange(desc(n))
+```
+
+```{r}
+gbbo %>%
+  filter(total_episodes == 10) %>%
+  select(Baker, series, Round_10, total_episodes)
+
+gbbo %>% 
+  count(total_episodes) %>% 
+  arrange(total_episodes)
+
+gbbo %>%
+  group_by(occupation_category) %>%
+  summarise(
+    n = n(),
+    avg_episodes = round(mean(total_episodes, na.rm = TRUE), 1),
+    median_episodes = median(total_episodes, na.rm = TRUE)
+  ) %>%
+  arrange(desc(avg_episodes))
+```
+
+```{r}
+#bootstrap to calculate CIs around the mean. DOing this because there's wide variance between size in groups.
+
+# Set seed for reproducibility
+set.seed(100)
+
+# Bootstrap function - resamples each group 1000 times and calculates mean
+bootstrap_ci <- gbbo %>%
+  group_by(occupation_category) %>%
+  summarise(
+    n = n(),
+    mean_episodes = mean(total_episodes, na.rm = TRUE),
+    # Bootstrap 1000 resamples
+    lower_ci = quantile(replicate(1000, mean(sample(total_episodes, replace = TRUE))), 0.025),
+    upper_ci = quantile(replicate(1000, mean(sample(total_episodes, replace = TRUE))), 0.975)
+  ) %>%
+  mutate(label = paste0(occupation_category, " (n=", n, ")"))%>%
+  arrange(desc(mean_episodes))
+
+```
+
+```{r}
+#visualize scatterplot with bootstrapped confidence intervals
+# Join bootstrap results back to individual baker data
+plot_data <- gbbo %>%
+  left_join(bootstrap_ci, by = "occupation_category")%>%
+  mutate(finalist = total_episodes == 10) %>%
+  mutate(occupation_category = fct_reorder(occupation_category, mean_episodes))
+```
+
+```{r}
+p <- ggplot() +
+  # Confidence interval
+  geom_errorbar(data = bootstrap_ci %>%
+                mutate(occupation_category = fct_reorder(occupation_category, mean_episodes)),
+              aes(y = occupation_category, xmin = lower_ci, xmax = upper_ci),
+              orientation = "y",
+              width = 0.2, linewidth = 0.8, color = "#1d3557") +
+  # Mean dot
+  geom_point(data = bootstrap_ci %>%
+               mutate(occupation_category = fct_reorder(occupation_category, mean_episodes)),
+             aes(x = mean_episodes, y = occupation_category, fill = occupation_category),
+             shape = 21,size = 6, color = "#1d3557", stroke = 1) +
+  #put y axis labels next to the error bars
+  geom_text(data = bootstrap_ci %>%
+            mutate(occupation_category = fct_reorder(occupation_category, mean_episodes)),
+          aes(x = lower_ci - 0.15, y = occupation_category, 
+              label = paste0(occupation_category, " (n=", n, ")")),
+          size = 4, hjust = 1, color = "grey30") +
+  
+  scale_x_continuous(breaks = 1:10, limits = c(-1, 10))+
+  scale_fill_brewer(palette = "Set2")+
+  labs(
+    title = "Does Your Day Job Predict How Far You Get in the Great British Bake Off?",
+    subtitle = "Average number of weeks a baker stayed in the tent, by occupation (Series 5\u201314)",
+    x = "", y = "",
+    caption = "Data: Kaggle GBBO dataset | #30DayChartChallenge Day 12\nBootstrap technique used to calculate 95% confidence intervals. Note: Bakers may appear in multiple occupation categories\nCreated by: Lyndsay Miles"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.y = element_blank(),
+    legend.position = "none",
+    panel.grid.major.x = element_line(color = "grey85", linewidth = 0.3),
+    panel.grid.minor.x = element_blank(),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank(),
+    plot.title = element_text(size = 24),
+    plot.subtitle = element_text(size = 16),
+    plot.caption = element_text(hjust = 1, size = 12),
+    plot.caption.position = "plot",
+    plot.background       = element_rect(fill = "#EAF4FB", color = NA),
+    panel.background      = element_rect(fill = "#EAF4FB", color = NA),
+    panel.border     = element_blank()
+    
+  )
+p
+ggsave("img/cc_2026_day12.png", p, width = 16, height = 7, dpi = 300,
+       device = ragg::agg_png)
+```
+#Day12 of the #30DayChartChallenge and I went back to the Great British Bake Off 🧁 dataset to create a FlowingData-inspired viz. I've been curious whether a contestant's occupation might predict their success in the series. Many contestants had multiple occupations, so I created several general categories and categorized each contestant into all that applied. The chart shows the mean number of episodes contestants survived by occupation group, with total number per group and bootstrapped 95% confidence intervals.
+
+#Rstats #30DayChartChallenge #DataVisualization
+Data: Kaggle GBBO dataset (Series 5–14)

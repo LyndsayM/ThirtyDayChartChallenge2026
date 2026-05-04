@@ -54,16 +54,11 @@ df <- spending_purpose %>%
          year %in% c("2018", "2022"))%>% 
   left_join(pop, by = c("iso3_code", "year"))%>%
   mutate(percap_spend = value/tot_n)
-```
 
-Add dyslexic-friendly fonts
-```{r}
 font_add_google("Atkinson Hyperlegible", "atkinson")
 showtext_auto()
-```
-
-```{r}
-plot <- ggplot(
+showtext_opts(dpi = 300)
+p <- ggplot(
   data = df,
   aes(y = percap_spend, x = year, color = iso3_code, group = iso3_code))+
   geom_point()+
@@ -83,25 +78,27 @@ plot <- ggplot(
   ) +
   theme(
     text                  = element_text(family = "atkinson"),
-    plot.title            = element_text(face = "bold", size = 16, hjust = 0,
+    plot.title            = element_text(face = "bold", size = 24, hjust = 0,
                                          margin = margin(b = 6)),
-    plot.subtitle         = element_text(size = 10, hjust = 0,
+    plot.subtitle         = element_text(size = 16, hjust = 0,
                                          margin = margin(b = 16)),
-    plot.caption          = element_text(size = 7, color = "gray50", hjust = 0,
+    plot.caption          = element_text(size = 12, color = "gray50", hjust = 0,
                                          margin = margin(t = 12)),
     plot.title.position   = "plot",
     plot.caption.position = "plot",
     plot.background       = element_rect(fill = "#f5ebe0", color = NA),
-    axis.text.x = element_text(size = 10, face = "bold"),
-    axis.text.y           = element_text(size = 10, face = "bold", hjust = 1,
+    axis.text.x = element_text(size = 12, face = "bold"),
+    axis.text.y           = element_text(size = 12, face = "bold", hjust = 1,
                                          margin = margin(r = 8)),
     legend.position       = "bottom",
-    legend.text           = element_text(size = 9),
+    legend.text           = element_text(size = 12),
     plot.margin           = margin(20, 20, 20, 20)
   ) +
   guides(color = guide_legend(override.aes = list(size = 3)))
 
-plot
+
+ggsave("img/cc_2026_day4.png", p, width = 16, height = 7, dpi = 300) 
+p
 ```
 Day 4 of the #30DayChartChallenge: Slope — visualizing change over time.
 Sticking with my theme, I returned to the WHO GHED spending purpose data from Day 1 to examine per capita preventive care spending changes across North America between 2018 and 2022.
