@@ -1,0 +1,132 @@
+---
+title: "cc_2026_day20"
+author: "Lyndsay Miles"
+date: "`r Sys.Date()`"
+output: html_document
+---
+#Day20 #30DayChartChallenge: Timeseries - Global Change
+Let's start with UNICEF which is the next theme day: https://data.unicef.org/resources/resource-type/datasets/
+UNICEF, Indicator: Children population as proportion of total population (%)
+UNICEF defines the Children population as proportion of total population (%) as the number of individuals aged 0 to 17 years divided by the total population, multiplied by 100.
+
+https://data.unicef.org/resources/data_explorer/unicef_f/?ag=UNICEF&df=DM&ver=1.0&dq=.DM_POP_CHILD_PROP...&startPeriod=2016&endPeriod=2026 Accessed 4/20/2026
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(lubridate)
+library(showtext)
+library(ggtext)
+font_add_google("Outfit", "outfit")
+showtext_auto()
+```
+
+```{r}
+unicef <- read.csv("data/UNICEF_1.0_DM_POP_CHILD_PROP.csv")
+df <- unicef %>% 
+  rename_with(~ tolower(gsub(" ", "", gsub(".", "", .x, fixed = TRUE), fixed = TRUE))) 
+```
+
+```{r}
+names(df)
+#vars with only one value: indicator, residence, currentage, unit_measure, unit_multiplier, obs_status
+#unique(df$indicator) #"DM_POP_CHILD_PROP: Children population as proportion of total population (%)"
+#vars to consider
+
+unique(df$geographicarea) #429
+unique(df$sex) #Total, Male, Female
+unique(df$obs_status)
+
+geog_list <- df %>% group_by(geographicarea) %>% 
+  summarize(N = n())
+
+unfpa <- df %>% 
+   
+  filter(str_detect(geographicarea, regex("UNFPA_", ignore_case = TRUE)),
+          obs_value > 0,
+          sex == "_T: Total") %>% 
+  select(geographicarea, time_period, obs_value)
+unfpa_clean <- unfpa %>%
+  mutate(region_short = gsub("UNFPA_.*: (.+) \\(UNFPA\\)", "\\1", geographicarea))
+```
+UNFPA (United Nations Population Fund): This is the UN's sexual and reproductive health agency. Its mission is to ensure that every pregnancy is wanted, every childbirth is safe, and every young person's potential is fulfilled. They work with governments and partners across the region to provide reproductive health care, reduce maternal deaths, combat gender-based violence, and support family planning.
+
+Population change by UNFPA region, 2020-2025
+
+```{r}
+dumbbell_data <- unfpa_clean %>%
+  filter(time_period %in% c(2020, 2025)) %>%
+  select(region_short, time_period, obs_value) %>%
+  pivot_wider(names_from = time_period, values_from = obs_value, 
+              names_prefix = "yr_") %>%
+  mutate(change = yr_2025 - yr_2020,
+         change_label = paste0(ifelse(change > 0, "+", ""), round(change, 1)),
+         region_short = reorder(region_short, yr_2020))
+
+font_add_google("Roboto", "roboto")
+showtext_auto()
+
+p <- ggplot(dumbbell_data) +
+  geom_segment(aes(x = yr_2025, xend = yr_2020,
+                   y = region_short, yend = region_short,
+                   color = region_short),
+               linewidth = 1.5, alpha = 0.6) +
+  geom_point(aes(x = yr_2020, y = region_short, color = region_short),
+             size = 4) +
+  geom_point(aes(x = yr_2025, y = region_short, color = region_short),
+             size = 4, shape = 21, fill = "white", stroke = 1.5) +
+  geom_text(aes(x = yr_2020, y = region_short,
+                label = paste0(round(yr_2020, 1), "%")),
+            hjust = -0.4, size = 5, color = "grey50") +
+  geom_text(aes(x = yr_2025, y = region_short,
+                label = paste0(round(yr_2025, 1), "%")),
+            hjust = 1.4, size = 5, color = "grey50") +
+  geom_text(aes(x = (yr_2020 + yr_2025) / 2, y = region_short,
+                label = change_label, color = region_short),
+            vjust = -0.8, size = 5, fontface = "bold") +
+  # region names on the line instead of y-axis
+  geom_text(aes(x = (yr_2020 + yr_2025) / 2, y = region_short,
+                label = region_short, color = region_short),
+            vjust = 2, size = 3.5, fontface = "bold") +
+  scale_color_manual(values = c(
+    "Asia and the Pacific"            = "#185FA5",
+    "Arab States"                     = "#A5CF4D",
+    "East and Southern Africa"        = "#F57F29",
+    "Eastern Europe and Central Asia" = "#7F77DD",
+    "Latin America and the Caribbean" = "#D4537E",
+    "West and Central Africa"         = "#FFCE34"
+  )) +
+  scale_x_continuous(labels = scales::label_percent(scale = 1, accuracy = 1),
+                     expand = expansion(mult = c(0.14, 0.08))) +
+  labs(
+    title = "Past Peak Child: For Most of the World, the Share of Children Is Shrinking",
+    subtitle = "\u25CF 2020  |  \u25CB 2025  |  Number above segment = change",
+    x = NULL, y = NULL,
+    caption = "Data: UNICEF / UNFPA\n#30DayChartChallenge Day 20 | Created by: Lyndsay Miles"
+  ) +
+  theme_minimal(base_size = 16, base_family = "roboto") +
+  theme(
+    legend.position   = "none",
+    panel.grid.minor  = element_blank(),
+    panel.grid.major.y = element_line(color = "grey90", linewidth = 0.3),  # restored
+    panel.grid.major.x = element_line(color = "grey90", linewidth = 0.3,
+                                      linetype = "dashed"),
+    plot.title    = element_text(size = 24, face = "bold", color = "#1cabe2"),
+    plot.subtitle = element_text(size = 16, color = "grey50", family = "Arial", margin = margin(b = 15)),
+    #plot.margin = margin(t = 15, r = 15, b = 15, l = 15),
+    plot.caption  = element_text(size = 11, color = "grey60"),
+    plot.background  = element_rect(fill = "#eef6fb", color = NA),
+    panel.background = element_rect(fill = "#eef6fb", color = NA),
+    axis.text.y  = element_blank(),
+    axis.text.x  = element_text(size = 13)
+  )
+
+ggsave("img/cc_2026_day20.png", p, width = 12, height = 6.27, dpi = 100)
+p
+```
+#Day20 | #30DayChartChallenge | Global Change
+The world may have already reached "Peak Child", a concept Hans Rosling popularized around 2012. The share of children in the total population has been declining across nearly every world region since 2020. West and Central Africa still has the highest proportion at nearly 48%, but there is even decline there. Eastern Europe and Central Asia is the only region where the proportion is holding essentially flat.
+
+📊 Data: UNICEF / UNFPA | #RStats #DataViz #PublicHealth #Demographics #GlobalHealth

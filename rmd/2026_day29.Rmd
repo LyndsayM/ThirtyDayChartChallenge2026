@@ -1,0 +1,166 @@
+---
+title: "cc_2026_day29"
+author: "Lyndsay Miles"
+date: "`r Sys.Date()`"
+output: html_document
+---
+#30DayChartChallenge Day 29 — Monochrome (Uncertainties category)
+huggingface : https://huggingface.co/datasets/afmck/peanuts-opt-6.7b
+nicola rennie's article on monochrome: https://nrennie.rbind.io/blog/monochrome-data-visualisations/
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+#install.packages("arrow")
+library(arrow)
+library(gganimate)
+```
+
+```{r}
+# try files 0000 through 0020
+file_nums <- sprintf("%04d", 0:20)
+files <- paste0(
+  "https://huggingface.co/datasets/afmck/peanuts-opt-6.7b/resolve/refs%2Fconvert%2Fparquet/default/train/",
+  file_nums, ".parquet"
+)
+
+df_all <- bind_rows(lapply(files, function(f) {
+  tryCatch(
+    read_parquet(f) |> select(-image),  # drop image column
+    error = function(e) NULL
+  )
+}))
+
+range(df_all$year)
+nrow(df_all)
+```
+
+
+```{r}
+# unnest the characters list column
+char_counts <- df_all |>
+  select(year, characters) |>
+  unnest(characters) |>
+  rename(character = characters) |>
+  count(year, character) |>
+  mutate(character = case_when(
+    character %in% c("Joe Cool", "the World War I Flying Ace") ~ "Snoopy",
+    character == "\"Pig-Pen\"" ~ "Pig-Pen",
+    TRUE ~ character
+  ))
+
+# top characters overall
+char_counts |>
+  group_by(character) |>
+  summarise(total = sum(n)) |>
+  arrange(desc(total))
+
+char_counts |>
+  group_by(character) |>
+  summarise(total = sum(n)) |>
+  arrange(desc(total)) |>
+  print(n = 19)
+
+```
+
+```{r}
+# re-do from char_counts with Snoopy consolidation
+char_counts_clean <- char_counts |>
+  group_by(year, character) |>
+  summarise(n = sum(n), .groups = "drop")
+
+# top 12 by total appearances
+top_chars <- char_counts_clean |>
+  group_by(character) |>
+  summarise(total = sum(n)) |>
+  arrange(desc(total)) |>
+  slice_head(n = 10) |>
+  pull(character)
+
+# verify
+top_chars
+```
+
+```{r}
+heatmap_data <- char_counts_clean |>
+  filter(character %in% top_chars) |>
+  mutate(character = factor(character, levels = rev(top_chars)))
+
+p <- ggplot(heatmap_data, aes(x = year, y = character, fill = n)) +
+  geom_tile(color = "white", linewidth = 0.1) +
+  scale_fill_gradient(low = "white", high = "black",
+                      name = "# of Appearances") +
+  labs(
+    title = "50 Years of Peanuts",
+    subtitle = "Top 10 character appearances by year, 1950–2000",
+    x = NULL,
+    y = NULL,
+    caption = "Data: Peanuts comic strips (afmck/peanuts-opt-6.7b)\n#30DayChartChallenge | Created by: Lyndsay Miles"
+  ) +
+  ggthemes::theme_economist_white(base_size = 14)+
+  theme(
+    panel.grid = element_blank(),
+    plot.title = element_text(face = "bold", hjust = 0.5, size = 18),
+    plot.subtitle = element_text(size = 12, margin = margin(t = 5, b = 10)),
+    axis.ticks = element_blank(),
+    axis.text.y = element_text(size = 10),
+    legend.position = "right",
+    legend.key.width = unit(0.4, "cm"),
+    legend.key.height = unit(1.5, "cm"),
+    legend.title = element_text(size = 10),
+    legend.text = element_text(size = 9)
+  )
+p
+ggsave("img/cc_2026_day29.png", plot = p, width = 12, height = 10, dpi = 300)
+```
+Animated version
+```{r}
+
+p_anim <- ggplot(heatmap_data, aes(x = year, y = character, fill = n)) +
+  geom_tile(color = "white", linewidth = 0.1) +
+  scale_fill_gradient(low = "white", high = "black",
+                      name = "# of Appearances") +
+  labs(
+    title = "50 Years of Peanuts",
+    subtitle = "Top 10 character appearances by year, 1950–2000",
+    x = NULL,
+    y = NULL,
+    caption = "Data: Peanuts comic strips (afmck/peanuts-opt-6.7b)\n#30DayChartChallenge | Created by: Lyndsay Miles"
+  ) +
+  ggthemes::theme_economist_white(base_size = 14)+
+  theme(
+    panel.grid = element_blank(),
+    plot.title = element_text(face = "bold", hjust = 0.5, size = 18),
+    plot.subtitle = element_text(size = 12, margin = margin(t = 5, b = 10)),
+    axis.ticks = element_blank(),
+    axis.text.y = element_text(size = 10),
+    legend.position = "right",
+    legend.key.width = unit(0.4, "cm"),
+    legend.key.height = unit(1.5, "cm"),
+    legend.title = element_text(size = 10),
+    legend.text = element_text(size = 9)
+  )+
+  transition_time(year) +
+  shadow_mark() +  # keeps previous years visible
+  ggthemes::theme_fivethirtyeight() +
+  theme(
+  panel.grid = element_blank(),
+  panel.background = element_rect(fill = "white", color = NA),
+  plot.background = element_rect(fill = "white", color = NA),
+  plot.title = element_text(face = "bold", size = 14, hjust = 0.5),
+  plot.subtitle = element_text(size = 11, hjust = 0.5),
+  legend.title = element_text(size = 10),
+  legend.text = element_text(size = 9),
+  axis.ticks = element_blank()
+)
+
+animate(p_anim, fps = 8, duration = 12, 
+        width = 800, height = 500,
+        renderer = gifski_renderer("img/cc_2026_day29.gif"))
+```
+#Day29 of the #30DayChartChallenge | Monochrome | Uncertainties
+
