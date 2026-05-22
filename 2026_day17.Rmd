@@ -75,9 +75,6 @@ p <- ggplot(cia_plot, aes(x = birth_rate, y = maternal_mortality_rate, color = r
   annotate("text", x = 20, y = 1000,
            label = "High birth rate + High MMR",
            size = 3, color = "grey50", hjust = 0, family = "georgia") +
-  #annotate("text", x = 20, y = 3,
-   #        label = "High birth rate + Low MMR",
-    #       size = 3, color = "grey50", hjust = 0, family = "georgia") +
   # Points
   geom_point(size = 3, alpha = 0.6) +
 # Chad arrow and label
@@ -114,7 +111,7 @@ annotate("text", x = 12, y = 3,
     subtitle = "Maternal mortality rate vs. birth rate by country | CIA Factbook 2014",
     x = "Birth Rate (per 1,000 people)",
     y = "Maternal Mortality Rate\n(per 100,000 live births, log scale)",
-    caption = "Dashed lines show global medians | #30DayChartChallenge Day 17\nData: CIA Factbook via TidyTuesday | Created by: Lyndsay Miles"
+    caption = "Dashed lines show global median | #30DayChartChallenge Day 17\nData: CIA Factbook via TidyTuesday | Created by: Lyndsay Miles"
   ) +
   theme_minimal() +
   theme(

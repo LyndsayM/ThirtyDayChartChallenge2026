@@ -196,9 +196,9 @@ p2 <- ggplot() +
     panel.grid = element_blank(),
     axis.text.y = element_blank(),
     axis.text.x = element_text(size = 11, face = "bold", family = "georgia"),
-    plot.title = element_text(size = 22, face = "bold", family = "georgia"),
-    plot.subtitle = element_text(size = 14, family = "georgia"),
-    plot.caption = element_text(hjust = 1, size = 10, family = "georgia"),
+    plot.title = element_text(size = 16, face = "bold", family = "georgia"),
+    plot.subtitle = element_text(size = 11, family = "georgia"),
+    plot.caption = element_text(hjust = 1, size = 8, family = "georgia"),
     legend.text = element_text(family = "georgia"),
     legend.position = "bottom"
       )

@@ -1,0 +1,173 @@
+---
+title: "cc_2026_day19"
+author: "Lyndsay Miles"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+30 Day Chart Challenge 2026 Day 19: Evolution
+Baby names over time
+
+```{r}
+library(tidyverse)
+library(lubridate)
+library(ggthemes)
+library(ggtext)
+```
+
+```{r}
+# Download directly
+url <- "https://www.ssa.gov/oact/babynames/state/namesbystate.zip"
+download.file(url, "namesbystate.zip")
+unzip("namesbystate.zip", exdir = "namesbystate")
+
+# Check what files are in there
+list.files("namesbystate") %>% head(10)
+or_names <- read_csv("namesbystate/OR.TXT",
+                     col_names = c("state", "sex", "year", "name", "n"))
+```
+
+```{r}
+or_names <- or_names %>% 
+  group_by(year, sex) %>% mutate(prop = n/ sum(n))
+```
+
+```{r}
+or_names %>%
+  filter(sex == "F") %>%
+  group_by(year) %>%
+  slice_max(n, n = 10) %>%
+  summarise(top10_share = sum(prop))
+
+
+or_names %>%
+  filter(sex == "F") %>%
+  group_by(year) %>%
+  slice_max(n, n = 10) %>%
+  summarise(top10_share = sum(prop)) %>% 
+  tail(10)
+
+or_names %>%
+  filter(sex == "F") %>%
+  group_by(year) %>%
+  summarise(total_oregon = sum(n)) %>%
+  tail(5)
+
+or_names %>%
+  filter(sex == "F") %>%
+  mutate(decade = floor(year/10)*10) %>%
+  group_by(decade, name) %>%
+  summarise(total = sum(n), .groups = "drop") %>%
+  slice_max(total, n = 1, by = decade)
+
+or_names %>%
+  filter(sex == "M") %>%
+  mutate(decade = floor(year/10)*10) %>%
+  group_by(decade, name) %>%
+  summarise(total = sum(n), .groups = "drop") %>%
+  slice_max(total, n = 1, by = decade)
+```
+
+
+```{r}
+# Step 1: Get decade top names
+decade_names <- or_names %>%
+  filter(sex == "F") %>%
+  mutate(decade = floor(year/10)*10) %>%
+  group_by(decade, name) %>%
+  summarise(total = sum(n), .groups = "drop") %>%
+  slice_max(total, n = 1, by = decade)
+
+# Step 2: Get unique name list
+name_list <- unique(decade_names$name)
+
+# Step 3: Get full year-by-year history for those names
+highlight_data <- or_names %>%
+  filter(sex == "F", name %in% name_list)
+
+# Step 4: Get peak year and n for each name for labels
+name_peaks <- highlight_data %>%
+  group_by(name) %>%
+  slice_max(n, n = 1) %>%
+  ungroup()
+
+# Check
+name_peaks
+
+# Keep decade info with each name
+decade_tops <- or_names %>%
+  filter(sex == "F") %>%
+  mutate(decade = floor(year/10)*10) %>%
+  group_by(decade, name) %>%
+  summarise(total = sum(n), .groups = "drop") %>%
+  slice_max(total, n = 1, by = decade)
+
+# Get just the unique names for filtering
+top_name_list <- decade_tops %>% pull(name) %>% unique()
+
+# Full year-by-year history for those names
+highlight_data <- or_names %>%
+  filter(sex == "F",
+         name %in% top_name_list) %>%
+  mutate(is_olivia = name == "Olivia")
+
+# Check
+decade_tops  # shows which name topped each decade
+highlight_data %>% count(name)  # shows data available for each name
+
+
+
+```
+
+```{r}
+windowsFonts(georgia = windowsFont("Georgia"))
+p <- ggplot() +
+  # Grey spaghetti lines
+  geom_line(data = highlight_data %>% filter(!is_olivia),
+            aes(x = year, y = n, group = name),
+            color = "darkgrey", linewidth = 0.6, alpha = 0.7) +
+  # Olivia highlighted
+  geom_line(data = highlight_data %>% filter(is_olivia),
+            aes(x = year, y = n),
+            color = "#846092", linewidth = 1.5) +
+  # Labels at peak for grey lines
+  geom_text(data = name_peaks %>% filter(name != "Olivia"),
+            aes(x = year, y = n, label = name),
+            size = 4, family = "georgia", color = "#222222",
+            vjust = -0.8) +
+  # Olivia label at peak
+  geom_text(data = name_peaks %>% filter(name == "Olivia"),
+            aes(x = year, y = n, label = "Olivia"),
+            size = 5, family = "georgia", color = "#846092",
+            fontface = "bold", vjust = -0.8) +
+  scale_x_continuous(breaks = seq(1910, 2024, 10)) +
+  labs(title = "Oregon's Most Popular Baby Girl Names, From Mary to <b style='color:#6a3d8f'>Olivia</b>",
+    subtitle = "Annual count at each name's peak, 1910–2024",
+    x = NULL, y = NULL,
+    caption = "Data: SSA Baby Names by State | #30DayChartChallenge Day 19\nCreated by: Lyndsay Miles"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.background = element_rect(fill = "#f0ecf5", color = NA),
+    panel.background = element_rect(fill = "#f0ecf5", color = NA),
+    panel.grid.minor = element_blank(),
+    panel.grid.major = element_line(color = "grey88", linewidth = 0.3),
+    plot.title = element_markdown(family = "georgia", size = 20,
+                              face = "bold", color = "#1a1a1a"),
+    plot.subtitle = element_text(family = "georgia", size = 14,
+                                 color = "grey40"),
+    axis.text = element_text(family = "georgia", size = 12),
+    plot.caption = element_text(family = "georgia", size = 10,
+                                hjust = 1, color = "grey50"),
+    plot.margin = margin(20, 20, 20, 20)
+  )
+
+ggsave("img/cc_2026_day19.png", p,
+       width = 10, height = 6, 
+       dpi = 300)
+```
+#Day19 of the #30DayChartChallenge | Evolution (Timeseries)
+Today I looked at the evolution of popular baby girl names in Oregon since 1910. Olivia is the new favorite, but what's going on with Linda in the 1940s?

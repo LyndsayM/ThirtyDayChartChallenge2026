@@ -1,0 +1,1003 @@
+population_group_id,population_group_name,measure_id,measure_name,location_id,location_name,sex_id,sex_name,age_id,age_name,cause_id,cause_name,metric_id,metric_name,year,val,upper,lower
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,491,Cardiovascular diseases,1,Number,2023,24.44796866961977,29.259789403478372,19.640195463414603
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,491,Cardiovascular diseases,1,Number,2023,9.608516104144243,12.186654455007613,7.9333141297018726
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,491,Cardiovascular diseases,2,Percent,2023,0.056679105982769463,0.06645999406448973,0.046307552181826216
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,491,Cardiovascular diseases,2,Percent,2023,0.06630141003721379,0.08199408208463126,0.055371367337254826
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,491,Cardiovascular diseases,3,Rate,2023,15.297127157012643,18.307889916785513,12.288896940782475
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,491,Cardiovascular diseases,3,Rate,2023,6.234374801145263,7.907170120867566,5.147439330246928
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,491,Cardiovascular diseases,1,Number,2023,42.07274473219624,49.19325469998083,34.88910217752155
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,491,Cardiovascular diseases,1,Number,2023,16.49428141974404,19.89969560378803,13.433336432180429
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,491,Cardiovascular diseases,2,Percent,2023,0.0898769817409697,0.10215020798081623,0.0770191318623013
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,491,Cardiovascular diseases,2,Percent,2023,0.08526989072567388,0.09858647069171572,0.07171462540197542
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,491,Cardiovascular diseases,3,Rate,2023,26.833649345706554,31.375051834523145,22.251981414031945
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,491,Cardiovascular diseases,3,Rate,2023,11.015578685817372,13.289858295066157,8.971350173800836
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,491,Cardiovascular diseases,1,Number,2023,72.85872586784399,83.81770827283917,62.53767746543057
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,491,Cardiovascular diseases,1,Number,2023,27.70583021109689,32.90010731035092,23.32559380361802
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,491,Cardiovascular diseases,2,Percent,2023,0.13167712393556866,0.14857160501434807,0.11806959015892517
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,491,Cardiovascular diseases,2,Percent,2023,0.1125330099202468,0.12634546488144816,0.09676314526205171
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,491,Cardiovascular diseases,3,Rate,2023,47.494657823803635,54.638525812470306,40.766641976467966
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,491,Cardiovascular diseases,3,Rate,2023,18.76071793430571,22.277969241674864,15.794685907827256
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,491,Cardiovascular diseases,1,Number,2023,91.39948949350695,103.59856090351118,80.00645202397669
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,491,Cardiovascular diseases,1,Number,2023,40.331641344506785,45.6970547864509,34.35151251402318
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,491,Cardiovascular diseases,2,Percent,2023,0.16317726478010203,0.17998178989044433,0.14871295321713957
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,491,Cardiovascular diseases,2,Percent,2023,0.13628586078944313,0.15055452902960234,0.12005097029840886
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,491,Cardiovascular diseases,3,Rate,2023,66.56015374988665,75.44392403301724,58.2633642398749
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,491,Cardiovascular diseases,3,Rate,2023,30.80294785703566,34.90073671397621,26.235675353288897
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,491,Cardiovascular diseases,1,Number,2023,157.66682604058013,174.64790618163076,141.70605253232745
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,491,Cardiovascular diseases,1,Number,2023,73.55096048254262,83.92265870976843,63.90082898779299
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,491,Cardiovascular diseases,2,Percent,2023,0.19578645454933832,0.20942314874816428,0.18204249924836075
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,491,Cardiovascular diseases,2,Percent,2023,0.14492632974873898,0.15941844723681153,0.13041262833928915
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,491,Cardiovascular diseases,3,Rate,2023,116.21144247568724,128.72768236928945,104.4472397007523
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,491,Cardiovascular diseases,3,Rate,2023,56.47787055369308,64.44202800393138,49.067785439767896
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,491,Cardiovascular diseases,1,Number,2023,238.55488769027576,263.229640254932,214.3141255954112
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,491,Cardiovascular diseases,1,Number,2023,109.54472487545259,122.97905637377566,97.10370274066727
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,491,Cardiovascular diseases,2,Percent,2023,0.2216351041860806,0.23575895989179493,0.20776911699083392
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,491,Cardiovascular diseases,2,Percent,2023,0.16571165971650592,0.17869208786234705,0.15209109321935724
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,491,Cardiovascular diseases,3,Rate,2023,190.77625163329898,210.50905547497072,171.39051707984453
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,491,Cardiovascular diseases,3,Rate,2023,88.1506693818909,98.96127952876786,78.13937554530389
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,491,Cardiovascular diseases,1,Number,2023,415.9254170803026,454.33209505228825,383.3144620745572
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,491,Cardiovascular diseases,1,Number,2023,186.65144328551654,208.34382179305416,162.47668228955098
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,491,Cardiovascular diseases,2,Percent,2023,0.24234442264316075,0.25579692361187906,0.2293815434996346
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,491,Cardiovascular diseases,2,Percent,2023,0.17158088282921138,0.1839193536587298,0.15901037121931977
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,491,Cardiovascular diseases,3,Rate,2023,321.8037567049862,351.5192122804202,296.5724835015983
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,491,Cardiovascular diseases,3,Rate,2023,136.275819050144,152.11361058405927,118.62561877803968
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,491,Cardiovascular diseases,1,Number,2023,596.565505542157,641.4661093175721,548.0086285525408
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,491,Cardiovascular diseases,1,Number,2023,293.6983256060849,324.78621087042023,261.50831804983113
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,491,Cardiovascular diseases,2,Percent,2023,0.25752384451302585,0.27033366967481637,0.24403263079750967
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,491,Cardiovascular diseases,2,Percent,2023,0.18416544043725896,0.19734237793127835,0.1688590590786532
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,491,Cardiovascular diseases,3,Rate,2023,476.55452581207317,512.4224828797933,437.7658273812578
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,491,Cardiovascular diseases,3,Rate,2023,212.3992847980321,234.88168943007034,189.11983787411035
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,491,Cardiovascular diseases,1,Number,2023,773.6405357099561,842.2884636670552,720.9869517870735
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,491,Cardiovascular diseases,1,Number,2023,427.4919542772373,470.6505678286937,374.67558937484347
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,491,Cardiovascular diseases,2,Percent,2023,0.2725183756181962,0.28555933517460774,0.25682679120204077
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,491,Cardiovascular diseases,2,Percent,2023,0.2123495139915722,0.22872054115562795,0.1901551548637077
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,491,Cardiovascular diseases,3,Rate,2023,705.9256412095642,768.5649812182313,657.8806987885564
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,491,Cardiovascular diseases,3,Rate,2023,348.5209741309297,383.7068574828749,305.4614246782184
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,491,Cardiovascular diseases,1,Number,2023,888.0339091220367,958.5713800015344,812.4727138063388
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,491,Cardiovascular diseases,1,Number,2023,627.9455784936915,700.4450228646019,545.4547308222714
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,491,Cardiovascular diseases,2,Percent,2023,0.28567250109295156,0.3013399243046698,0.26656968270916787
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,491,Cardiovascular diseases,2,Percent,2023,0.24049999083803034,0.26156290801489646,0.21041175908450593
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,491,Cardiovascular diseases,3,Rate,2023,1144.2940763414028,1235.1865628313788,1046.9281679984308
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,491,Cardiovascular diseases,3,Rate,2023,709.4750349217055,791.3874610753236,616.2739693567695
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,491,Cardiovascular diseases,1,Number,2023,2817.883691020397,3108.785951133965,2373.6406002060835
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,491,Cardiovascular diseases,1,Number,2023,3581.0869732504425,4105.284505655406,2692.9674310853106
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,491,Cardiovascular diseases,2,Percent,2023,0.345873407475382,0.37790424366616443,0.29094388804446336
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,491,Cardiovascular diseases,2,Percent,2023,0.35467617533453655,0.4032123016240445,0.2667328708960504
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,491,Cardiovascular diseases,3,Rate,2023,3833.846110305929,4229.630543130316,3229.435200382246
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,491,Cardiovascular diseases,3,Rate,2023,3511.2481994507366,4025.2227707365023,2640.4488676786136
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,491,Cardiovascular diseases,1,Number,2023,1408.7126363533132,1499.2277458014132,1317.1590254158734
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,491,Cardiovascular diseases,1,Number,2023,663.4454542495967,721.7231535707233,601.0212370693852
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,491,Cardiovascular diseases,2,Percent,2023,0.238178725260194,0.2500784151737739,0.22566685202894124
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,491,Cardiovascular diseases,2,Percent,2023,0.17227006648454127,0.18445591381762214,0.15972990547923696
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,491,Cardiovascular diseases,3,Rate,2023,273.45789308778967,291.02859592918855,255.68559737221926
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,491,Cardiovascular diseases,3,Rate,2023,125.23934959856132,136.24049688554314,113.45545944033914
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,491,Cardiovascular diseases,1,Number,2023,2182.353172063271,2316.627640787963,2045.3441904253189
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,491,Cardiovascular diseases,1,Number,2023,1090.9374085268346,1179.4187706072544,988.6243468582147
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,491,Cardiovascular diseases,2,Percent,2023,0.24931668597482073,0.26088047703334555,0.23624143314237928
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,491,Cardiovascular diseases,2,Percent,2023,0.18602938437111788,0.19955991677847348,0.17069208872233665
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,491,Cardiovascular diseases,3,Rate,2023,349.32167401435373,370.81452072346457,327.39112334389444
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,491,Cardiovascular diseases,3,Rate,2023,167.21886832745184,180.78129007549612,151.53632389032754
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,492,Rheumatic heart disease,1,Number,2023,0.5060507594857795,0.6724739069189541,0.3822111566902146
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,492,Rheumatic heart disease,1,Number,2023,0.41163360564717577,0.563166732222107,0.3122090665928299
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,492,Rheumatic heart disease,2,Percent,2023,0.0011731454886954426,0.0015246503397533821,0.0009087117664363798
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,492,Rheumatic heart disease,2,Percent,2023,0.0028413470976917754,0.0038403438838350893,0.0021527773955868986
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,492,Rheumatic heart disease,3,Rate,2023,0.31663664660108515,0.4207678356809804,0.23915003915988042
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,492,Rheumatic heart disease,3,Rate,2023,0.267083715168512,0.3654042358002091,0.20257325026659537
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,492,Rheumatic heart disease,1,Number,2023,0.7195742744898856,0.9330171865976513,0.5527392446947283
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,492,Rheumatic heart disease,1,Number,2023,0.5578764750647737,0.7030371530424775,0.4226133936770389
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,492,Rheumatic heart disease,2,Percent,2023,0.001536883919070625,0.0019397840013214995,0.0011981109481998904
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,492,Rheumatic heart disease,2,Percent,2023,0.002883903948841195,0.0036344042380199925,0.0022223067670038383
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,492,Rheumatic heart disease,3,Rate,2023,0.4589385333131524,0.5950706610191756,0.3525325282711785
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,492,Rheumatic heart disease,3,Rate,2023,0.37257350300124853,0.469517942692687,0.28223909688828225
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,492,Rheumatic heart disease,1,Number,2023,0.8199298181498755,1.0524855475390804,0.635884109370281
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,492,Rheumatic heart disease,1,Number,2023,0.6972889300892787,0.8641993645582742,0.5531573739457706
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,492,Rheumatic heart disease,2,Percent,2023,0.0014816224375494604,0.0018489739912131346,0.0011982646951314761
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,492,Rheumatic heart disease,2,Percent,2023,0.002834215946732933,0.0035037197046728064,0.002229397772088848
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,492,Rheumatic heart disease,3,Rate,2023,0.5344903536084067,0.6860872235885348,0.4145158706853644
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,492,Rheumatic heart disease,3,Rate,2023,0.47216202641995714,0.5851837102138268,0.3745648257716299
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,492,Rheumatic heart disease,1,Number,2023,0.8644711075940467,1.0703484513892516,0.6865778768243106
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,492,Rheumatic heart disease,1,Number,2023,0.8722708414884842,1.0747733532794141,0.6767571634256706
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,492,Rheumatic heart disease,2,Percent,2023,0.0015435059479787668,0.001899621442799548,0.0012779630289972358
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,492,Rheumatic heart disease,2,Percent,2023,0.0029470315853906562,0.0035730991817938835,0.0023905320551835855
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,492,Rheumatic heart disease,3,Rate,2023,0.6295366653867597,0.7794634071285781,0.4999888872020808
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,492,Rheumatic heart disease,3,Rate,2023,0.6661894322146624,0.8208490023108435,0.5168675244037784
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,492,Rheumatic heart disease,1,Number,2023,1.1824932966274637,1.4708472903916237,0.9725830410089765
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,492,Rheumatic heart disease,1,Number,2023,1.4573621448519871,1.7965179715813626,1.1698254078741692
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,492,Rheumatic heart disease,2,Percent,2023,0.001468248558369686,0.0017857722129038759,0.0012180480901576181
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,492,Rheumatic heart disease,2,Percent,2023,0.00287193625675022,0.0034539208179863168,0.0023259974009684284
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,492,Rheumatic heart disease,3,Rate,2023,0.8715799966921349,1.0841169925870966,0.7168615044863866
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,492,Rheumatic heart disease,3,Rate,2023,1.1190705060383128,1.3794994488268832,0.8982785204011047
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,492,Rheumatic heart disease,1,Number,2023,1.7788319375186064,2.157330812013003,1.4603949967726704
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,492,Rheumatic heart disease,1,Number,2023,2.077090656270192,2.4820414339640147,1.707701045687477
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,492,Rheumatic heart disease,2,Percent,2023,0.0016522278224977548,0.002012816211500182,0.0013819815390952812
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,492,Rheumatic heart disease,2,Percent,2023,0.00314285394848674,0.0037588699743229333,0.0026205860222452302
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,492,Rheumatic heart disease,3,Rate,2023,1.42256104082009,1.7252527912285514,1.167901802750071
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,492,Rheumatic heart disease,3,Rate,2023,1.6714354061800945,1.9972994052089224,1.3741874878289013
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,492,Rheumatic heart disease,1,Number,2023,3.157888242494049,3.8516698932068674,2.5931030008718294
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,492,Rheumatic heart disease,1,Number,2023,3.214909652433422,3.9841818150846335,2.5803212213552316
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,492,Rheumatic heart disease,2,Percent,2023,0.001840461966840615,0.0022514111189651295,0.0015328638235150732
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,492,Rheumatic heart disease,2,Percent,2023,0.002954769313021786,0.0035836100059437877,0.0024006162631731395
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,492,Rheumatic heart disease,3,Rate,2023,2.44327530359341,2.9800579390466932,2.0062978912452873
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,492,Rheumatic heart disease,3,Rate,2023,2.347233101152099,2.9088853026698156,1.8839146468037928
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,492,Rheumatic heart disease,1,Number,2023,3.803599553297344,4.596880502423201,3.0780723918492554
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,492,Rheumatic heart disease,1,Number,2023,4.920251548532077,5.9167152492054305,4.046705551062896
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,492,Rheumatic heart disease,2,Percent,2023,0.0016424034550339024,0.001957403226459796,0.0013544164293903802
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,492,Rheumatic heart disease,2,Percent,2023,0.003085112181607615,0.003703076606938908,0.0025162717402770047
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,492,Rheumatic heart disease,3,Rate,2023,3.038430087997337,3.672126845577813,2.4588571003277666
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,492,Rheumatic heart disease,3,Rate,2023,3.5582698940418154,4.278901095848832,2.926531375554352
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,492,Rheumatic heart disease,1,Number,2023,5.177934859404427,6.318245137399519,4.220272872374006
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,492,Rheumatic heart disease,1,Number,2023,7.7581900844986516,9.490621804460735,6.261463918342409
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,492,Rheumatic heart disease,2,Percent,2023,0.0018242293812538773,0.0022156455772508734,0.0015079444916346104
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,492,Rheumatic heart disease,2,Percent,2023,0.003854440947989942,0.004652779268603543,0.003127816033205843
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,492,Rheumatic heart disease,3,Rate,2023,4.72472268068539,5.765224343945358,3.8508825429835993
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,492,Rheumatic heart disease,3,Rate,2023,6.325012526408533,7.737410548442274,5.1047779554024775
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,492,Rheumatic heart disease,1,Number,2023,6.297055345682002,7.453739270420088,5.160475930491686
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,492,Rheumatic heart disease,1,Number,2023,11.09244935024847,13.453316446064576,8.988022115389569
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,492,Rheumatic heart disease,2,Percent,2023,0.002025290550439045,0.0023971169637770668,0.0016993083483257281
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,492,Rheumatic heart disease,2,Percent,2023,0.004248537219060539,0.00514326396511843,0.003487568005494643
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,492,Rheumatic heart disease,3,Rate,2023,8.114198181443165,9.604666675586246,6.649635760195432
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,492,Rheumatic heart disease,3,Rate,2023,12.532640024335866,15.200030834328583,10.15498400273732
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,492,Rheumatic heart disease,1,Number,2023,20.53653758655511,24.950542660480593,15.830011182715987
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,492,Rheumatic heart disease,1,Number,2023,48.60389546847458,60.63543249783638,35.899773786456734
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,492,Rheumatic heart disease,2,Percent,2023,0.0025201899698370205,0.0030475465777593047,0.0019104008192418961
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,492,Rheumatic heart disease,2,Percent,2023,0.004813043708090102,0.0059912077846188206,0.0035593692531907545
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,492,Rheumatic heart disease,3,Rate,2023,27.940800039498782,33.946234627685065,21.537378207749356
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,492,Rheumatic heart disease,3,Rate,2023,47.65601665772159,59.45291325546786,35.1996522312806
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,492,Rheumatic heart disease,1,Number,2023,9.922813029937469,11.909587168875028,8.176834844964297
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,492,Rheumatic heart disease,1,Number,2023,11.669614002087677,13.966323580255175,9.59518178888918
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,492,Rheumatic heart disease,2,Percent,2023,0.0016779303042302315,0.0020109544460526862,0.0013890734155224788
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,492,Rheumatic heart disease,2,Percent,2023,0.0030300823861105675,0.0035525272449546306,0.0025054884698307643
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,492,Rheumatic heart disease,3,Rate,2023,1.9262065765911163,2.3118771924816595,1.5872790313140563
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,492,Rheumatic heart disease,3,Rate,2023,2.2028862483363874,2.6364387159040827,1.8112933306320422
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,492,Rheumatic heart disease,1,Number,2023,15.100747889341891,18.027630732791454,12.638371198823029
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,492,Rheumatic heart disease,1,Number,2023,19.427804086586328,22.43854272235536,16.509637917427987
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,492,Rheumatic heart disease,2,Percent,2023,0.0017252412266600065,0.0020497262225548534,0.0014409838116072541
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,492,Rheumatic heart disease,2,Percent,2023,0.003313188602884124,0.0038210409126429898,0.002793671785502687
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,492,Rheumatic heart disease,3,Rate,2023,2.4171241387966775,2.885620085101765,2.0229800751331646
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,492,Rheumatic heart disease,3,Rate,2023,2.977893496046982,3.4393794654234298,2.5305970328547875
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,493,Ischemic heart disease,1,Number,2023,7.079352129587162,8.7334017218305,5.492055647404761
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,493,Ischemic heart disease,1,Number,2023,1.5954933527717239,2.120964742814192,1.1889670957811604
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,493,Ischemic heart disease,2,Percent,2023,0.016412747244731803,0.020259469500128024,0.012941864941822659
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,493,Ischemic heart disease,2,Percent,2023,0.011007737946363696,0.014298029781543525,0.008279488795335946
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,493,Ischemic heart disease,3,Rate,2023,4.429560229686243,5.464501303052108,3.4363866678272643
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,493,Ischemic heart disease,3,Rate,2023,1.035217451488126,1.3761634994830472,0.7714475805615681
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,493,Ischemic heart disease,1,Number,2023,15.82573563856569,19.120281801904934,12.62670895070259
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,493,Ischemic heart disease,1,Number,2023,3.437539901310252,4.364500688296883,2.6138780529296826
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,493,Ischemic heart disease,2,Percent,2023,0.03379995898749815,0.03977215898071021,0.028122019923559
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,493,Ischemic heart disease,2,Percent,2023,0.01777074916418849,0.022785022582438915,0.01393581758366656
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,493,Ischemic heart disease,3,Rate,2023,10.093523573662882,12.194757925331796,8.053210755089262
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,493,Ischemic heart disease,3,Rate,2023,2.295734521856335,2.914798137170648,1.7456583063213444
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,493,Ischemic heart disease,1,Number,2023,30.888649488467962,36.39250175840354,25.987121532594518
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,493,Ischemic heart disease,1,Number,2023,6.9577632862884515,8.543112716534713,5.485519441773462
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,493,Ischemic heart disease,2,Percent,2023,0.05582615996712944,0.06460410874496567,0.048025781135745974
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,493,Ischemic heart disease,2,Percent,2023,0.02825432615712115,0.03394691196472698,0.022374776304948257
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,493,Ischemic heart disease,3,Rate,2023,20.135485772221973,23.723300095896892,16.94031058482879
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,493,Ischemic heart disease,3,Rate,2023,4.711377839002417,5.784880898161779,3.714463063772153
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,493,Ischemic heart disease,1,Number,2023,44.5098014097223,51.3311314347296,38.677884102795495
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,493,Ischemic heart disease,1,Number,2023,11.622903501531768,13.968026432602562,9.401755955776965
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,493,Ischemic heart disease,2,Percent,2023,0.0794685129802412,0.08933119700665466,0.0700363581113908
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,493,Ischemic heart disease,2,Percent,2023,0.03925744068712086,0.046045628627948504,0.03259316526656662
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,493,Ischemic heart disease,3,Rate,2023,32.41352048709748,37.38104030322791,28.166523980259754
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,493,Ischemic heart disease,3,Rate,2023,8.876893639088232,10.66796132083908,7.180511102849435
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,493,Ischemic heart disease,1,Number,2023,83.78965367956232,93.77502579144634,73.96193471829793
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,493,Ischemic heart disease,1,Number,2023,26.349207458254103,31.31724037627452,21.619823339102975
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,493,Ischemic heart disease,2,Percent,2023,0.104058309392114,0.11422662834365585,0.09407013082029816
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,493,Ischemic heart disease,2,Percent,2023,0.05190227831373326,0.05891661327124836,0.04360650448542695
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,493,Ischemic heart disease,3,Rate,2023,61.758816126190226,69.11873149912913,54.515102115988476
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,493,Ischemic heart disease,3,Rate,2023,20.232871443913933,24.04769477469885,16.60130032196364
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,493,Ischemic heart disease,1,Number,2023,134.68048412353662,148.41783898021572,119.87604930208983
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,493,Ischemic heart disease,1,Number,2023,46.09186045733894,53.17687881543667,39.12936054097961
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,493,Ischemic heart disease,2,Percent,2023,0.12512853940742272,0.1344195125775668,0.11594041664072141
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,493,Ischemic heart disease,2,Percent,2023,0.06972569877280319,0.07760852858189896,0.060710833615176416
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,493,Ischemic heart disease,3,Rate,2023,107.70618945609516,118.69217717694356,95.86684040678104
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,493,Ischemic heart disease,3,Rate,2023,37.09013242755976,42.79144859371372,31.487406884214458
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,493,Ischemic heart disease,1,Number,2023,238.13241750449282,262.1961716443136,217.14962098695986
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,493,Ischemic heart disease,1,Number,2023,82.8419995486025,94.50053075996406,70.89254316843603
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,493,Ischemic heart disease,2,Percent,2023,0.1387574824083684,0.1475968721677961,0.1283981876502483
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,493,Ischemic heart disease,2,Percent,2023,0.07614249204767878,0.08359619779063131,0.06689679695208865
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,493,Ischemic heart disease,3,Rate,2023,184.24434621986748,202.86260363962103,168.0098424645589
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,493,Ischemic heart disease,3,Rate,2023,60.48365413905949,68.99564773409242,51.75925358395535
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,493,Ischemic heart disease,1,Number,2023,339.911668161387,370.5070471346284,310.85872244613944
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,493,Ischemic heart disease,1,Number,2023,125.73098386855114,142.15819221434052,110.11078867994826
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,493,Ischemic heart disease,2,Percent,2023,0.1467315233502894,0.15630190123313698,0.13717254247065094
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,493,Ischemic heart disease,2,Percent,2023,0.07883910915579401,0.08713670242961152,0.0685836155543957
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,493,Ischemic heart disease,3,Rate,2023,271.53169657609993,295.9722084447558,248.32332693328738
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,493,Ischemic heart disease,3,Rate,2023,90.9272158617982,102.80718588434993,79.63086856523678
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,493,Ischemic heart disease,1,Number,2023,413.07783956356235,459.3112268888368,379.6357668740599
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,493,Ischemic heart disease,1,Number,2023,166.04197174705595,185.0430824857702,142.80558567383903
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,493,Ischemic heart disease,2,Percent,2023,0.14550067379646398,0.1554218272023839,0.1351357052611137
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,493,Ischemic heart disease,2,Percent,2023,0.08247477869886857,0.09176101814729018,0.07200199357219941
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,493,Ischemic heart disease,3,Rate,2023,376.9221302445985,419.1088204274417,346.4071617068534
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,493,Ischemic heart disease,3,Rate,2023,135.36888627002082,150.85990442362018,116.42497907248794
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,493,Ischemic heart disease,1,Number,2023,455.1974640835322,494.51502279299314,415.1109109740976
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,493,Ischemic heart disease,1,Number,2023,225.76822973839856,253.93830480107286,192.34858806752572
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,493,Ischemic heart disease,2,Percent,2023,0.14643256930653495,0.15718507727145736,0.13490545295189132
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,493,Ischemic heart disease,2,Percent,2023,0.08646882669699929,0.09615791123143072,0.07377734686069423
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,493,Ischemic heart disease,3,Rate,2023,586.5539101219542,637.2173465800537,534.899570357585
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,493,Ischemic heart disease,3,Rate,2023,255.08089898824068,286.9084421278549,217.3222105707038
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,493,Ischemic heart disease,1,Number,2023,1326.5401035241694,1487.1714700762375,1110.8670014880415
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,493,Ischemic heart disease,1,Number,2023,1157.6851967094833,1360.068761631194,853.5430833299029
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,493,Ischemic heart disease,2,Percent,2023,0.1628190174288432,0.18197119076240154,0.1361605381607748
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,493,Ischemic heart disease,2,Percent,2023,0.11465879947482814,0.13389944940545662,0.0850466259626423
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,493,Ischemic heart disease,3,Rate,2023,1804.8121121064926,2023.3576616659795,1511.38002831477
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,493,Ischemic heart disease,3,Rate,2023,1135.1078856337674,1333.544542782246,836.8971870502945
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,493,Ischemic heart disease,1,Number,2023,796.5142234689787,857.9387686661646,739.6906768973415
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,493,Ischemic heart disease,1,Number,2023,281.01405133274653,316.2624170077197,245.85456579745886
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,493,Ischemic heart disease,2,Percent,2023,0.1346742547588914,0.14331279440709885,0.12579985911293895
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,493,Ischemic heart disease,2,Percent,2023,0.07296226896076513,0.08048495118473191,0.0645776112580221
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,493,Ischemic heart disease,3,Rate,2023,154.61854727741283,166.5422187772156,143.58801704558303
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,493,Ischemic heart disease,3,Rate,2023,53.04734065406599,59.70121455322316,46.410244759513546
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,493,Ischemic heart disease,1,Number,2023,1209.592063032541,1304.6137847702335,1120.8574435887037
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,493,Ischemic heart disease,1,Number,2023,447.05602307980286,497.0837451878744,389.11226588352764
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,493,Ischemic heart disease,2,Percent,2023,0.13818621842647946,0.14671689588244544,0.1295499811897932
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,493,Ischemic heart disease,2,Percent,2023,0.07622792486971862,0.08447645723965237,0.0667018083101662
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,493,Ischemic heart disease,3,Rate,2023,193.61519012686782,208.82498629095736,179.41174853732775
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,493,Ischemic heart disease,3,Rate,2023,68.5247399842344,76.19298841950311,59.643121818728595
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,494,Stroke,1,Number,2023,4.263711221888801,5.47742993120883,3.154677029209605
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,494,Stroke,1,Number,2023,2.4134769108251577,3.1648676975805294,1.8649714298840951
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,494,Stroke,2,Percent,2023,0.009882387064209616,0.012678996552903214,0.007742026638741821
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,494,Stroke,2,Percent,2023,0.01665186426920436,0.02148014113355228,0.013049014604087444
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,494,Stroke,3,Rate,2023,2.6678098946954005,3.427235337365623,1.9738856960780276
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,494,Stroke,3,Rate,2023,1.5659566443880533,2.053487886047727,1.2100651923048202
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,494,Stroke,1,Number,2023,7.321720799205378,9.296321274054412,5.806220165777472
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,494,Stroke,1,Number,2023,4.153540057753511,5.20330749140174,3.2962512824753483
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,494,Stroke,2,Percent,2023,0.01563917521464905,0.019212940321270956,0.012471925893063228
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,494,Stroke,2,Percent,2023,0.021477111962029737,0.02635886484986174,0.01733561517802141
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,494,Stroke,3,Rate,2023,4.669733096417066,5.9291169820473595,3.70315930049639
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,494,Stroke,3,Rate,2023,2.773909706433767,3.4749887939603417,2.2013760070123176
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,494,Stroke,1,Number,2023,11.74783993277929,14.43457314676252,9.641992483569183
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,494,Stroke,1,Number,2023,7.665693497976099,9.354288225753093,6.0270988437055415
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,494,Stroke,2,Percent,2023,0.021231660167072675,0.026313144047494328,0.01775379530854638
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,494,Stroke,2,Percent,2023,0.03112752127038438,0.037022444584272965,0.025640857297173275
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,494,Stroke,3,Rate,2023,7.658103145918764,9.40951278343344,6.285357426884637
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,494,Stroke,3,Rate,2023,5.190745499796273,6.334160050156566,4.081187984890315
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,494,Stroke,1,Number,2023,15.204792530932453,18.437750306998936,12.637319146614393
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,494,Stroke,1,Number,2023,12.191649072902381,14.354910048881209,9.989984553787918
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,494,Stroke,2,Percent,2023,0.027143729189331032,0.03280511953262756,0.023251687303708794
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,494,Stroke,2,Percent,2023,0.04120533363031136,0.04771791272171616,0.03489653808412698
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,494,Stroke,3,Rate,2023,11.072636556311254,13.426984133462255,9.202916887679057
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,494,Stroke,3,Rate,2023,9.311268229232082,10.963440390415691,7.629765688790468
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,494,Stroke,1,Number,2023,25.413488892437538,29.842968257357295,21.181372243231362
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,494,Stroke,1,Number,2023,20.13646107275282,23.715115258425932,16.558013339085008
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,494,Stroke,2,Percent,2023,0.03155113607238521,0.03642619396056854,0.027387173997240197
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,494,Stroke,2,Percent,2023,0.03968807980030461,0.04606554475033115,0.034008322022601574
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,494,Stroke,3,Rate,2023,18.731513005595062,21.996348097037384,15.612147994701546
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,494,Stroke,3,Rate,2023,15.462264998515478,18.210220518455277,12.714468007703685
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,494,Stroke,1,Number,2023,38.510733709163745,45.009164875089546,33.020341326665175
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,494,Stroke,1,Number,2023,26.216862166885846,30.336730009052648,22.393740194421728
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,494,Stroke,2,Percent,2023,0.03577515587696855,0.04136672809032762,0.031130088205886006
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,494,Stroke,2,Percent,2023,0.03965633639495854,0.04527114478151127,0.034419908292712756
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,494,Stroke,3,Rate,2023,30.797664620568057,35.99456647965693,26.40690789002888
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,494,Stroke,3,Rate,2023,21.096715991859053,24.411974745439725,18.02024871893018
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,494,Stroke,1,Number,2023,75.18720515178998,86.00698645675872,65.07790536317087
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,494,Stroke,1,Number,2023,47.80438602061463,55.353961260967075,41.25178082759026
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,494,Stroke,2,Percent,2023,0.043809935888527426,0.04928631757062792,0.03896234091485592
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,494,Stroke,2,Percent,2023,0.04395124513855386,0.0496650247990167,0.038715881983001084
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,494,Stroke,3,Rate,2023,58.17274944109294,66.54407306710992,50.35112922737449
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,494,Stroke,3,Rate,2023,34.90239209767748,40.41440170901463,30.11827886569096
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,494,Stroke,1,Number,2023,117.55432576935111,134.6177774994078,104.70236451322573
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,494,Stroke,1,Number,2023,76.9784439039385,87.17270813349796,65.92826597209422
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,494,Stroke,2,Percent,2023,0.05074693991392677,0.056856748609759394,0.04569619270023105
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,494,Stroke,2,Percent,2023,0.04827222014344949,0.05463274806907086,0.04284677564595704
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,494,Stroke,3,Rate,2023,93.90594235457745,107.5367424467556,83.63940792496452
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,494,Stroke,3,Rate,2023,55.66993409418067,63.04230990508228,47.67857123989383
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,494,Stroke,1,Number,2023,172.78546906875425,190.98773839210733,154.32828631550504
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,494,Stroke,1,Number,2023,127.52332177476819,144.99613244885197,113.02073346137296
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,494,Stroke,2,Percent,2023,0.06087049656076563,0.06830077028679298,0.054977138459439905
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,494,Stroke,2,Percent,2023,0.06334493771358506,0.07074377242237523,0.05646187002713218
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,494,Stroke,3,Rate,2023,157.66197273016803,174.27104121927647,140.82030277029097
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,494,Stroke,3,Rate,2023,103.96582177668554,118.2108641359803,92.14230988170736
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,494,Stroke,1,Number,2023,210.80555782722618,235.05331189190503,188.93252533733627
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,494,Stroke,1,Number,2023,201.6437167462377,233.92317810178199,177.04440911352114
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,494,Stroke,2,Percent,2023,0.0678159816792124,0.075481989053997,0.06098735782197841
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,494,Stroke,2,Percent,2023,0.07722245306003565,0.08664740562577221,0.06781368033385995
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,494,Stroke,3,Rate,2023,271.6377703640037,302.8827048825821,243.4528314188801
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,494,Stroke,3,Rate,2023,227.82417438697937,264.29464691966973,200.03101007545337
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,494,Stroke,1,Number,2023,682.7744565967937,783.2735553434028,573.4167148395856
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,494,Stroke,1,Number,2023,1172.724826312127,1371.5722851152557,889.8447240987385
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,494,Stroke,2,Percent,2023,0.08380771888781133,0.0961352046946879,0.07017931712865307
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,494,Stroke,2,Percent,2023,0.11614946451440668,0.13472554272954407,0.08734154701838374
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,494,Stroke,3,Rate,2023,928.9425972340154,1065.6757349595882,780.1569130683595
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,494,Stroke,3,Rate,2023,1149.8542106342902,1344.823723216138,872.4908690074203
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,494,Stroke,1,Number,2023,256.66575352274236,293.27661510788124,230.83403172616084
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,494,Stroke,1,Number,2023,171.13615316419168,190.5130007420474,148.92467801410393
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,494,Stroke,2,Percent,2023,0.04339503125959027,0.04891240245476709,0.03919042804155202
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,494,Stroke,2,Percent,2023,0.0444414510394441,0.05014531532761559,0.03896156624796027
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,494,Stroke,3,Rate,2023,49.82370028837846,56.93056425398984,44.809272196351735
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,494,Stroke,3,Rate,2023,32.305565405260545,35.96335486236959,28.11268009177541
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,494,Stroke,1,Number,2023,429.45122259149673,481.10094651416284,386.5697004724593
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,494,Stroke,1,Number,2023,298.65947493896,333.7152947924918,262.9418486091657
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,494,Stroke,2,Percent,2023,0.0490623849652728,0.05497262304945026,0.044353322024226725
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,494,Stroke,2,Percent,2023,0.0509312540538254,0.0573616164363702,0.04505902714876365
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,494,Stroke,3,Rate,2023,68.74076199194738,77.00815347285369,61.87686604574551
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,494,Stroke,3,Rate,2023,45.77851948628585,51.151874986226446,40.30372230037187
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,498,Hypertensive heart disease,1,Number,2023,3.230333137114458,4.233076125931953,2.437306364388047
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,498,Hypertensive heart disease,1,Number,2023,0.986345147585771,1.3021089480114922,0.7535477509288656
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,498,Hypertensive heart disease,2,Percent,2023,0.007490060878760566,0.009608259210084156,0.005785341386572017
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,498,Hypertensive heart disease,2,Percent,2023,0.0068078888988050285,0.00879583958595294,0.0052494301408602005
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,498,Hypertensive heart disease,3,Rate,2023,2.0212238254115835,2.6486414736027504,1.5250258980808817
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,498,Hypertensive heart disease,3,Rate,2023,0.639978667537271,0.8448583658331303,0.48893076297435384
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,498,Hypertensive heart disease,1,Number,2023,5.144741069140499,6.4292048019616255,3.946829529818805
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,498,Hypertensive heart disease,1,Number,2023,2.0575778803826834,2.6509803224459585,1.537021625773975
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,498,Hypertensive heart disease,2,Percent,2023,0.010992071844346687,0.01379518723888936,0.00850248991946438
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,498,Hypertensive heart disease,2,Percent,2023,0.010630334947898116,0.013237057310018873,0.008232280272201494
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,498,Hypertensive heart disease,3,Rate,2023,3.2812733921332926,4.100493759694045,2.517255299233939
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,498,Hypertensive heart disease,3,Rate,2023,1.3741375248043084,1.7704367709830249,1.0264880433196157
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,498,Hypertensive heart disease,1,Number,2023,9.803547410856115,12.189165245420233,7.714853336053539
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,498,Hypertensive heart disease,1,Number,2023,3.7921669291131344,4.689973855614777,2.9743752599744413
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,498,Hypertensive heart disease,2,Percent,2023,0.01771716346638933,0.021932988735233805,0.01441748754452732
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,498,Hypertensive heart disease,2,Percent,2023,0.015399690370851551,0.018758676692000265,0.012153844543117208
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,498,Hypertensive heart disease,3,Rate,2023,6.390670769931018,7.945791332380937,5.029106877621215
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,498,Hypertensive heart disease,3,Rate,2023,2.567826828318572,3.1757675534016627,2.0140676116901854
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,498,Hypertensive heart disease,1,Number,2023,10.74144416792701,13.30909927022173,8.848038747282674
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,498,Hypertensive heart disease,1,Number,2023,5.324472087603647,6.498867488290886,4.208160600551568
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,498,Hypertensive heart disease,2,Percent,2023,0.01917540416834696,0.02334025027889284,0.016218036400224536
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,498,Hypertensive heart disease,2,Percent,2023,0.017994540611964347,0.02139742457515522,0.014527344472843958
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,498,Hypertensive heart disease,3,Rate,2023,7.822277556198334,9.692129557916111,6.443436639172108
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,498,Hypertensive heart disease,3,Rate,2023,4.066520245971473,4.9634547392124375,3.213946847478765
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,498,Hypertensive heart disease,1,Number,2023,16.21267245948802,19.76147160124669,13.434876973431159
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,498,Hypertensive heart disease,1,Number,2023,8.78813277102214,10.722835423577651,7.166078329518203
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,498,Hypertensive heart disease,2,Percent,2023,0.02013040342723528,0.023920028654146164,0.016886518831446803
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,498,Hypertensive heart disease,2,Percent,2023,0.017319598190369895,0.020596960083195087,0.014384340145034369
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,498,Hypertensive heart disease,3,Rate,2023,11.94986986303654,14.565582233716903,9.90244093683974
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,498,Hypertensive heart disease,3,Rate,2023,6.748178702143015,8.23378657529718,5.502645262779617
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,498,Hypertensive heart disease,1,Number,2023,22.36879638416931,26.39932809371235,18.65603371957358
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,498,Hypertensive heart disease,1,Number,2023,12.201883286237251,14.54338282072431,10.252544950122337
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,498,Hypertensive heart disease,2,Percent,2023,0.02078341405352437,0.024411146449949968,0.01775639081481553
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,498,Hypertensive heart disease,2,Percent,2023,0.018462185860514825,0.021442835277551007,0.015642160744616364
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,498,Hypertensive heart disease,3,Rate,2023,17.888692908530437,21.11197514382927,14.919535784090163
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,498,Hypertensive heart disease,3,Rate,2023,9.818858741253262,11.703064042394814,8.250225661242515
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,498,Hypertensive heart disease,1,Number,2023,29.08344619234028,35.375859410445806,24.437552988354344
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,498,Hypertensive heart disease,1,Number,2023,15.925681650685105,18.836557146948422,12.761321629582389
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,498,Hypertensive heart disease,2,Percent,2023,0.01694148524830019,0.019673698005156892,0.014416581767887479
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,498,Hypertensive heart disease,2,Percent,2023,0.014638831614728936,0.017088588150195858,0.012203377788509742
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,498,Hypertensive heart disease,3,Rate,2023,22.50202045434376,27.37049477491051,18.9074676213194
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,498,Hypertensive heart disease,3,Rate,2023,11.627476716368728,13.752731873380734,9.317150334452316
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,498,Hypertensive heart disease,1,Number,2023,33.26213588046353,40.108084376831215,28.181282823412726
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,498,Hypertensive heart disease,1,Number,2023,19.68074944773527,23.49301664554791,16.204924791291123
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,498,Hypertensive heart disease,2,Percent,2023,0.014355912247389704,0.01687686038191176,0.012243900068264516
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,498,Hypertensive heart disease,2,Percent,2023,0.012343320931770015,0.014431940677603285,0.010472125391436821
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,498,Hypertensive heart disease,3,Rate,2023,26.570797749369575,32.03954796893757,22.51205902440221
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,498,Hypertensive heart disease,3,Rate,2023,14.232893900099354,16.989882128082716,11.7192170870341
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,498,Hypertensive heart disease,1,Number,2023,36.01694967043104,42.84715901997534,30.243126991744845
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,498,Hypertensive heart disease,1,Number,2023,27.543856956981823,32.49732718467829,23.162236372339386
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,498,Hypertensive heart disease,2,Percent,2023,0.012688072294990707,0.014751912890321807,0.01085802402617873
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,498,Hypertensive heart disease,2,Percent,2023,0.013682510415636045,0.015802581506734276,0.011520794512674922
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,498,Hypertensive heart disease,3,Rate,2023,32.86447273239024,39.096850292917,27.59601885937608
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,498,Hypertensive heart disease,3,Rate,2023,22.455655040807493,26.494066177700454,18.883455238793516
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,498,Hypertensive heart disease,1,Number,2023,37.404421773581866,44.4428430189095,31.702241341910806
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,498,Hypertensive heart disease,1,Number,2023,36.25429693443593,43.2698228203772,29.407622966023833
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,498,Hypertensive heart disease,2,Percent,2023,0.01203401652564793,0.014049644963293426,0.010127564641090468
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,498,Hypertensive heart disease,2,Percent,2023,0.013886076231905287,0.01629898242343376,0.01166996029647307
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,498,Hypertensive heart disease,3,Rate,2023,48.19822511822935,57.267725342366774,40.850565053489255
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,498,Hypertensive heart disease,3,Rate,2023,40.961381789360274,48.88777006788257,33.22576835532841
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,498,Hypertensive heart disease,1,Number,2023,138.33221020485476,162.68174719098218,112.09149063864062
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,498,Hypertensive heart disease,1,Number,2023,283.16528689334496,338.04519246600177,200.54854487266064
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,498,Hypertensive heart disease,2,Percent,2023,0.016979586760314965,0.019855635661299047,0.013773108927609516
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,498,Hypertensive heart disease,2,Percent,2023,0.028045565977478887,0.03328840452977433,0.020109594505303762
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,498,Hypertensive heart disease,3,Rate,2023,188.20663454418832,221.33517635004634,152.50506142350036
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,498,Hypertensive heart disease,3,Rate,2023,277.64296460209835,331.4525958865103,196.63742387341009
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,498,Hypertensive heart disease,1,Number,2023,100.92705091646116,117.0525286959422,87.25700263049396
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,498,Hypertensive heart disease,1,Number,2023,56.59644715567979,66.68902134379981,47.02159191845855
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,498,Hypertensive heart disease,2,Percent,2023,0.0170618277773612,0.019201785599353215,0.014822214696706412
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,498,Hypertensive heart disease,2,Percent,2023,0.014696782297468142,0.017169143354035667,0.01248669151437703
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,498,Hypertensive heart disease,3,Rate,2023,19.591858543006257,22.72212021938755,16.93824239289784
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,498,Hypertensive heart disease,3,Rate,2023,10.683775412077877,12.588962069095576,8.87631914761935
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,498,Hypertensive heart disease,1,Number,2023,136.94400058689232,159.01332709605856,118.54222822082363
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,498,Hypertensive heart disease,1,Number,2023,84.14030411266158,98.0514643864822,70.75730274438219
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,498,Hypertensive heart disease,2,Percent,2023,0.01564340536720612,0.017719126496115335,0.013641171443502909
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,498,Hypertensive heart disease,2,Percent,2023,0.014348555488631584,0.016666160387672806,0.012250520505512426
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,498,Hypertensive heart disease,3,Rate,2023,21.920149379858916,25.45270963602621,18.974641746156905
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,498,Hypertensive heart disease,3,Rate,2023,12.897024452985226,15.02932687467166,10.845678219794458
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,499,Cardiomyopathy and myocarditis,1,Number,2023,3.6578594619341507,4.722388324417868,2.5986529738843718
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,499,Cardiomyopathy and myocarditis,1,Number,2023,0.9989165796974463,1.3094674474712735,0.7295733579231317
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.008484159907594534,0.010862014824879468,0.006232594374719301
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.006891426430954089,0.009006423354617089,0.004905331883409342
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,499,Cardiomyopathy and myocarditis,3,Rate,2023,2.2887276267341,2.9548047798825783,1.6259806904880392
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,499,Cardiomyopathy and myocarditis,3,Rate,2023,0.6481354962007039,0.8496328432976075,0.47337525471400616
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,499,Cardiomyopathy and myocarditis,1,Number,2023,5.183460434010418,6.557570828978229,3.9657518123531204
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,499,Cardiomyopathy and myocarditis,1,Number,2023,1.5690220469174736,2.0387289017969845,1.1571516869674914
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.011079348823467427,0.013813835909613843,0.008355300758128738
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.008110868175781919,0.010256853876272455,0.006011661994915774
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,499,Cardiomyopathy and myocarditis,3,Rate,2023,3.3059682834797295,4.18236455226511,2.529323774860575
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,499,Cardiomyopathy and myocarditis,3,Rate,2023,1.0478592778775238,1.361549379769416,0.7727948332419387
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,499,Cardiomyopathy and myocarditis,1,Number,2023,7.775881119983159,9.774077941466292,5.869467614338467
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,499,Cardiomyopathy and myocarditis,1,Number,2023,1.875209792408553,2.4316646363912753,1.4025134246868578
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.014052941032960413,0.017199026889802668,0.011095797715477196
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.00761473949978463,0.009482174408444606,0.005825360567797341
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,499,Cardiomyopathy and myocarditis,3,Rate,2023,5.068889260320848,6.371460409768289,3.8261492035497744
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,499,Cardiomyopathy and myocarditis,3,Rate,2023,1.2697790217791123,1.6465766954671828,0.9496975387183509
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,499,Cardiomyopathy and myocarditis,1,Number,2023,7.080048374769183,8.845053067338078,5.515832019731206
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,499,Cardiomyopathy and myocarditis,1,Number,2023,2.341581319522951,2.938576150482579,1.81264164211853
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.012636159036314409,0.015445526006642733,0.010230766379554617
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.007916211435993038,0.0097222905478022,0.006192102669750333
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,499,Cardiomyopathy and myocarditis,3,Rate,2023,5.155927139119842,6.44126236755132,4.016812668498963
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,499,Cardiomyopathy and myocarditis,3,Rate,2023,1.788362806070083,2.24431252782555,1.3843896286971553
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,499,Cardiomyopathy and myocarditis,1,Number,2023,10.960486727499283,13.548168266629213,8.558321023665252
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,499,Cardiomyopathy and myocarditis,1,Number,2023,3.617036652736901,4.4720069080694405,2.8154700637034695
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.013607481563841596,0.01639285773892264,0.011092583917337586
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.007125019212084901,0.008710260905396354,0.005628876478910342
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,499,Cardiomyopathy and myocarditis,3,Rate,2023,8.078642824397857,9.98594451798682,6.308079234588999
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,499,Cardiomyopathy and myocarditis,3,Rate,2023,2.7774284186230918,3.4339378522339556,2.1619262721033268
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,499,Cardiomyopathy and myocarditis,1,Number,2023,13.103378466960752,15.98063185441034,10.871784353814618
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,499,Cardiomyopathy and myocarditis,1,Number,2023,4.919879445250327,6.124448235747044,3.909821909377454
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.012178218299113489,0.014722201014908232,0.010042041272984484
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.00744447654612026,0.009094466911858905,0.0059168687919485576
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,499,Cardiomyopathy and myocarditis,3,Rate,2023,10.478986416345615,12.77997308474504,8.69434404663781
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,499,Cardiomyopathy and myocarditis,3,Rate,2023,3.959028304376224,4.928345131996597,3.1462347353326336
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,499,Cardiomyopathy and myocarditis,1,Number,2023,19.662832296638822,23.855357040314708,16.162156347297746
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,499,Cardiomyopathy and myocarditis,1,Number,2023,7.365680512348935,9.12193046751108,5.816153601677655
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.011455791376408547,0.013781361348779431,0.009466698255998149
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.006772606239907871,0.00822024953982742,0.005358259195737605
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,499,Cardiomyopathy and myocarditis,3,Rate,2023,15.213240260565382,18.457019450748945,12.504748244345905
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,499,Cardiomyopathy and myocarditis,3,Rate,2023,5.377746493749845,6.659999643704844,4.246423610974404
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,499,Cardiomyopathy and myocarditis,1,Number,2023,22.996571381042394,27.377517774054045,19.044814633135253
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,499,Cardiomyopathy and myocarditis,1,Number,2023,11.955445898403978,14.547871209855513,9.224950136810303
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.009929863301910596,0.011887654720445368,0.008296523302028036
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.00749489727155099,0.008978715873200338,0.006007916070538728
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,499,Cardiomyopathy and myocarditis,3,Rate,2023,18.370355087554966,21.869987251222263,15.213572562202472
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,499,Cardiomyopathy and myocarditis,3,Rate,2023,8.64604233960931,10.520854805456116,6.671378896398524
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,499,Cardiomyopathy and myocarditis,1,Number,2023,27.547551348262036,32.598138135079765,22.892153930098463
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,499,Cardiomyopathy and myocarditis,1,Number,2023,14.175497066610646,17.045930051739685,11.198539026604028
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.00970502023691987,0.01147012619039515,0.00810345651791019
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.007042269768055231,0.008290169568892088,0.005584403740573345
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,499,Cardiomyopathy and myocarditis,3,Rate,2023,25.136380465676538,29.744901544134525,20.88845878136791
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,499,Cardiomyopathy and myocarditis,3,Rate,2023,11.556844513712857,13.897019785189297,9.129822658285967
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,499,Cardiomyopathy and myocarditis,1,Number,2023,31.353596773752802,37.51553792994014,25.43601421418354
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,499,Cardiomyopathy and myocarditis,1,Number,2023,17.552281994034825,20.995084521716933,13.779260924442855
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.010085741231620739,0.012060241796018863,0.008331849562874586
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.006725190206660459,0.008038997263566897,0.005273251013572563
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,499,Cardiomyopathy and myocarditis,3,Rate,2023,40.40131203511497,48.34140609161396,32.77609119656501
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,499,Cardiomyopathy and myocarditis,3,Rate,2023,19.831186502730628,23.72098607646922,15.568294387891115
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,499,Cardiomyopathy and myocarditis,1,Number,2023,72.39838508113881,88.83196599241305,56.598246176569404
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,499,Cardiomyopathy and myocarditis,1,Number,2023,60.27131839027373,74.64249242933766,42.00420302783068
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.008887039690089733,0.010898646999801614,0.006887615824124839
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.005969674665231954,0.007374917805058002,0.004194927432811452
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,499,Cardiomyopathy and myocarditis,3,Rate,2023,98.50096649491049,120.85952602519107,77.0042307443864
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,499,Cardiomyopathy and myocarditis,3,Rate,2023,59.095900143492656,73.18680587842228,41.18503218506417
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,499,Cardiomyopathy and myocarditis,1,Number,2023,66.72326887214128,79.93766564285609,55.9783330845854
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,499,Cardiomyopathy and myocarditis,1,Number,2023,27.858042508740144,33.40082447751288,22.183554685855125
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.011282296740577466,0.01350964278176629,0.00946752863601126
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.007233729109278698,0.008700670148027223,0.005757565967163729
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,499,Cardiomyopathy and myocarditis,3,Rate,2023,12.952254459034767,15.51741999109113,10.86645823203786
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,499,Cardiomyopathy and myocarditis,3,Rate,2023,5.258794227220842,6.3051114553958225,4.1876147358384
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,499,Cardiomyopathy and myocarditis,1,Number,2023,94.2708202204033,112.38444772054099,79.21919396665301
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,499,Cardiomyopathy and myocarditis,1,Number,2023,42.03353957535079,50.22201496655257,33.501274021804875
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.010770974473628962,0.012870912558797794,0.008998067672798881
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.007167946951662071,0.008535038015421,0.005743970122335142
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,499,Cardiomyopathy and myocarditis,3,Rate,2023,15.089601972609934,17.988987260848276,12.680340562996982
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,499,Cardiomyopathy and myocarditis,3,Rate,2023,6.442900266000393,7.698029641472966,5.135074740006294
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,500,Atrial fibrillation and flutter,1,Number,2023,0.08175666890567308,0.10368524822787675,0.062177315980680097
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,500,Atrial fibrillation and flutter,1,Number,2023,0.021290334136669364,0.027463670027092664,0.01663307195074202
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,500,Atrial fibrillation and flutter,2,Percent,2023,0.00018947497240819953,0.00023144057803447767,0.00014639328349531252
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,500,Atrial fibrillation and flutter,2,Percent,2023,0.00014688412815076977,0.0001853427183194037,0.00011131810259122529
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,500,Atrial fibrillation and flutter,3,Rate,2023,0.05115525862637297,0.06487600045148939,0.03890443094440576
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,500,Atrial fibrillation and flutter,3,Rate,2023,0.013813987634611537,0.017819485392757666,0.010792176805596113
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,500,Atrial fibrillation and flutter,1,Number,2023,0.13206556822460336,0.16293447957991872,0.10300380404828817
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,500,Atrial fibrillation and flutter,1,Number,2023,0.046060503657241014,0.06060367770801376,0.03359927263046383
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,500,Atrial fibrillation and flutter,2,Percent,2023,0.000282181448192786,0.0003465760617001135,0.0002211325673576046
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,500,Atrial fibrillation and flutter,2,Percent,2023,0.00023798820069625244,0.00029660869205543685,0.0001816968994563283
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,500,Atrial fibrillation and flutter,3,Rate,2023,0.08423032941962061,0.10391826630761625,0.06569497608722696
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,500,Atrial fibrillation and flutter,3,Rate,2023,0.03076115227046921,0.04047369894170878,0.02243901519735605
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,500,Atrial fibrillation and flutter,1,Number,2023,0.5112289204071099,0.6304253823014906,0.4120509919209426
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,500,Atrial fibrillation and flutter,1,Number,2023,0.16803000609774374,0.20842606025086344,0.1309824755667379
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,500,Atrial fibrillation and flutter,2,Percent,2023,0.0009236635156388322,0.0010749208108571202,0.0007743970773447427
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,500,Atrial fibrillation and flutter,2,Percent,2023,0.0006826282970006947,0.0008251841177215299,0.0005515111580527025
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,500,Atrial fibrillation and flutter,3,Rate,2023,0.3332564817069418,0.41095747227532353,0.2686050385061883
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,500,Atrial fibrillation and flutter,3,Rate,2023,0.11377979020591973,0.14113356274589858,0.08869343599241568
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,500,Atrial fibrillation and flutter,1,Number,2023,0.982204202606966,1.1473781594212566,0.8310694308052424
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,500,Atrial fibrillation and flutter,1,Number,2023,0.37351082790499934,0.44802662178322167,0.29978134572316784
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,500,Atrial fibrillation and flutter,2,Percent,2023,0.0017538783712514022,0.0019828582408239555,0.0015317221498721068
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,500,Atrial fibrillation and flutter,2,Percent,2023,0.001262660507766723,0.0014884526884706025,0.001041351026051271
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,500,Atrial fibrillation and flutter,3,Rate,2023,0.7152738281317061,0.8355590072061185,0.6052124513798006
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,500,Atrial fibrillation and flutter,3,Rate,2023,0.2852657162578618,0.34217651970744956,0.2289554516749272
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,500,Atrial fibrillation and flutter,1,Number,2023,2.2225001285135626,2.5483839544570963,1.940059271519137
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,500,Atrial fibrillation and flutter,1,Number,2023,1.1086636170915871,1.2895191236716528,0.9218406264619716
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,500,Atrial fibrillation and flutter,2,Percent,2023,0.002759870474733295,0.003096359484935874,0.002456522342536088
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,500,Atrial fibrillation and flutter,2,Percent,2023,0.0021851927688598437,0.002494502766360807,0.0019243166278563966
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,500,Atrial fibrillation and flutter,3,Rate,2023,1.638137535479313,1.8783366340686796,1.4299589336157628
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,500,Atrial fibrillation and flutter,3,Rate,2023,0.8513139711961955,0.9901882132528425,0.7078574532661864
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,500,Atrial fibrillation and flutter,1,Number,2023,4.642371852015875,5.266161805391277,4.086255833439733
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,500,Atrial fibrillation and flutter,1,Number,2023,2.0879926286729313,2.4782039962709588,1.7779182514436054
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,500,Atrial fibrillation and flutter,2,Percent,2023,0.0043129104419575934,0.00476679790980089,0.003897007322972008
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,500,Atrial fibrillation and flutter,2,Percent,2023,0.0031586862290462906,0.003573989406909401,0.0028002014132370904
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,500,Atrial fibrillation and flutter,3,Rate,2023,3.7125808202488,4.211435864736412,3.2678457300378825
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,500,Atrial fibrillation and flutter,3,Rate,2023,1.680208226286009,1.9942114180718074,1.430691292065628
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,500,Atrial fibrillation and flutter,1,Number,2023,10.501526649378532,11.976601082170792,9.230839931197591
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,500,Atrial fibrillation and flutter,1,Number,2023,4.814067387336563,5.512708798009038,4.117162224173832
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,500,Atrial fibrillation and flutter,2,Percent,2023,0.006118345443604235,0.0067102305044117495,0.0055057996956452224
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,500,Atrial fibrillation and flutter,2,Percent,2023,0.004425196415209685,0.004972877812032987,0.003919425124918703
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,500,Atrial fibrillation and flutter,3,Rate,2023,8.125088268541834,9.266361377610762,7.141951045584366
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,500,Atrial fibrillation and flutter,3,Rate,2023,3.5147918742227207,4.024875958148621,3.005975439489882
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,500,Atrial fibrillation and flutter,1,Number,2023,19.397488978934547,21.468818178601058,17.238880509016067
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,500,Atrial fibrillation and flutter,1,Number,2023,10.635179104049822,12.302268421154814,9.179138752224135
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,500,Atrial fibrillation and flutter,2,Percent,2023,0.008373509524088349,0.009141147907389013,0.007607581367741806
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,500,Atrial fibrillation and flutter,2,Percent,2023,0.006668290751201879,0.007478925437771286,0.005848717472893997
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,500,Atrial fibrillation and flutter,3,Rate,2023,15.495299470760036,17.149939733023768,13.770937893968803
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,500,Atrial fibrillation and flutter,3,Rate,2023,7.691240427529217,8.896860438868508,6.638248624710287
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,500,Atrial fibrillation and flutter,1,Number,2023,32.40939964464441,35.41992555748253,29.0456327526285
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,500,Atrial fibrillation and flutter,1,Number,2023,20.867932021592427,23.471364926707285,18.029641421654983
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,500,Atrial fibrillation and flutter,2,Percent,2023,0.011416498453526089,0.012327115921760676,0.010402636766179842
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,500,Atrial fibrillation and flutter,2,Percent,2023,0.010366656440742349,0.011431576940526945,0.009087263574062174
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,500,Atrial fibrillation and flutter,3,Rate,2023,29.572682879610657,32.31970470344514,26.50333840951158
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,500,Atrial fibrillation and flutter,3,Rate,2023,17.012979831538004,19.13547819225972,14.699009253005594
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,500,Atrial fibrillation and flutter,1,Number,2023,42.43360369363678,46.89928071257962,38.05828831460409
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,500,Atrial fibrillation and flutter,1,Number,2023,37.06747701547228,41.73408741121424,31.523055530314007
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,500,Atrial fibrillation and flutter,2,Percent,2023,0.013650269462432404,0.014991535076572537,0.012375641845227844
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,500,Atrial fibrillation and flutter,2,Percent,2023,0.014196353069565786,0.015784677901246946,0.012391637686976755
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,500,Atrial fibrillation and flutter,3,Rate,2023,54.67867932256463,60.43301787556234,49.04077809050194
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,500,Atrial fibrillation and flutter,3,Rate,2023,41.88014129042219,47.15264210399113,35.615858585797895
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,500,Atrial fibrillation and flutter,1,Number,2023,200.40524349571754,228.46349665082462,166.39202186847334
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,500,Atrial fibrillation and flutter,1,Number,2023,307.36647086876513,361.19712924344617,229.73258153242801
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,500,Atrial fibrillation and flutter,2,Percent,2023,0.024597911228603827,0.027775804010429204,0.020361883049790416
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,500,Atrial fibrillation and flutter,2,Percent,2023,0.030442228408878256,0.035758928955998234,0.02252473642693584
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,500,Atrial fibrillation and flutter,3,Rate,2023,272.65953726526834,310.8339392334824,226.38315692702864
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,500,Atrial fibrillation and flutter,3,Rate,2023,301.37217427866176,354.1530209057364,225.25231006292404
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,500,Atrial fibrillation and flutter,1,Number,2023,36.76388760884251,40.10829837749383,33.101720094790366
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,500,Atrial fibrillation and flutter,1,Number,2023,18.645902737150916,21.167108261083488,16.097477440420644
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,500,Atrial fibrillation and flutter,2,Percent,2023,0.0062157345705653325,0.0067443179661377676,0.005617188858583909
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,500,Atrial fibrillation and flutter,2,Percent,2023,0.004841537815313234,0.005431073530683564,0.004229786421953625
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,500,Atrial fibrillation and flutter,3,Rate,2023,7.136569224831537,7.785782910301832,6.425672916610962
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,500,Atrial fibrillation and flutter,3,Rate,2023,3.51980817190177,3.9957389933417278,3.0387390431306427
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,500,Atrial fibrillation and flutter,1,Number,2023,69.17328725348692,75.34144029869518,62.94901621426491
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,500,Atrial fibrillation and flutter,1,Number,2023,39.51383475874329,44.56260712111234,34.44030865947326
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,500,Atrial fibrillation and flutter,2,Percent,2023,0.00790240330030705,0.00855868964459502,0.007192353975009001
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,500,Atrial fibrillation and flutter,2,Percent,2023,0.006738223043606837,0.007499403091254719,0.005924571157277576
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,500,Atrial fibrillation and flutter,3,Rate,2023,11.072327251972055,12.059642034433129,10.076029857593646
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,500,Atrial fibrillation and flutter,3,Rate,2023,6.056679952480031,6.83055569849401,5.2790099540743745
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,501,Aortic aneurysm,1,Number,2023,1.0035549842882836,1.3343546101767054,0.7408791237134346
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,501,Aortic aneurysm,1,Number,2023,0.20629179299473174,0.2757042208423143,0.1491993824491798
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,501,Aortic aneurysm,2,Percent,2023,0.002325034251025369,0.0029934408278486048,0.0017141024645786925
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,501,Aortic aneurysm,2,Percent,2023,0.0014235967173929216,0.0018890802322931329,0.0010590268043252286
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,501,Aortic aneurysm,3,Rate,2023,0.6279257148586025,0.8349074894628684,0.4635690726119036
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,501,Aortic aneurysm,3,Rate,2023,0.13385004947587323,0.1788875023321615,0.09680629768486451
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,501,Aortic aneurysm,1,Number,2023,1.5014208133066842,1.937180362767665,1.1243964199607717
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,501,Aortic aneurysm,1,Number,2023,0.3450696120969771,0.45447897432118567,0.25465013205430254
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,501,Aortic aneurysm,2,Percent,2023,0.0032073697176440573,0.004036297522706969,0.0024372031893791384
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,501,Aortic aneurysm,2,Percent,2023,0.0017838140400189854,0.0022518230461046483,0.0013730918528536383
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,501,Aortic aneurysm,3,Rate,2023,0.9575938028541832,1.235517646989101,0.7171307565229104
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,501,Aortic aneurysm,3,Rate,2023,0.23045208017299088,0.30352027925823266,0.17006612750284225
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,501,Aortic aneurysm,1,Number,2023,2.365275115464292,2.963081839012791,1.835534382970488
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,501,Aortic aneurysm,1,Number,2023,0.5497370872213413,0.6720244882662688,0.4314949266858924
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,501,Aortic aneurysm,2,Percent,2023,0.004275061347868694,0.005221205918378394,0.0033436190055336048
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,501,Aortic aneurysm,2,Percent,2023,0.002235321587818281,0.0027831826137060317,0.0017616198374705867
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,501,Aortic aneurysm,3,Rate,2023,1.5418596870867642,1.931553926747303,1.1965358494072391
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,501,Aortic aneurysm,3,Rate,2023,0.3722488137986063,0.4550544695195567,0.2921823510777032
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,501,Aortic aneurysm,1,Number,2023,2.727985907484847,3.3660430958960244,2.1235383884670203
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,501,Aortic aneurysm,1,Number,2023,0.8583025132983702,1.0538806658992186,0.6888082797912469
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,501,Aortic aneurysm,2,Percent,2023,0.00487090229735724,0.005910758894825513,0.0039138530775499475
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,501,Aortic aneurysm,2,Percent,2023,0.0029005529678392595,0.003489320034033498,0.002348947780398106
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,501,Aortic aneurysm,3,Rate,2023,1.9866102364019729,2.451264741555256,1.5464314124007479
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,501,Aortic aneurysm,3,Rate,2023,0.655521240429092,0.8048923901197267,0.5260714619737149
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,501,Aortic aneurysm,1,Number,2023,3.7277965613974264,4.5137103589426015,3.022946295170746
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,501,Aortic aneurysm,1,Number,2023,1.3800688157876437,1.7156281327604916,1.1170703273297808
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,501,Aortic aneurysm,2,Percent,2023,0.004627871733437077,0.005556217755657452,0.0037552458391840317
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,501,Aortic aneurysm,2,Percent,2023,0.0027198131308385563,0.003252463767647842,0.0022250615776906934
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,501,Aortic aneurysm,3,Rate,2023,2.7476459476922703,3.3269192061693755,2.228122163110645
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,501,Aortic aneurysm,3,Rate,2023,1.0597189679357473,1.3173862443756839,0.8577692654506843
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,501,Aortic aneurysm,1,Number,2023,4.952066927445231,5.7915563268580845,4.12548218888848
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,501,Aortic aneurysm,1,Number,2023,1.7158178124433938,2.099748054018526,1.3518739559557007
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,501,Aortic aneurysm,2,Percent,2023,0.004600777322398971,0.005382092252850675,0.0038688513514364645
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,501,Aortic aneurysm,2,Percent,2023,0.0025955537417463193,0.003057754401065084,0.0021493343982072954
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,501,Aortic aneurysm,3,Rate,2023,3.960249045418065,4.6316024704370005,3.299215689086734
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,501,Aortic aneurysm,3,Rate,2023,1.3807190522065034,1.6896678202031168,1.0878533336308924
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,501,Aortic aneurysm,1,Number,2023,8.456751527418644,10.014908704402929,6.778121510044779
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,501,Aortic aneurysm,1,Number,2023,3.0915621034682284,3.747703340203155,2.4506987820216573
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,501,Aortic aneurysm,2,Percent,2023,0.004926361351947164,0.005739210283443296,0.004042421511365991
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,501,Aortic aneurysm,2,Percent,2023,0.002842055504948438,0.0033529312772072675,0.0023252760013241164
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,501,Aortic aneurysm,3,Rate,2023,6.54303463863217,7.7485893186279995,5.244269466980314
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,501,Aortic aneurysm,3,Rate,2023,2.2571759980985386,2.736230340645726,1.7892761924927825
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,501,Aortic aneurysm,1,Number,2023,13.824708114877454,16.76350875632632,11.269108460438497
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,501,Aortic aneurysm,1,Number,2023,6.390000910438778,7.907312323956707,5.381733209357277
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,501,Aortic aneurysm,2,Percent,2023,0.0059656450619043734,0.007162543298484562,0.00498369023891329
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,501,Aortic aneurysm,2,Percent,2023,0.004006602318789459,0.004835958312986645,0.0033471776142499987
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,501,Aortic aneurysm,3,Rate,2023,11.043593970771726,13.391196594676554,9.002103857494307
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,501,Aortic aneurysm,3,Rate,2023,4.621175896849762,5.718478233803977,3.8920081763572076
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,501,Aortic aneurysm,1,Number,2023,18.605835965244605,22.16952983193918,15.589937929439703
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,501,Aortic aneurysm,1,Number,2023,9.533686282644153,11.25949357907459,7.986614295311497
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,501,Aortic aneurysm,2,Percent,2023,0.006553309046985838,0.0078030726784446384,0.0055054615578385944
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,501,Aortic aneurysm,2,Percent,2023,0.0047359955389969085,0.005563637173811639,0.00397333490719182
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,501,Aortic aneurysm,3,Rate,2023,16.977311913926705,20.22908423168968,14.225388176121909
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,501,Aortic aneurysm,3,Rate,2023,7.772519686138911,9.179517020465655,6.511239723601474
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,501,Aortic aneurysm,1,Number,2023,19.537283759575477,23.271853460346936,16.35886289048082
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,501,Aortic aneurysm,1,Number,2023,12.478558130644375,15.275616982940013,10.160339680052797
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,501,Aortic aneurysm,2,Percent,2023,0.0062848436973882175,0.007518616033021765,0.005362379047997627
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,501,Aortic aneurysm,2,Percent,2023,0.004780587285931762,0.00569570723283618,0.0038282857654147484
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,501,Aortic aneurysm,3,Rate,2023,25.17516261961912,29.987418032818223,21.079544045525807
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,501,Aortic aneurysm,3,Rate,2023,14.098714552220367,17.258930174202717,11.479509683965805
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,501,Aortic aneurysm,1,Number,2023,40.958141738304285,48.122382120239166,33.363239941363084
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,501,Aortic aneurysm,1,Number,2023,41.02941115017985,49.314366566784116,31.029982369229437
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,501,Aortic aneurysm,2,Percent,2023,0.005027088135341043,0.00583546712375725,0.004103626494723967
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,501,Aortic aneurysm,2,Percent,2023,0.004063730668111132,0.0048414951466963585,0.003012056621167818
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,501,Aortic aneurysm,3,Rate,2023,55.725228436200915,65.47247074045362,45.39205364792054
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,501,Aortic aneurysm,3,Rate,2023,40.229250811752834,48.352632066209424,30.424832051496
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,501,Aortic aneurysm,1,Number,2023,30.961323131138755,35.672816426408296,26.523485607242964
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,501,Aortic aneurysm,1,Number,2023,12.577449642138044,14.732925030517883,10.478138788621132
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,501,Aortic aneurysm,2,Percent,2023,0.005234007794755612,0.00593667176441025,0.004508332638724697
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,501,Aortic aneurysm,2,Percent,2023,0.0032655718288629983,0.0037775271646006635,0.0027560278265115067
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,501,Aortic aneurysm,3,Rate,2023,6.01018119108287,6.9247715742265,5.148712593561102
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,501,Aortic aneurysm,3,Rate,2023,2.3742594100244148,2.781150939670553,1.9779701232178049
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,501,Aortic aneurysm,1,Number,2023,49.56715909638335,57.57741943105839,42.50882304460023
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,501,Aortic aneurysm,1,Number,2023,22.11113592478222,26.049108139440122,18.60228377259025
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,501,Aortic aneurysm,2,Percent,2023,0.0056617092238059495,0.006539499582848199,0.004875990979281851
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,501,Aortic aneurysm,2,Percent,2023,0.003770412312586647,0.0043820432153027335,0.0031958875142444397
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,501,Aortic aneurysm,3,Rate,2023,7.934042579970854,9.216217062643599,6.804239302972535
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,501,Aortic aneurysm,3,Rate,2023,3.3891945567889104,3.9928068741346574,2.8513577556747154
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,502,Lower extremity peripheral arterial disease,1,Number,2023,0.2715547982188637,0.3309291642769209,0.21539725780880142
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,502,Lower extremity peripheral arterial disease,1,Number,2023,0.2038161517972923,0.25495783998814564,0.1591661797513758
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,502,Lower extremity peripheral arterial disease,2,Percent,2023,0.0004906957080951769,0.0005976869295370919,0.0004070628498477422
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,502,Lower extremity peripheral arterial disease,2,Percent,2023,0.0008282542885414748,0.0010288952528489418,0.0006486034355185407
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,502,Lower extremity peripheral arterial disease,3,Rate,2023,0.17701932154579736,0.2157238852866968,0.14041172054491996
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,502,Lower extremity peripheral arterial disease,3,Rate,2023,0.13801201065590635,0.1726420787506905,0.10777774137230381
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,502,Lower extremity peripheral arterial disease,1,Number,2023,0.4772271591939492,0.5896983091094562,0.3877069006342932
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,502,Lower extremity peripheral arterial disease,1,Number,2023,0.34082442628411297,0.4216749345042363,0.27077675846630683
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,502,Lower extremity peripheral arterial disease,2,Percent,2023,0.0008521101603505113,0.0010257894583677396,0.0007085560525499664
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,502,Lower extremity peripheral arterial disease,2,Percent,2023,0.0011519104237342776,0.0014196875068949405,0.0009303477744969786
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,502,Lower extremity peripheral arterial disease,3,Rate,2023,0.34753271889803505,0.42943795789102207,0.2823410837315871
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,502,Lower extremity peripheral arterial disease,3,Rate,2023,0.2603017551792129,0.3220506427993914,0.20680344498478498
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,502,Lower extremity peripheral arterial disease,1,Number,2023,1.1930328592357669,1.4187216903667126,0.9815979083650539
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,502,Lower extremity peripheral arterial disease,1,Number,2023,0.8308249011188292,1.0343317042153157,0.6721930509808327
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,502,Lower extremity peripheral arterial disease,2,Percent,2023,0.001482394455891004,0.0017570117374218126,0.0012264369615358121
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,502,Lower extremity peripheral arterial disease,2,Percent,2023,0.001637373589195044,0.001983711475579416,0.0013211227046527685
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,502,Lower extremity peripheral arterial disease,3,Rate,2023,0.8793483890961173,1.0456967914520365,0.7235060901959202
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,502,Lower extremity peripheral arterial disease,3,Rate,2023,0.6379688437829621,0.7942364276006786,0.5161595697910465
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,502,Lower extremity peripheral arterial disease,1,Number,2023,2.076926220530286,2.547093340910503,1.6677518668089184
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,502,Lower extremity peripheral arterial disease,1,Number,2023,1.4070394595817783,1.7447559676782156,1.1420457964316124
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,502,Lower extremity peripheral arterial disease,2,Percent,2023,0.001929148276606531,0.0023138957561984713,0.0016031138152763696
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,502,Lower extremity peripheral arterial disease,2,Percent,2023,0.0021289800860214026,0.002615463235494193,0.0017480074249076666
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,502,Lower extremity peripheral arterial disease,3,Rate,2023,1.6609519222516174,2.036952270581585,1.3337284885872065
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,502,Lower extremity peripheral arterial disease,3,Rate,2023,1.1322450291411683,1.404005593457366,0.9190045575876071
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,502,Lower extremity peripheral arterial disease,1,Number,2023,4.504530379314425,5.548053406588533,3.6741563714269563
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,502,Lower extremity peripheral arterial disease,1,Number,2023,2.7140087289828445,3.292495356136722,2.19306684099992
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,502,Lower extremity peripheral arterial disease,2,Percent,2023,0.002624024875591902,0.0031431773212026305,0.0022029271381662665
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,502,Lower extremity peripheral arterial disease,2,Percent,2023,0.0024940115271490245,0.0030176095074885014,0.0020676312995461586
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,502,Lower extremity peripheral arterial disease,3,Rate,2023,3.485179646944368,4.292559087090805,2.8427147620518647
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,502,Lower extremity peripheral arterial disease,3,Rate,2023,1.9815210423292582,2.403879088628208,1.6011769034746406
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,502,Lower extremity peripheral arterial disease,1,Number,2023,7.412152273801828,8.832279683101593,6.173967695060583
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,502,Lower extremity peripheral arterial disease,1,Number,2023,5.075613899668118,6.06797260222925,4.087465251014508
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,502,Lower extremity peripheral arterial disease,2,Percent,2023,0.0032000750295855785,0.003760288391086181,0.0027097618021339905
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,502,Lower extremity peripheral arterial disease,2,Percent,2023,0.0031825846926126595,0.003838856390386471,0.0026294102891874357
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,502,Lower extremity peripheral arterial disease,3,Rate,2023,5.921050880872455,7.0554915044826565,4.931951680016704
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,502,Lower extremity peripheral arterial disease,3,Rate,2023,3.670626177305391,4.3882886912203904,2.9560083264373342
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,502,Lower extremity peripheral arterial disease,1,Number,2023,11.81008774814464,14.066931560140988,9.908645711440348
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,502,Lower extremity peripheral arterial disease,1,Number,2023,7.282220962134031,8.950975104945774,5.924399376026477
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,502,Lower extremity peripheral arterial disease,2,Percent,2023,0.004160181754199882,0.004915286163199802,0.0035644313023658392
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,502,Lower extremity peripheral arterial disease,2,Percent,2023,0.003617496099749308,0.004362856983204354,0.002968566930724875
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,502,Lower extremity peripheral arterial disease,3,Rate,2023,10.776379185844327,12.835686889558868,9.041365795224205
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,502,Lower extremity peripheral arterial disease,3,Rate,2023,5.936969615839084,7.297453277855789,4.829979654621453
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,502,Lower extremity peripheral arterial disease,1,Number,2023,12.480374317723816,14.933919832405865,10.384822157106822
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,502,Lower extremity peripheral arterial disease,1,Number,2023,10.652653347037484,12.797343648377655,8.400834105161023
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,502,Lower extremity peripheral arterial disease,2,Percent,2023,0.004014164035228098,0.004782291326050356,0.00337969772080866
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,502,Lower extremity peripheral arterial disease,2,Percent,2023,0.004081349851890728,0.004931643300924637,0.0032749979486227363
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,502,Lower extremity peripheral arterial disease,3,Rate,2023,16.081839055463586,19.24340481285727,13.381572883838224
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,502,Lower extremity peripheral arterial disease,3,Rate,2023,12.03574300742395,14.458889659860883,9.491558304189004
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,502,Lower extremity peripheral arterial disease,1,Number,2023,35.48955719085281,43.02271146912485,28.293589097796524
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,502,Lower extremity peripheral arterial disease,1,Number,2023,47.42980197705513,58.31758799757502,33.39329268483537
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,502,Lower extremity peripheral arterial disease,2,Percent,2023,0.004355657239462697,0.005232502317359019,0.003462222896978071
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,502,Lower extremity peripheral arterial disease,2,Percent,2023,0.004697574443039593,0.00576183405601866,0.003348444802912079
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,502,Lower extremity peripheral arterial disease,3,Rate,2023,48.28499530559436,58.53416006712129,38.49458615160288
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,502,Lower extremity peripheral arterial disease,3,Rate,2023,46.50482047384578,57.18027162767673,32.742052815023754
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,502,Lower extremity peripheral arterial disease,1,Number,2023,15.186641732882308,18.18872944873378,12.71204619263949
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,502,Lower extremity peripheral arterial disease,1,Number,2023,10.02748698935157,12.020755273922273,8.143114096375802
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,502,Lower extremity peripheral arterial disease,2,Percent,2023,0.0025677952089613334,0.0030281169898388888,0.0021620500755336245
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,502,Lower extremity peripheral arterial disease,2,Percent,2023,0.0026036219260813956,0.003154900584079456,0.002131735459812475
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,502,Lower extremity peripheral arterial disease,3,Rate,2023,2.9480157586316356,3.5307780342413984,2.4676497384680203
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,502,Lower extremity peripheral arterial disease,3,Rate,2023,1.8929000728098497,2.269171583807586,1.5371848681825546
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,502,Lower extremity peripheral arterial disease,1,Number,2023,26.99672948102693,31.913453589093514,22.699652973050092
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,502,Lower extremity peripheral arterial disease,1,Number,2023,17.309707951485578,20.972682380651218,14.106039367887304
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,502,Lower extremity peripheral arterial disease,2,Percent,2023,0.0030842477067220143,0.003638845491344447,0.0026187438593518876
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,502,Lower extremity peripheral arterial disease,2,Percent,2023,0.002951649815019566,0.003546541385849425,0.0024186000820643344
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,502,Lower extremity peripheral arterial disease,3,Rate,2023,4.321272494272332,5.108275403830159,3.6334544186512034
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,502,Lower extremity peripheral arterial disease,3,Rate,2023,2.653231754729878,3.214692415964872,2.1621734860717994
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,503,Endocarditis,1,Number,2023,1.5205398007920503,2.0163928438450647,1.0904206087922812
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,503,Endocarditis,1,Number,2023,0.7224994728699913,1.0085811639320148,0.5286121681167624
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,503,Endocarditis,2,Percent,2023,0.0035239378072452238,0.004583034161402501,0.0025791186452675825
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,503,Endocarditis,2,Percent,2023,0.004983078713946905,0.006749684458845641,0.0036907371248472653
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,503,Endocarditis,3,Rate,2023,0.9514038157664424,1.2616597373636942,0.6822776539324684
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,503,Endocarditis,3,Rate,2023,0.4687854460231014,0.6544062501613023,0.3429839056068711
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,503,Endocarditis,1,Number,2023,1.7814821474280114,2.2651480597866827,1.2975659089890665
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,503,Endocarditis,1,Number,2023,0.8532182469892874,1.1179779787499735,0.6092382514110882
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,503,Endocarditis,2,Percent,2023,0.0038069255368947358,0.004782663487197069,0.0028969574950498582
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,503,Endocarditis,2,Percent,2023,0.004411330561246381,0.005778926689342092,0.0033075115843321365
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,503,Endocarditis,3,Rate,2023,1.1362146102899193,1.4446927372891305,0.8275768273827585
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,503,Endocarditis,3,Rate,2023,0.5698152284848981,0.7466329742131012,0.4068750693676941
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,503,Endocarditis,1,Number,2023,2.4507974330755955,3.0540931419733566,1.9261468747929469
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,503,Endocarditis,1,Number,2023,1.2259720895919044,1.5761693795159133,0.9524976029177864
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,503,Endocarditis,2,Percent,2023,0.004430868066946412,0.005623202944435877,0.003584708672421652
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,503,Endocarditis,2,Percent,2023,0.004980061296907278,0.0062367991090092525,0.003848343099899932
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,503,Endocarditis,3,Rate,2023,1.597609402208259,1.9908817648438837,1.2556037131724669
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,503,Endocarditis,3,Rate,2023,0.8301543896328709,1.0672868822369426,0.6449739540483327
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,503,Endocarditis,1,Number,2023,2.2762387716467414,2.8325085779952897,1.8493185909488712
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,503,Endocarditis,1,Number,2023,1.138605618369145,1.480045042330229,0.8812579123440198
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,503,Endocarditis,2,Percent,2023,0.004065292994710766,0.005067961580146256,0.0033216893366506033
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,503,Endocarditis,2,Percent,2023,0.003847297934594163,0.004740812161576129,0.0030462460786889055
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,503,Endocarditis,3,Rate,2023,1.6576329195254764,2.062727127842793,1.3467354186351876
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,503,Endocarditis,3,Rate,2023,0.8696003515644058,1.130371805985812,0.6730532311011481
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,503,Endocarditis,1,Number,2023,3.0836813532890677,3.7754210007624556,2.465013212764583
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,503,Endocarditis,1,Number,2023,1.8385129000754796,2.310166908181931,1.4447092484268222
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,503,Endocarditis,2,Percent,2023,0.0038304293970651895,0.004665419929546764,0.003156648381195312
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,503,Endocarditis,2,Percent,2023,0.0036239706358160823,0.004458735833999658,0.0028946254951235017
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,503,Endocarditis,3,Rate,2023,2.2728881350656964,2.7827484796242645,1.816886585281237
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,503,Endocarditis,3,Rate,2023,1.4117462627344366,1.7739171146336334,1.1093546757929784
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,503,Endocarditis,1,Number,2023,3.790013859250382,4.619004269220664,3.024461105580753
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,503,Endocarditis,1,Number,2023,2.1042080335151407,2.6068047865150965,1.7062721677155503
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,503,Endocarditis,2,Percent,2023,0.003520961503652373,0.004254619098385004,0.002864525796853796
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,503,Endocarditis,2,Percent,2023,0.00318348235845383,0.003848946680627715,0.0025796496302887143
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,503,Endocarditis,3,Rate,2023,3.030936170315638,3.693893381485488,2.418711092109472
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,503,Endocarditis,3,Rate,2023,1.6932567668959215,2.097696508348402,1.3730376693430397
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,503,Endocarditis,1,Number,2023,5.5345818450608855,6.837828610719806,4.416062489650123
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,503,Endocarditis,1,Number,2023,2.7339813787207943,3.33903611045453,2.158075483921544
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,503,Endocarditis,2,Percent,2023,0.003223646036366918,0.0038566388194263756,0.0026173410952707666
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,503,Endocarditis,2,Percent,2023,0.0025134352529208944,0.00300276861836242,0.002051253604854072
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,503,Endocarditis,3,Rate,2023,4.282136066687982,5.290465175417814,3.416731559684921
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,503,Endocarditis,3,Rate,2023,1.9961032451439313,2.4378588923855737,1.5756294136637132
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,503,Endocarditis,1,Number,2023,6.934806228538257,8.400747769579779,5.653194970428662
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,503,Endocarditis,1,Number,2023,4.338969160724495,5.341404891768215,3.5241357199878482
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,503,Endocarditis,2,Percent,2023,0.002993015130729284,0.0035606213511356947,0.0024370853093735635
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,503,Endocarditis,2,Percent,2023,0.0027207060430784213,0.0032800183259009403,0.0022044496015047226
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,503,Endocarditis,3,Rate,2023,5.53973245710252,6.71077079148355,4.515942714467675
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,503,Endocarditis,3,Rate,2023,3.1378930901181343,3.8628431962867613,2.5486148241122586
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,503,Endocarditis,1,Number,2023,9.241028194077433,11.16208600551961,7.474816324650901
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,503,Endocarditis,1,Number,2023,5.896349393075032,7.078881421558023,4.806147561246169
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,503,Endocarditis,2,Percent,2023,0.0032557826972364223,0.003919732170120825,0.002679378528481831
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,503,Endocarditis,2,Percent,2023,0.002929453901277401,0.0035091170860605887,0.0023663470994131144
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,503,Endocarditis,3,Rate,2023,8.432183232686082,10.185095476482193,6.820563638202599
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,503,Endocarditis,3,Rate,2023,4.807111370704571,5.7711931747813745,3.918303521511909
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,503,Endocarditis,1,Number,2023,10.083071541549934,11.880116042299957,8.118202451726603
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,503,Endocarditis,1,Number,2023,8.526888928255957,10.474688777750595,6.650172339892684
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,503,Endocarditis,2,Percent,2023,0.003244152209435764,0.003873647703805313,0.002630851194900793
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,503,Endocarditis,2,Percent,2023,0.003265872153157566,0.003927092104018687,0.002525075786093077
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,503,Endocarditis,3,Rate,2023,12.992746017693557,15.308364099398542,10.460874163279737
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,503,Endocarditis,3,Rate,2023,9.63397948379481,11.834672367970581,7.513598972061425
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,503,Endocarditis,1,Number,2023,33.81717015237928,40.11285525400093,26.75324503117354
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,503,Endocarditis,1,Number,2023,42.79582484680082,54.54470180392908,30.417776844577176
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,503,Endocarditis,2,Percent,2023,0.004151384619478397,0.004981818343284473,0.0033077451178180365
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,503,Endocarditis,2,Percent,2023,0.004238063121047268,0.005441879649247019,0.0030321119634032835
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,503,Endocarditis,3,Rate,2023,46.00964428141634,54.57518157292281,36.398884995741156
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,503,Endocarditis,3,Rate,2023,41.96121570343934,53.48096469848828,29.824565830042605
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,503,Endocarditis,1,Number,2023,19.343083286138597,23.20103190700416,15.548785443297893
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,503,Endocarditis,1,Number,2023,11.015671473035908,13.378855032277485,8.938764240411688
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,503,Endocarditis,2,Percent,2023,0.0032699795545693845,0.0039082508106501246,0.002682609280752067
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,503,Endocarditis,2,Percent,2023,0.002860594525747936,0.0034394697950249366,0.0023283344825075127
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,503,Endocarditis,3,Rate,2023,3.7548600507637206,4.503761192329288,3.0183147347958625
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,503,Endocarditis,3,Rate,2023,2.0794407766873033,2.525541612928896,1.6873806467635735
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,503,Endocarditis,1,Number,2023,28.58411148021601,34.24461410715574,22.730702860810247
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,503,Endocarditis,1,Number,2023,16.912020866110943,20.501017892989836,13.660267564471658
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,503,Endocarditis,2,Percent,2023,0.0032654056845555245,0.003911804544866971,0.002644986628880281
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,503,Endocarditis,2,Percent,2023,0.0028842534111162025,0.0034616582340103843,0.0023323579159399118
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,503,Endocarditis,3,Rate,2023,4.575359204139154,5.481416151620204,3.638424466079448
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,503,Endocarditis,3,Rate,2023,2.5922742847182896,3.142395690927743,2.093845591256908
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,504,Non-rheumatic valvular heart disease,1,Number,2023,0.8780346372958605,1.1290047537461039,0.6571515919389614
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,504,Non-rheumatic valvular heart disease,1,Number,2023,0.43043729912828504,0.577258424990378,0.3091424203493471
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.0020359358227335198,0.002677673878239064,0.0015363076911457324
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.002971009243092141,0.004012613470656639,0.002153869590495628
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,504,Non-rheumatic valvular heart disease,3,Rate,2023,0.5493874634937161,0.7064198057643577,0.41118064241530805
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,504,Non-rheumatic valvular heart disease,3,Rate,2023,0.27928427470720313,0.3745474680483289,0.20058349223765792
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,504,Non-rheumatic valvular heart disease,1,Number,2023,1.3150280634487006,1.715468531148294,0.9960513835983119
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,504,Non-rheumatic valvular heart disease,1,Number,2023,0.6036180270044769,0.7682907130869611,0.43780378927209845
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.0028084819382951333,0.003566241727635067,0.002175164708259272
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.003119932175738075,0.003975251603040937,0.0023222458555411086
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,504,Non-rheumatic valvular heart disease,3,Rate,2023,0.8387140453744295,1.094111670665531,0.6352733516178126
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,504,Non-rheumatic valvular heart disease,3,Rate,2023,0.4031216458260735,0.5130970297051888,0.2923838854782097
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,504,Non-rheumatic valvular heart disease,1,Number,2023,1.8562055249440161,2.3404529705905577,1.4336782671551922
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,504,Non-rheumatic valvular heart disease,1,Number,2023,0.8106542159872766,1.0226446535532958,0.6286692891213205
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.003354469632530996,0.004142721587522941,0.002641289321909293
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.0032953412396177664,0.004113287096544265,0.002563843800965093
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,504,Non-rheumatic valvular heart disease,3,Rate,2023,1.2100108148717856,1.525678793677108,0.9345765783973429
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,504,Non-rheumatic valvular heart disease,3,Rate,2023,0.5489261636455732,0.6924733078258329,0.42569694238729805
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,504,Non-rheumatic valvular heart disease,1,Number,2023,2.0936388879003545,2.595487771069501,1.6681443335500734
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,504,Non-rheumatic valvular heart disease,1,Number,2023,0.9713113463681422,1.1854403305758894,0.7601732632631855
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.0037371824438668273,0.004511229376670336,0.003036819694789885
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.0032825690751852343,0.0039939907415281455,0.0026309933322846367
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,504,Non-rheumatic valvular heart disease,3,Rate,2023,1.5246575998139336,1.8901206785253337,1.214798287532916
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,504,Non-rheumatic valvular heart disease,3,Rate,2023,0.7418307749877884,0.9053699644517351,0.5805758607887097
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,504,Non-rheumatic valvular heart disease,1,Number,2023,3.594531853582229,4.432473018568875,2.931872264324234
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,504,Non-rheumatic valvular heart disease,1,Number,2023,1.9932346099951874,2.4667962515607815,1.6119586283718812
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.004462066733469959,0.005423327729555338,0.0037182154521455285
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.003927526316620613,0.0047048139526759715,0.0031868057562759017
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,504,Non-rheumatic valvular heart disease,3,Rate,2023,2.6494205675332294,3.267041622883154,2.1609942531847834
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,504,Non-rheumatic valvular heart disease,3,Rate,2023,1.5305530416991426,1.894188715741552,1.237781126905938
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,504,Non-rheumatic valvular heart disease,1,Number,2023,4.8598697011377086,5.800990552159893,4.070488540147658
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,504,Non-rheumatic valvular heart disease,1,Number,2023,3.141312926590803,3.8837327814113323,2.450138070987165
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.004515168563183833,0.0053454378397491484,0.0037925632729871777
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.004750263000464828,0.005601605313872709,0.0038755771297094574
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,504,Non-rheumatic valvular heart disease,3,Rate,2023,3.886517413187703,4.639147174960011,3.255236367296297
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,504,Non-rheumatic valvular heart disease,3,Rate,2023,2.5278153515087016,3.1252408070862647,1.971626760495631
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,504,Non-rheumatic valvular heart disease,1,Number,2023,9.243176643253022,10.756014444781021,7.714254876200536
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,504,Non-rheumatic valvular heart disease,1,Number,2023,5.931296417639251,7.057814028948094,4.840033026812303
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.0053853514585759776,0.006170931229281333,0.004586800793721083
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.005454946128539384,0.006333891067633432,0.004526871501672673
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,504,Non-rheumatic valvular heart disease,3,Rate,2023,7.151496026780014,8.32198685957043,5.968560942410017
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,504,Non-rheumatic valvular heart disease,3,Rate,2023,4.330490368116503,5.152970534641083,3.5337496102274972
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,504,Non-rheumatic valvular heart disease,1,Number,2023,16.19917241384252,19.09429222264457,13.753727079241187
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,504,Non-rheumatic valvular heart disease,1,Number,2023,12.161779795014173,14.311763198376966,10.019200325832367
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.006993376580645068,0.00821379827925115,0.006142248211937399
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.007625433897444482,0.00878820787684776,0.0064427335020015965
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,504,Non-rheumatic valvular heart disease,3,Rate,2023,12.940387696755987,15.253096753574397,10.986892177816813
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,504,Non-rheumatic valvular heart disease,3,Rate,2023,8.79526066415767,10.350104180066475,7.245771589141519
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,504,Non-rheumatic valvular heart disease,1,Number,2023,27.340379101760814,32.02594637355826,23.17875942364866
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,504,Non-rheumatic valvular heart disease,1,Number,2023,19.04118219080059,22.165613579886937,16.11185472028278
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.00963002623251573,0.011267539283973994,0.00816213001489909
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.00945912278986786,0.01084028735228791,0.007974543003149225
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,504,Non-rheumatic valvular heart disease,3,Rate,2023,24.947341507398587,29.222792350649435,21.149978385718708
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,504,Non-rheumatic valvular heart disease,3,Rate,2023,15.523687169650415,18.07093948734769,13.13549704499777
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,504,Non-rheumatic valvular heart disease,1,Number,2023,38.69977457755843,44.94603887446587,32.60500095091469
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,504,Non-rheumatic valvular heart disease,1,Number,2023,35.69485956681397,42.14550284559592,29.168884190612424
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.01244587311764357,0.014279795987975042,0.010681909327025365
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.013671803772552707,0.016108799716352002,0.011318695470164536
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,504,Non-rheumatic valvular heart disease,3,Rate,2023,49.86737820476875,57.91612855179149,42.01383422860976
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,504,Non-rheumatic valvular heart disease,3,Rate,2023,40.32930974438751,47.61747375449092,32.95603287693157
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,504,Non-rheumatic valvular heart disease,1,Number,2023,212.339597812387,252.14303573549324,175.2914124939273
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,504,Non-rheumatic valvular heart disease,1,Number,2023,304.154214838372,359.3031946126311,220.1324028279869
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.026063213201968857,0.030745452480137,0.021717526167845554
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.03012350118246257,0.03584702153264788,0.022154168679731436
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,504,Non-rheumatic valvular heart disease,3,Rate,2023,288.8967148399779,343.05092146837364,238.4911421651045
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,504,Non-rheumatic valvular heart disease,3,Rate,2023,298.22256403821126,352.29602200791555,215.83935515784455
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,504,Non-rheumatic valvular heart disease,1,Number,2023,33.896750611815484,39.1263363115407,29.564458917472603
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,504,Non-rheumatic valvular heart disease,1,Number,2023,23.227623749239417,26.94304967148675,19.19326566892198
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.005730492627748882,0.006596010069237703,0.005082756621844334
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.006031416533673234,0.006948356271664582,0.0050533418987594525
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,504,Non-rheumatic valvular heart disease,3,Rate,2023,6.580003448272112,7.595165412653198,5.739023301999323
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,504,Non-rheumatic valvular heart disease,3,Rate,2023,4.384704835102291,5.086069993312916,3.62313449229522
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,504,Non-rheumatic valvular heart disease,1,Number,2023,61.23712971357631,69.08669788530686,54.34178387396252
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,504,Non-rheumatic valvular heart disease,1,Number,2023,42.268805940040004,48.72597387627022,35.64277242946133
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.006995574500641451,0.007900866651252387,0.0062723667631871295
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.007208160687471807,0.008286861713944046,0.006096990158453292
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,504,Non-rheumatic valvular heart disease,3,Rate,2023,9.802014145655615,11.058467193283246,8.698300144440807
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,504,Non-rheumatic valvular heart disease,3,Rate,2023,6.478961890573314,7.468716487360671,5.46332358128209
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,507,Other cardiovascular and circulatory diseases,1,Number,2023,2.1249621098955482,2.7111412961041,1.5122647934014206
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,507,Other cardiovascular and circulatory diseases,1,Number,2023,1.6908653834902494,2.253901899950738,1.263288519841428
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.0049261629781875635,0.006182642662063802,0.0036873911526478305
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.01167067763251233,0.01505110697788577,0.008849663083885717
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,1.329591674391311,1.6963647862764342,0.9462261324181734
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,1.0970984931183905,1.4624182399242385,0.8196701789653653
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,507,Other cardiovascular and circulatory diseases,1,Number,2023,3.022520433469063,3.8981940184762283,2.2734125909428586
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,507,Other cardiovascular and circulatory diseases,1,Number,2023,2.688144024742956,3.5458150665493693,2.029830077833936
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.006457633235123193,0.008071801876323769,0.004991594142611651
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.013899101489480275,0.01749738692518821,0.01062037296702795
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,1.9277385863032601,2.4862359715094717,1.4499637870498034
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,1.7952562630537023,2.368045256229018,1.3556063687899345
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,507,Other cardiovascular and circulatory diseases,1,Number,2023,4.195406601291133,5.1739359106796785,3.2916481552668695
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,507,Other cardiovascular and circulatory diseases,1,Number,2023,3.5271114810158544,4.512110651972121,2.800210612802544
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.007581428753826085,0.009234026374748282,0.0061511983756352695
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.014336042673089652,0.01799179049788165,0.011269700225138032
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,2.7348735321213153,3.3727506589361793,2.1457375345037817
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,2.3883472581047753,3.0553293146263676,1.8961338123842493
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,507,Other cardiovascular and circulatory diseases,1,Number,2023,4.285384377177175,5.262380987320024,3.407558755735412
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,507,Other cardiovascular and circulatory diseases,1,Number,2023,4.0337841482478645,5.022627011709552,3.1822521445676353
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.0076517318001925625,0.00912077304491736,0.006219937495360096
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.013633379391723321,0.016938434656301623,0.01089203647531937
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,3.1207596957370107,3.8322411815153936,2.4814978283837545
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,3.0807683159648858,3.8359886379407198,2.430417994640022
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,507,Other cardiovascular and circulatory diseases,1,Number,2023,6.049062919254073,7.412670190582423,4.978071049862592
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,507,Other cardiovascular and circulatory diseases,1,Number,2023,5.637371591007885,6.926343856747922,4.480663104429951
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.00751330671367438,0.008914321019212875,0.006213718358421155
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.011109543356085008,0.013612912844014982,0.009084025692839332
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,4.458581079648157,5.463654701987819,3.6691854081092163
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,4.328791097916107,5.318559393179159,3.4405847203962328
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,507,Other cardiovascular and circulatory diseases,1,Number,2023,7.487554202933886,8.969265257214083,6.111868094910734
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,507,Other cardiovascular and circulatory diseases,1,Number,2023,7.052229443544317,8.641157931479848,5.672004234261038
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.006956229697990296,0.008203935879353308,0.005756027909571808
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.010663765234296305,0.012960494606602646,0.00875449683131663
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,5.987919755354087,7.172868358487339,4.887761038617157
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,5.6749309178503164,6.953542096715574,4.56426332309016
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,507,Other cardiovascular and circulatory diseases,1,Number,2023,11.991645889709016,14.303988003166715,9.87629150395992
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,507,Other cardiovascular and circulatory diseases,1,Number,2023,9.440241353279811,11.581449768555744,7.562055981106247
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.006987969950311772,0.008143829539713151,0.005850606610634791
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.00868027812072566,0.010490825222627478,0.007155918987780766
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,9.278001627006168,11.06707329307886,7.641340436942377
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,6.892401150530355,8.455715772761465,5.521121907168551
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,507,Other cardiovascular and circulatory diseases,1,Number,2023,14.597687285691682,16.947664317455345,12.380462773086931
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,507,Other cardiovascular and circulatory diseases,1,Number,2023,14.622021748245517,17.361658228246565,11.789621906724694
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.006301897214844832,0.007188199960454216,0.005365517739733783
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.009168773783056536,0.011055417478231104,0.007584029812340278
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,11.661073055277646,13.53830561337475,9.889887214985047
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,10.57447963048338,12.555753537162962,8.526120317029333
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,507,Other cardiovascular and circulatory diseases,1,Number,2023,18.73029839327354,22.291589210991788,15.724492340517568
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,507,Other cardiovascular and circulatory diseases,1,Number,2023,20.376529685607334,24.210679563170427,16.67372088384493
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.006597753498809538,0.007742479300412662,0.0055546925606290345
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.010121001908284886,0.011871925298170508,0.008285189163860073
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,17.090880445120856,20.340460047001994,14.34816536337277
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,16.612354699031627,19.738218558976154,13.593569157692775
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,507,Other cardiovascular and circulatory diseases,1,Number,2023,22.685537262034018,26.384149541288345,19.22082619965084
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,507,Other cardiovascular and circulatory diseases,1,Number,2023,29.170060363585602,35.2579202374254,23.784676266976234
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.007299820559327685,0.00848513356182189,0.00618221277460179
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.011170057272520925,0.013288856659356344,0.009259139447275716
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,29.231908422542404,33.99783017210558,24.767384822492858
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,32.957361758589144,39.83564029819086,26.872765097881704
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,507,Other cardiovascular and circulatory diseases,1,Number,2023,51.19943905986412,62.30478671021954,40.312653039459505
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,507,Other cardiovascular and circulatory diseases,1,Number,2023,107.5928395614159,131.46302363026544,78.49565480966702
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.006284961047935238,0.007543685405761173,0.004937947149579521
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.010655716880657922,0.012845965638834599,0.007725452119643294
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,69.65893266461455,84.76821273482666,54.84701463866256
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,105.49455151627026,128.89921648485944,76.96482343878398
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,507,Other cardiovascular and circulatory diseases,1,Number,2023,40.12595029758865,46.524771619810664,34.6711653344581
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,507,Other cardiovascular and circulatory diseases,1,Number,2023,36.75186413607751,44.69949952821072,29.997242916861957
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.006784985509241597,0.007771716097473151,0.005855050445768033
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.009543373805555543,0.011504132283413541,0.007922515162159225
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,7.789209483439263,9.031342301633979,6.730332062472816
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,6.93769100602717,8.437975137875037,5.662613510415991
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,507,Other cardiovascular and circulatory diseases,1,Number,2023,58.8562486908622,68.42054551137835,50.50746426202809
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,507,Other cardiovascular and circulatory diseases,1,Number,2023,57.12839382168487,68.28044891662056,47.894777993417755
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.006724372659948158,0.007696176215528947,0.0058189165433996555
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.009741498509190889,0.011621146667259302,0.008207477917882754
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,9.420914809796443,10.951838502112544,8.084553954001485
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,507,Other cardiovascular and circulatory diseases,3,Rate,2023,8.756639280641325,10.466026105151045,7.341310795885927
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,1004,Pulmonary Arterial Hypertension,1,Number,2023,0.10181375843200563,0.14806579784332943,0.06793554975591433
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,1004,Pulmonary Arterial Hypertension,1,Number,2023,0.1312662249970399,0.19809146101957995,0.08924878799665621
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.00023605956717763529,0.00034114703956183133,0.00016302837823107413
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.0009058989590998235,0.0013599525086260295,0.0006237563875681703
+1,All Population,1,Deaths,560,Oregon,1,Male,11,30-34 years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,0.06370500674778476,0.09264497054221583,0.042507365627851304
+1,All Population,1,Deaths,560,Oregon,2,Female,11,30-34 years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,0.08517057540342202,0.1285293586977351,0.057908046246508846
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,1004,Pulmonary Arterial Hypertension,1,Number,2023,0.12499549090730004,0.1754601005084656,0.08724152901615402
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,1004,Pulmonary Arterial Hypertension,1,Number,2023,0.18261464382442205,0.24721243622178612,0.12789858781549002
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.0002669510757878926,0.00037680851827602243,0.00018773974509356573
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.0009447560597544474,0.0012646210682835867,0.0006797163431970539
+1,All Population,1,Deaths,560,Oregon,1,Male,12,35-39 years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,0.07972109245903863,0.11190700395649761,0.05564192716457839
+1,All Population,1,Deaths,560,Oregon,2,Female,12,35-39 years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,0.12195778203605122,0.1650989196809733,0.08541608585627704
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,1004,Pulmonary Arterial Hypertension,1,Number,2023,0.17240970420659132,0.24331228741851052,0.11828843544113474
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,1004,Pulmonary Arterial Hypertension,1,Number,2023,0.23238674350996621,0.311337005660127,0.16913484346068228
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.00031138983956108257,0.00043918023761602967,0.0002180230998776216
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.0009448672923971003,0.0012406048980469775,0.0006950752003037324
+1,All Population,1,Deaths,560,Oregon,1,Male,13,40-44 years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,0.11238928226178663,0.15860878292368477,0.07710907237082638
+1,All Population,1,Deaths,560,Oregon,2,Female,13,40-44 years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,0.15735829294572576,0.2108186508470535,0.11452791946143907
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,1004,Pulmonary Arterial Hypertension,1,Number,2023,0.15625259655201054,0.2121807851707571,0.1121341773860471
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,1004,Pulmonary Arterial Hypertension,1,Number,2023,0.2624256409849165,0.34887435183878085,0.18799635098581832
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.00027885539016041493,0.0003776563661720375,0.00020220382353313348
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.0008869325378198545,0.001152144194415966,0.0006607119470772344
+1,All Population,1,Deaths,560,Oregon,1,Male,14,45-49 years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,0.1137883472648898,0.15451711778697122,0.08165984436885254
+1,All Population,1,Deaths,560,Oregon,2,Female,14,45-49 years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,0.20042535007587842,0.26644981731721035,0.14358061322782878
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,1004,Pulmonary Arterial Hypertension,1,Number,2023,0.23742530969338987,0.315510845829298,0.17614820253976107
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,1004,Pulmonary Arterial Hypertension,1,Number,2023,0.41408394784807895,0.5357584766633146,0.3007565470813752
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.0002949360271216016,0.00039372936180703913,0.00021611489327161637
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.0008159981780808306,0.001070595880702205,0.0006022821916409665
+1,All Population,1,Deaths,560,Oregon,1,Male,15,50-54 years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,0.17499900526065093,0.23255348909674792,0.1298335053778307
+1,All Population,1,Deaths,560,Oregon,2,Female,15,50-54 years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,0.31796429919466296,0.41139500687032277,0.23094313415892456
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,1004,Pulmonary Arterial Hypertension,1,Number,2023,0.3038603056134553,0.3954824556681539,0.2237229088218853
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,1004,Pulmonary Arterial Hypertension,1,Number,2023,0.5285485591215986,0.7131563240697908,0.3957776608341336
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.00028235292076409646,0.0003719381904336364,0.00020882864345467012
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.0007993775435934202,0.001031558107428253,0.0006061877536109877
+1,All Population,1,Deaths,560,Oregon,1,Male,16,55-59 years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,0.24300206416372938,0.3162737984939566,0.17891487515842416
+1,All Population,1,Deaths,560,Oregon,2,Female,16,55-59 years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,0.425323166773898,0.5738770845620886,0.3184823894404232
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,1004,Pulmonary Arterial Hypertension,1,Number,2023,0.46941475841194397,0.6283309436188594,0.3422376335033607
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,1004,Pulmonary Arterial Hypertension,1,Number,2023,0.7736285314045073,1.0013786805774314,0.5617024879296338
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.0002735666383177388,0.00036483627413923714,0.0002034793006611028
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.0007110155258271348,0.0009059983865924132,0.0005360482201527247
+1,All Population,1,Deaths,560,Oregon,1,Male,17,60-64 years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,0.3631887509307037,0.4861430674997659,0.26479111788915344
+1,All Population,1,Deaths,560,Oregon,2,Female,17,60-64 years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,0.56483282369502,0.7311151602845979,0.41010380234790383
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,1004,Pulmonary Arterial Hypertension,1,Number,2023,0.6711895009289718,0.8887210544141283,0.4916531957767584
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,1004,Pulmonary Arterial Hypertension,1,Number,2023,1.2088863207831317,1.5729270783507965,0.9131123197987231
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.0002896837026780333,0.0003867707031511617,0.00021720727073769547
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.0007583892669036074,0.0009623748608444609,0.000577073028774765
+1,All Population,1,Deaths,560,Oregon,1,Male,18,65-69 years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,0.5361664249336074,0.7099371933692904,0.3927474072850607
+1,All Population,1,Deaths,560,Oregon,2,Female,18,65-69 years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,0.8742528218592678,1.1375229524776211,0.660352432262905
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,1004,Pulmonary Arterial Hypertension,1,Number,2023,0.8977621523969117,1.1864244615143356,0.6702126056912134
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,1004,Pulmonary Arterial Hypertension,1,Number,2023,1.4512161114683597,1.8442716889430095,1.1008336295367425
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.00031633166452862857,0.0004224218893279178,0.00023473769019862766
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.0007208497685187244,0.0009162230324054032,0.0005438535225526925
+1,All Population,1,Deaths,560,Oregon,1,Male,19,70-74 years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,0.8191831914584008,1.0825795832590848,0.611550509029531
+1,All Population,1,Deaths,560,Oregon,2,Female,19,70-74 years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,1.1831316303919124,1.5035776911386385,0.8974756251749684
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,1004,Pulmonary Arterial Hypertension,1,Number,2023,1.056168166183223,1.3631304508840085,0.8168332984904465
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,1004,Pulmonary Arterial Hypertension,1,Number,2023,2.044106378526513,2.666405682393837,1.507674561972541
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.0003397787180409716,0.0004486988656079245,0.0002571152018488246
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.0007828840177497966,0.0010102829193420805,0.0005747958024298951
+1,All Population,1,Deaths,560,Oregon,1,Male,20,75-79 years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,1.360946878006818,1.7564893459634805,1.0525470876952505
+1,All Population,1,Deaths,560,Oregon,2,Female,20,75-79 years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,2.30950339322016,3.0125990681703714,1.7034238302496154
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,1004,Pulmonary Arterial Hypertension,1,Number,2023,3.0928485773809755,4.137948152173445,2.2276317081935986
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,1004,Pulmonary Arterial Hypertension,1,Number,2023,8.267886234154062,11.078193193516128,5.401654620930929
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.00037963926569580176,0.0005102561194932105,0.0002738810974316405
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.0008188122903039009,0.0010923000217266774,0.000539176484002214
+1,All Population,1,Deaths,560,Oregon,1,Male,21,80+ years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,4.207947093750876,5.629847845889295,3.0307841259976107
+1,All Population,1,Deaths,560,Oregon,2,Female,21,80+ years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,8.106644957183697,10.862144984039327,5.2963109255576395
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,1004,Pulmonary Arterial Hypertension,1,Number,2023,1.6818898746477602,2.229893427085306,1.2512241933421089
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,1004,Pulmonary Arterial Hypertension,1,Number,2023,2.9251473591573176,3.714507982547614,2.196701303333967
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.00028438915370122033,0.0003815670023068866,0.00021261725204122788
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.000759636256240451,0.0009648752439115092,0.0005823282196119734
+1,All Population,1,Deaths,560,Oregon,1,Male,25,50-69 years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,0.32648678634519657,0.4328646898203311,0.24288639347875268
+1,All Population,1,Deaths,560,Oregon,2,Female,25,50-69 years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,0.5521833790468447,0.7011918776941563,0.41467379229092827
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,1004,Pulmonary Arterial Hypertension,1,Number,2023,2.5796520270446726,3.4310174414514227,1.9291271528248402
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,1004,Pulmonary Arterial Hypertension,1,Number,2023,4.37636347062568,5.566219656359995,3.3217715249824304
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.0002947484395933259,0.00039456149352118,0.00022074866886219403
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.0007463166254041368,0.0009471478708466165,0.000571209045922839
+1,All Population,1,Deaths,560,Oregon,1,Male,41,50-74 years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,0.4129159184669496,0.5491910161759594,0.3087886667647852
+1,All Population,1,Deaths,560,Oregon,2,Female,41,50-74 years,1004,Pulmonary Arterial Hypertension,3,Rate,2023,0.6708089219672447,0.8531900588645381,0.5091610856025139

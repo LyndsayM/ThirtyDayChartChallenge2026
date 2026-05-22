@@ -1,0 +1,40 @@
+population_group_id,population_group_name,measure_id,measure_name,location_id,location_name,sex_id,sex_name,age_id,age_name,cause_id,cause_name,metric_id,metric_name,year,val,upper,lower
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,491,Cardiovascular diseases,1,Number,2023,11542.65268,12426.51772,10013.16655
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,491,Cardiovascular diseases,2,Percent,2023,0.271491693,0.293046057,0.235649965
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,491,Cardiovascular diseases,3,Rate,2023,270.630225,291.3534159,234.7697354
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,492,Rheumatic heart disease,1,Number,2023,127.4423888,147.435986,104.2383837
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,492,Rheumatic heart disease,2,Percent,2023,0.002997541,0.003458823,0.002464106
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,492,Rheumatic heart disease,3,Rate,2023,2.98802739,3.456799332,2.443983892
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,493,Ischemic heart disease,1,Number,2023,4948.413928,5392.403653,4307.462668
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,493,Ischemic heart disease,2,Percent,2023,0.116389015,0.126341582,0.10114482
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,493,Ischemic heart disease,3,Rate,2023,116.0210232,126.4308521,100.9932139
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,494,Stroke,1,Number,2023,3067.179208,3391.697534,2611.300152
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,494,Stroke,2,Percent,2023,0.072143169,0.079895057,0.061228898
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,494,Stroke,3,Rate,2023,71.91340001,79.52209014,61.22481265
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,498,Hypertensive heart disease,1,Number,2023,759.304491,867.4594717,644.5330381
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,498,Hypertensive heart disease,2,Percent,2023,0.017859035,0.020289012,0.015160114
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,498,Hypertensive heart disease,3,Rate,2023,17.8027314,20.33854423,15.11178808
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,499,Cardiomyopathy and myocarditis,1,Number,2023,354.9121737,409.1392205,295.6614483
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,499,Cardiomyopathy and myocarditis,2,Percent,2023,0.008348396,0.00962817,0.006966152
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,499,Cardiomyopathy and myocarditis,3,Rate,2023,8.321307423,9.592720354,6.932108806
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,500,Atrial fibrillation and flutter,1,Number,2023,698.2760641,780.8938992,575.194493
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,500,Atrial fibrillation and flutter,2,Percent,2023,0.016423779,0.018410456,0.013509312
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,500,Atrial fibrillation and flutter,3,Rate,2023,16.37185261,18.30891889,13.4860694
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,501,Aortic aneurysm,1,Number,2023,196.0792217,219.7379155,169.3679796
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,501,Aortic aneurysm,2,Percent,2023,0.004611698,0.005188504,0.004024249
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,501,Aortic aneurysm,3,Rate,2023,4.597293652,5.151997825,3.971019116
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,502,Lower extremity peripheral arterial disease,1,Number,2023,151.6522468,175.1157229,124.193035
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,502,Lower extremity peripheral arterial disease,2,Percent,2023,0.003566898,0.004093381,0.00292281
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,502,Lower extremity peripheral arterial disease,3,Rate,2023,3.555654217,4.105781298,2.911842706
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,503,Endocarditis,1,Number,2023,154.3087667,179.3709818,131.8379006
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,503,Endocarditis,2,Percent,2023,0.0036296,0.004229705,0.003093648
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,503,Endocarditis,3,Rate,2023,3.617939256,4.205550536,3.091085012
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,504,Non-rheumatic valvular heart disease,1,Number,2023,704.6372521,800.0050515,574.757623
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,504,Non-rheumatic valvular heart disease,2,Percent,2023,0.01657413,0.018975655,0.013522036
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,504,Non-rheumatic valvular heart disease,3,Rate,2023,16.52099768,18.75700093,13.4758265
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,1004,Pulmonary Arterial Hypertension,1,Number,2023,23.32669927,28.85132795,17.77919862
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,1004,Pulmonary Arterial Hypertension,2,Percent,2023,0.000548661,0.000677652,0.000416855
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,1004,Pulmonary Arterial Hypertension,3,Rate,2023,0.546920196,0.67645121,0.416852924
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,507,Other cardiovascular and circulatory diseases,1,Number,2023,357.1202393,410.0334698,301.4669707
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,507,Other cardiovascular and circulatory diseases,2,Percent,2023,0.008399772,0.009607371,0.007079077
+1,All Population,1,Deaths,560,Oregon,3,Both,22,All ages,507,Other cardiovascular and circulatory diseases,3,Rate,2023,8.373077957,9.613687017,7.068225683
