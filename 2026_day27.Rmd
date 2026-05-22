@@ -1,0 +1,125 @@
+---
+title: "cc_2026_day26"
+author: "Lyndsay Miles"
+date: "`r Sys.Date()`"
+output: html_document
+---
+#Day26 #30DayChartChallenge Uncertainties: Trends
+https://ghdx.healthdata.org/record/ihme-data/global-expected-health-spending-2023-2050-20251114
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(gganimate)
+```
+
+```{r}
+df <- read_csv("data/IHME_EXPECTED_HEALTH_SPENDING_2023_2050_Y2025M11D06.CSV")
+
+```
+
+```{r}
+names(df) #93 variables
+glimpse(df)
+unique(df$location_name) #216
+unique(df$year) #2023-2050
+unique(df$level) #Global, Country, World Bank Income Groups, GBD Super Regions
+```
+
+```{r}
+df_asia <- df %>% 
+  filter(location_name == "Southeast Asia, East Asia, and Oceania") %>%
+  select(year, 
+         ghes_per_cap_ppp_mean, 
+         oop_per_cap_ppp_mean, 
+         ppp_per_cap_ppp_mean, 
+         
+         )
+
+  df_asia_long <- df_asia |>
+    filter(year > 2024) |>
+  pivot_longer(cols = c(ghes_per_cap_ppp_mean, oop_per_cap_ppp_mean, 
+                         ppp_per_cap_ppp_mean),
+               names_to = "spending_type",
+               values_to = "value")
+ 
+```
+
+
+```{r}
+#fonts
+library(showtext)
+font_add_google("Roboto", "roboto")
+showtext_auto()
+
+# clean labels for legend
+asia_labels <- c(
+  "ghes_per_cap_ppp_mean" = "Government",
+  "oop_per_cap_ppp_mean"  = "Out-of-Pocket",
+  "ppp_per_cap_ppp_mean"  = "Prepaid Private"
+  
+)
+
+# set stack order — DAH at bottom, government on top
+df_asia_long$spending_type <- factor(df_asia_long$spending_type,
+  levels = c( 
+             "oop_per_cap_ppp_mean",
+             "ppp_per_cap_ppp_mean", "ghes_per_cap_ppp_mean")) 
+
+p <- ggplot(df_asia_long, aes(x = year, y = value, 
+                            fill = spending_type,
+                            group = spending_type)) +
+  geom_area(alpha = 0.85, color = NA, stat = "identity") +
+  scale_fill_manual(values = c(
+  "ghes_per_cap_ppp_mean" = "#2E9EC4",   
+  "oop_per_cap_ppp_mean"  = "#E8B84B",   
+  "ppp_per_cap_ppp_mean"  = "#A855C8"   
+    
+  ),
+  labels = asia_labels) +
+  scale_y_continuous(labels = scales::dollar) +
+  scale_x_continuous(breaks = seq(2025, 2050, by = 5)) +
+  labs(
+    title = "Projected Health Spending Composition: SE Asia, E Asia & Oceania",
+    subtitle = "In 2023 USD PPP | Year: {round(frame_along)}",
+    x = "",
+    y = "",
+    fill = "",
+    caption = "Source: IHME | #30DayChartChallenge | Created by: Lyndsay Miles"
+  ) +
+  transition_reveal(year) +
+  theme_minimal(base_family = "roboto", base_size = 14)+
+  theme(
+    plot.background   = element_rect(fill = "#1C2B3A", colour = NA),
+    panel.background  = element_rect(fill = "#1C2B3A", colour = NA),
+    plot.title        = element_text(colour = "#FFFFFF", size = 18, margin = margin(b=15)),
+    plot.subtitle     = element_text(colour = "#AAAAAA", size = 14),
+    plot.caption      = element_text(colour = "#A0A0A0", size = 10, hjust = 1),
+    axis.text         = element_text(colour = "#E8E8E8"),
+    axis.title.y      = element_text(colour = "#E8E8E8", angle = 90, margin = margin(r = 10)),
+    legend.text       = element_text(colour = "#E8E8E8", size = 10),
+    legend.background = element_rect(fill = "#1C2B3A", colour = NA),
+    legend.key        = element_rect(fill = "#1C2B3A", colour = NA),
+    legend.position   = "right",
+    legend.direction = "vertical",
+    legend.spacing.x = unit(0.5, "cm"),
+    legend.spacing.y = unit(0.3, "cm"),
+    legend.key.width = unit(1, "cm"),
+    panel.grid.major  = element_line(colour = "#2E4057", linewidth = 0.3),
+    panel.grid.minor  = element_blank(),
+    guides(fill = guide_legend(reverse = TRUE, nrow = 3)),
+    plot.margin = margin(20, 150, 15, 25)  # top, right, bottom, left
+  )
+showtext_opts(dpi = 150)
+animate(p, fps = 5, duration = 15, width = 1200, height = 700, renderer = gifski_renderer())
+anim_save("img/cc_2026_day27.gif")
+```
+
+#Day27 of the #30DayChartChallenge | Animation (Uncertainties)
+Continuing with the dataset I used for #Day26, my animation shows the projected healthcare spending in SE Asia, E Asia, and Oceania from 2025-2050. This was my first attempt at an animation outside of training, and #gganimate makes this an easier task. I picked this region because, outside of high-income countries, this region is projecting the greatest increase in government healthcare spending per capita (PPP). What surprised me was out-of-pocket spending is projected to be the largest and fastest-growing component. 
+
+Data: IHME | #rstats #gganimate #dataviz #globalhealth 📈

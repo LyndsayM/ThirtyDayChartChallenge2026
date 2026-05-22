@@ -1,0 +1,156 @@
+---
+title: "cc_2026_day28"
+author: "Lyndsay Miles"
+date: "`r Sys.Date()`"
+output: html_document
+---
+#Day28 #30DayChartChallenge Modeling (Uncertainties)
+https://github.com/rfordatascience/tidytuesday/blob/main/data/2026/2026-03-10/readme.md
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(lme4)
+```
+
+```{r}
+absolute_judgements <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2026/2026-03-10/absolute_judgements.csv')
+pairwise_comparisons <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2026/2026-03-10/pairwise_comparisons.csv')
+respondent_metadata <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2026/2026-03-10/respondent_metadata.csv')
+
+
+```
+
+```{r}
+# how many unique respondents?
+n_distinct(absolute_judgements$response_id)
+
+# how much missing demographic data?
+respondent_metadata |> 
+  summarise(across(everything(), ~sum(is.na(.))))
+
+# distribution of estimates per term
+absolute_judgements |>
+  group_by(term) |>
+  summarise(mean = mean(probability),
+            sd = sd(probability)) |>
+  arrange(desc(sd))
+
+```
+
+```{r}
+df <- absolute_judgements |>
+  left_join(respondent_metadata, by = "response_id")
+```
+
+```{r}
+#check for nas
+df_complete <- df |>
+  filter(!is.na(age_band), 
+         !is.na(english_background))
+
+df_complete <- df_complete |>
+  mutate(english_binary = case_when(
+    english_background == "English is my first language" ~ "First language",
+    TRUE ~ "Not first language"
+  ))
+
+# check how many respondents remain
+n_distinct(df$response_id)
+
+#size sample imbalance?
+df_complete |>
+  distinct(response_id, english_binary) |>
+  count(english_binary)
+
+df_complete |>
+  distinct(response_id, english_binary) |>
+  count(english_binary)
+```
+
+
+```{r}
+model <- lmer(probability ~ term * english_binary + 
+                  
+                 (1|response_id), 
+               data = df_complete,
+               na.action = na.exclude)
+
+summary(model)
+```
+
+```{r}
+# extract fixed effects
+coefs <- as.data.frame(summary(model)$coefficients)
+coefs$term <- rownames(coefs)
+
+interactions <- coefs |>
+  filter(grepl(":", term)) |>
+  rename(estimate = Estimate,
+         se = `Std. Error`,
+         t_value = `t value`) |>
+  mutate(
+    prob_term = gsub("term(.+):english_binary.*", "\\1", term),
+    eng_group = case_when(
+      grepl("Not first language", term) ~ "Not first language"
+    ),
+    significant = abs(t_value) > 2
+  ) |>
+  select(prob_term, eng_group, estimate, se, t_value, significant)
+head(interactions)
+```
+
+```{r}
+# order terms by mean estimate for cleaner layout
+term_order <- interactions |>
+  arrange(estimate) |>
+  pull(prob_term)
+
+interactions <- interactions |>
+  mutate(prob_term = factor(prob_term, levels = term_order))
+```
+
+```{r}
+p <- ggplot(interactions, aes(x = estimate, y = prob_term)) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "grey60") +
+  geom_errorbar(aes(xmin = estimate - 1.96 * se,
+                     xmax = estimate + 1.96 * se),
+                 height = 0.2, alpha = 0.5, color = "#9B59B6") +
+  geom_point(aes(shape = significant, size = significant),
+             color = "#9B59B6") +
+  scale_shape_manual(values = c("TRUE" = 19, "FALSE" = 1)) +
+  scale_size_manual(values = c("TRUE" = 3, "FALSE" = 2)) +
+  coord_cartesian(xlim = c(-6, 6)) +
+  labs(
+    title = "Are probability phrase interpretations consistent across English language backgrounds?",
+    subtitle = "Non-native speakers assign systematically different probabilities to select phrases",
+    x = "Difference in probability estimate relative to native English speakers (percentage points)",
+    y = NULL,
+    caption = "Filled points indicate |t| > 2\nMixed-effects model, n=5,174 | Data: #tidytuesday | Kucharski probability phrases survey | #30DayChartChallenge Day 28"
+  ) +
+  ggthemes::theme_fivethirtyeight(base_size=16)+
+  theme(
+    legend.position = "none",
+    panel.grid.minor = element_blank(),
+    plot.title = element_text(size = 22, face = "bold"),
+    plot.subtitle = element_text(),
+    plot.title.position = "plot"
+  )
+
+ggsave(filename = "img/cc_2026_day28.png",
+       plot = p,
+       width = 12,
+       height = 7,
+       dpi = 300)
+```
+It's #Day28 of the #30DayChartChallenge and the prompt is Modeling (Uncertainties). The data comes from Adam Kucharski's online quiz to better understand how people interpret common probability phrases, courtesy of #tidytuesday. 
+
+I was curious if probability phrase interpretations would be consistent across English language backgrounds, and used a linear mixed-effects model to test whether non-native English speakers interpret common probability phrases differently than native speakers. For certain phrases, this appears to be true. For example, non-native speakers (n=679) tend to assign higher probabilities to "chance" language like "Remote Chance" and "Chances are Slight," compared to native speakers (N = 3,801).
+However, there are some caveats - this is an initial analysis and given more time I would want to explore some aspects further. Want to take the quiz yourself? It's at https://probability.kucharski.io/.
+#30DayChartChallenge #dataviz #rstats #publichealth #lme4
+
+
+

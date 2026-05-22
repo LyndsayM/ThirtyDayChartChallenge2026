@@ -1,0 +1,142 @@
+---
+title: "cc_2026_day22"
+author: "Lyndsay Miles"
+date: "`r Sys.Date()`"
+output: html_document
+---
+#Day22 #30DayChartChallenge: Timeseries - New Tools, Earth Day Edition
+https://github.com/rfordatascience/tidytuesday/blob/main/data/2026/2026-04-14/readme.md
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(lubridate)
+library(ggplot2)
+library(showtext)
+library(ggtext)
+```
+
+```{r}
+temp <- read_csv("https://data.giss.nasa.gov/gistemp/tabledata_v4/GLB.Ts+dSST.csv", 
+                 skip = 1)  # skip the first row which is a header note
+```
+
+```{r}
+# keep only year and annual mean, clean up
+temp_clean <- temp |>
+  select(Year, `J-D`) |>                    # J-D is the Jan-Dec annual mean
+  rename(year = Year, anomaly = `J-D`) |>
+  filter(!is.na(anomaly), anomaly != "***") |>  # remove incomplete years
+  mutate(year = as.integer(year),
+         anomaly = as.numeric(anomaly),
+         paris_threshold = 1.5)
+
+# quick check
+glimpse(temp_clean)
+tail(temp_clean)
+```
+
+
+```{r}
+#created Day22 visual in Datawrapper
+write_csv(temp_clean, "data/temp_anomaly.csv")
+```
+Day 23
+```{r}
+temp_seasons <- temp %>% select(Year, DJF:SON)
+glimpse(temp_seasons)
+head(temp_seasons)
+
+temp_seasons <- temp_seasons |>
+  mutate(across(DJF:SON, ~ na_if(., "***"))) |>
+  mutate(across(DJF:SON, as.numeric)) |>
+  filter(Year >= 1980) |>  
+  pivot_longer(cols = DJF:SON, 
+               names_to = "season", 
+               values_to = "anomaly") |>
+  mutate(season = factor(season, 
+                         levels = c("DJF", "MAM", "JJA", "SON"),
+                         labels = c("Winter", "Spring", "Summer", "Fall")),
+         season = factor(season, levels = c("Fall", "Summer", "Spring","Winter")))
+glimpse(temp_seasons)
+# create a label dataframe
+
+```
+
+```{r}
+library(showtext)
+
+season_labels <- data.frame(
+  Year = 1981,
+  season = factor(c("Winter","Spring","Summer","Fall"),
+                  levels = c("Winter","Spring","Summer","Fall")),
+  anomaly_rebase = 0
+)
+
+# get 1980 anomaly value for each season as the new baseline
+baseline_1980 <- temp_seasons |>
+  filter(Year == 1980) |>
+  select(season, anomaly) |>
+  rename(baseline = anomaly)
+
+# subtract 1980 value from all years
+temp_seasons_rebase <- temp_seasons |>
+  left_join(baseline_1980, by = "season") |>
+  mutate(anomaly_rebase = anomaly - baseline) |>
+  mutate(anomaly_rebase = ifelse(is.na(anomaly_rebase), NA, anomaly_rebase))|>
+  filter(Year >= 1980)
+
+font_add_google("Exo 2", "exo2")
+showtext_opts(dpi = 300)  # FIRST
+showtext_auto()     
+
+p <- ggplot(temp_seasons_rebase, aes(x = Year, y = season, fill = anomaly_rebase)) +
+  geom_tile(color = NA) +
+  geom_text(data = season_labels, 
+          aes(x = Year, y = season, label = season),
+          size = 2.5, hjust = 1,  nudge_x = 7, family = "exo2") +
+  coord_polar() +
+  scale_fill_gradient2(
+    low = "#2196F3", mid = "#FFF2D4", high = "#B2182B",#2196F3
+    limits = c(-0.4, 1.21),
+    midpoint = 0, name = "°C change\nsince 1980",
+    na.value = "transparent"
+  ) +
+  labs(title = "Where Did the Blue Go?",
+       subtitle = "Seasonal temperature change relative to 1980, <span style='color:#2196F3'>**from cooler**</span> <span style='color:#B2182B'>**to warmer**</span>",
+       caption = "Source: NASA GISS Surface Temperature Analysis (GISTEMP v4)\n#30DayChartChallenge (Seasons) | Created by: Lyndsay Miles")+
+  scale_x_continuous(limits = c(1979.5, 2024.5),
+                     breaks = c(1980, 1990, 2000, 2010, 2020)) +
+  theme_minimal(base_family = "exo2", base_size = 12)+
+  theme(
+  plot.background = element_rect(fill = "#1C1C1C", color = NA),
+  panel.background = element_rect(fill = "#1C1C1C", color = NA),
+  panel.grid = element_blank(),
+  panel.border = element_blank(),
+  axis.title.x = element_blank(),
+  axis.text = element_text(color = "gray70"),
+  axis.title.y = element_blank(),
+  axis.text.y = element_blank(),
+  axis.ticks.y = element_blank(),
+  plot.margin = margin(t = 10, r = 10, b = 30, l = 10),
+  plot.title = element_text(color = "white", size = 18),
+  plot.subtitle = element_markdown(color = "gray70", size = 12, family = "exo2"),
+  plot.caption = element_text(color = "gray50", size = 10, lineheight = 1.5),
+  legend.background = element_rect(fill = "#1C1C1C", color = NA),
+  legend.position = "bottom",
+  legend.direction = "horizontal",
+  legend.text = element_text(color = "gray70"),
+  legend.title = element_text(color = "gray70")
+)
+
+ggsave("img/cc_2026_day23.png", p, width = 12, height = 6.27, dpi = 300)
+p
+
+```
+#Day23 of the #30DayChartChallenge is Seasons. 🌍 I continued to explore NASA seasonal temperature data, focusing on 1980 to present. This was a great lesson in the power of color palette. I used a diverging blue-yellow-red palette to help tell the story of the disappearing cool seasons. 
+
+Source: NASA GISS Surface Temperature Analysis (GISTEMP v4)
+#DataViz #ClimateData #rstats #30DayChartChallenge

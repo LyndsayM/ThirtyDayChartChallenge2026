@@ -1,0 +1,90 @@
+---
+title: "cc_2026_day26"
+author: "Lyndsay Miles"
+date: "`r Sys.Date()`"
+output: html_document
+---
+#Day26 #30DayChartChallenge Uncertainties: Trends
+https://ghdx.healthdata.org/record/ihme-data/global-expected-health-spending-2023-2050-20251114
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+df <- read_csv("data/IHME_EXPECTED_HEALTH_SPENDING_2023_2050_Y2025M11D06.CSV")
+
+```
+
+```{r}
+names(df) #93 variables
+glimpse(df)
+unique(df$location_name) #216
+unique(df$year) #2023-2050
+unique(df$level) #Global, Country, World Bank Income Groups, GBD Super Regions
+```
+
+```{r}
+df_regions <- df %>% 
+  #select the 7 GBD Super Regions
+  filter(level == "GBD Super Regions") %>%
+  #select Government Health Spending per person variables
+  select(location_name, iso3, level, year, ghes_per_cap_ppp_mean, ghes_per_cap_ppp_lower, ghes_per_cap_ppp_upper)
+```
+
+```{r}
+df_regions <- df_regions %>% filter(!location_name %in% "High-income", year > 2024)
+
+ihme_colors <- c(
+  "Central Europe, Eastern Europe, and Central Asia" = "#A05C7B",  # mauve/plum
+  "Latin America and Caribbean"                      = "#C4A020",  # gold/ochre
+  "North Africa and Middle East"                     = "#3D8B6E",  # teal green
+  "South Asia"                                       = "#2E86AB",  # medium blue
+  "Southeast Asia, East Asia, and Oceania"           = "#5B4FCF",  # purple-blue
+  "Sub-Saharan Africa"                               = "#E05C2A"   # burnt orange
+)
+p<- ggplot(df_regions, aes(x = year, color = location_name, fill = location_name)) +
+  geom_ribbon(aes(ymin = ghes_per_cap_ppp_lower, 
+                  ymax = ghes_per_cap_ppp_upper), 
+              alpha = 0.5, color = NA) +
+  geom_line(aes(y = ghes_per_cap_ppp_mean)) +
+  scale_y_continuous(labels = scales::dollar) +
+  scale_x_continuous(
+  limits = c(2025, 2050))+
+  scale_color_manual(values = ihme_colors) +
+  scale_fill_manual(values = ihme_colors)+
+  labs(x = "",
+       y = "2023 USD PPP",
+       fill = "", color = "",
+       title = "Current and Projected Government Healthcare Spending Per Capita",
+       subtitle = "High income countries (projected: $7,601/person by 2050) excluded for scale",
+       caption  = "Source: IHME | #30DayChartChallenge | Created by: Lyndsay Miles"  )+
+  theme_minimal(base_size = 16)+
+    theme(
+      legend.text = element_text(color ="white"),
+      legend.position = "bottom",
+      axis.text   = element_text(colour = "white"),
+      axis.title.y = element_text(colour = "white", angle = 90),
+      plot.background   = element_rect(fill = "#1C2B3A", colour = NA),
+      panel.background  = element_rect(fill = "#1C2B3A", colour = NA),
+      plot.title = element_text(color = "white",
+        size = 24, hjust = 0.5,margin = margin(b = 8)),
+      plot.subtitle     = element_text(color = "white", size = 16,
+                                     hjust = 0.5, margin = margin(b = 12)),
+    plot.caption      = element_text(colour = "white", size = 10,
+                                     hjust = 1, margin = margin(t = 10)),
+    plot.margin       = margin(20, 25, 15, 25),
+    panel.grid.major = element_line(colour = "#2E4057", linewidth = 0.3),
+panel.grid.minor = element_blank()
+  )
+
+ggsave("img/cc_2026_day26.png", p, width = 12, height = 6.27, dpi = 300)
+p
+  
+```
+#Day26 of the #30DayChartChallenge | Trends (Uncertainties). When I thought about this prompt, I thought, what could be more uncertain than future spending? Here is a viz of projected government health care per capita spending (PPP) from 2025 to 2050, with confidence intervals, data courtesy of IHME's Global Expected Health Spending analysis. 📈

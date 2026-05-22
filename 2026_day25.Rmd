@@ -1,0 +1,192 @@
+---
+title: "cc_2026_day25"
+author: "Lyndsay Miles"
+date: "`r Sys.Date()`"
+output: html_document
+---
+#Day25 #30DayChartChallenge: Space (Uncertainties)
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(lubridate)
+library(showtext)
+library(ggtext)
+library(rtrek)
+library(trekcolors)
+library(trekfont)
+library(ggrepel)
+```
+
+```{r}
+#https://datasets.imdbws.com/
+ratings <- read_tsv("data/title.ratings.tsv.gz",  na = "\\N")
+episodes <- read_tsv("data/title.episode.tsv.gz", na = "\\N")
+```
+
+```{r}
+#DS9 IMDB data
+# Filter to DS9 episodes only and join ratings
+ds9 <- episodes |>
+  filter(parentTconst == "tt0106145") |>
+  left_join(ratings, by = "tconst") |>
+  mutate(
+    season  = as.integer(seasonNumber),
+    episode = as.integer(episodeNumber)
+  ) |>
+  filter(!is.na(season), !is.na(episode), !is.na(averageRating)) |>
+  select(
+    tconst,
+    season,
+    episode,
+    rating = averageRating,
+    votes  = numVotes
+  ) |>
+  arrange(season, episode)
+View(ds9)
+```
+
+```{r}
+ds9_seasons <- ds9 |>
+  group_by(season) |>
+  summarise(
+    avg_rating  = mean(rating),
+    sd_rating   = sd(rating),
+    n_episodes  = n(),
+    total_votes = sum(votes)
+  ) |>
+  #use t-distribution to calculate 95% confidence intervals because # of episodes per season is less than 30. Originally wanted to visualize the CI as a halo around each circle, but the ranges were too small to be visually interesting
+  mutate(
+    se      = sd_rating / sqrt(n_episodes),
+    margin  = qt(0.975, df = n_episodes - 1) * se,
+    ci_low  = avg_rating - margin,
+    ci_high = avg_rating + margin
+  )
+
+#check
+ds9_seasons |>
+  select(season, n_episodes, avg_rating, ci_low, ci_high, margin)
+```
+
+```{r}
+#palette
+lcars_cols <- trekcolors::trek_pal("lcars_2369")[1:7]
+
+names(lcars_cols) <- as.character(1:7)
+```
+
+```{r}
+font_add("ds9title",
+  system.file("fonts/FederationDS9Title.ttf", package = "trekfont"))
+font_add("fedbold",
+  system.file("fonts/FederationBold.ttf", package = "trekfont"))
+
+library(showtext)
+showtext_auto()
+showtext_opts(dpi = 300)
+p<-
+ggplot(ds9_seasons, aes(x = factor(season), y = avg_rating)) +
+
+# core bubble: fixed size
+  geom_point(
+    aes(colour = factor(season)),
+    size = 14,
+    alpha = 0.90
+  ) +
+
+  # season labels
+  geom_text(
+  aes(label = paste0("S", season)),
+  family = "fedbold",
+  colour = "white",
+  size = 4,
+  fontface = "bold"
+)+
+  
+  # S1 text box in lower left
+annotate(
+  "text",
+  x = 0.6, y = 6.45,
+  label = "A rocky start: DS9's premiere\nachieved an 18.8 Nielsen rating —\nthe highest in Trek history. But\nserialized storytelling, a stationary\nsetting, and competition from TNG\nkept early ratings middling.",
+  colour = "#9999CC",
+  size = 4,
+  hjust = 0,
+  lineheight = 1.4
+) +
+
+# leader line from text box to S1 bubble
+annotate(
+  "segment",
+  x = 1, xend = 1,
+  y = 6.65, yend = 6.88,
+  colour = "#9999CC",
+  linewidth = 0.3,
+  linetype = "dashed",
+  alpha = 0.6
+) +
+
+# S4 annotation above bubble
+annotate(
+  "text",
+  x = 4, y = 7.95,
+  label = "First Emmy nomination",
+  colour = "#CC6699",
+  size = 4,
+  hjust = 0.5
+) +
+
+# S7 annotation above bubble
+annotate(
+  "text",
+  x = 6.8, y = 7.95,
+  label = "4 Primetime Emmy Awards\nearned across the series",
+  colour = "#FF9900",
+  size = 4,
+  hjust = 0.5,
+  lineheight = 1.3
+) +
+
+  scale_colour_manual(values = lcars_cols) +
+  guides(colour = "none", size = "none") +
+
+  scale_y_continuous(
+  limits = c(6.2, 8.1),  
+  breaks = seq(6.5, 8.0, 0.5)
+)+
+
+  theme_void(base_size = 16) +
+  theme(
+    plot.background   = element_rect(fill = "black", colour = NA),
+    panel.background  = element_rect(fill = "black", colour = NA),
+    axis.text.x  = element_blank(),
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank(),
+    axis.text.y       = element_text(colour = "grey60", size = 16),
+    panel.grid.major  = element_line(colour = "grey15", linewidth = 0.3),
+    plot.title = element_text(family = "ds9title", colour = "white",
+                           size = 32, hjust = 0.5,
+                           margin = margin(b = 4)),
+    plot.subtitle     = element_text(colour = "grey50", size = 20,
+                                     hjust = 0.5, margin = margin(b = 12)),
+    plot.caption      = element_text(colour = "grey40", size = 14,
+                                     hjust = 1, margin = margin(t = 10)),
+    plot.margin       = margin(20, 25, 15, 25)
+  ) +
+
+  
+  labs(
+    title    = "DEEP SPACE NINE",
+    subtitle = "Average episode IMDB rating by season",
+    caption  = "Source: IMDb Non-Commercial Datasets | #30DayChartChallenge | Created by: Lyndsay Miles"
+  )
+
+ggsave("img/cc_2026_day25.png", p, width = 12, height = 6.27, dpi = 300)
+p
+```
+#Day25 of the #30DayChartChallenge: Space (Uncertainties). 🌌 Did you know there's a Star Trek palette package in R? And a Star Trek font package? Now you know — you're welcome. There's also the rtrek package which I didn't use here, but would be great for text analysis of episode dialogue. Today's chart traces Deep Space Nine's journey across 7 seasons of average IMDb episode ratings.
+Data Source: IMDB. R packages: rtrek, trekcolors, trekfont, tidyverse, ggplot2
+#30DayChartChallenge #dataviz
