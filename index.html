@@ -53,6 +53,9 @@
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
         }
 
         .gallery-item:hover {
@@ -60,10 +63,21 @@
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
         }
 
-        .gallery-item img {
+        .gallery-item-image-container {
             width: 100%;
             height: 250px;
-            object-fit: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f5f5;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
             display: block;
         }
 
@@ -76,6 +90,113 @@
             font-weight: 600;
             color: #333;
             margin-bottom: 5px;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.open {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .modal-image {
+            max-width: 100%;
+            max-height: 80vh;
+            width: auto;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .modal-title {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: #333;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .modal-close:hover {
+            color: #667eea;
+        }
+
+        .modal-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #333;
+            font-size: 32px;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px 15px;
+            transition: color 0.2s ease;
+            user-select: none;
+        }
+
+        .modal-nav:hover {
+            color: #667eea;
+        }
+
+        .modal-prev {
+            left: 10px;
+        }
+
+        .modal-next {
+            right: 10px;
         }
 
         footer {
@@ -100,6 +221,44 @@
         .github-link:hover {
             opacity: 0.8;
         }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 15px;
+            }
+
+            .gallery-item-image-container {
+                height: 200px;
+            }
+
+            .modal-content {
+                padding: 15px;
+            }
+
+            .modal-close {
+                top: 10px;
+                right: 15px;
+                font-size: 24px;
+            }
+
+            .modal-nav {
+                font-size: 24px;
+                padding: 8px 12px;
+            }
+
+            .modal-prev {
+                left: 5px;
+            }
+
+            .modal-next {
+                right: 5px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -116,6 +275,17 @@
                 <a href="https://github.com/LyndsayM/ThirtyDayChartChallenge2026" class="github-link">View on GitHub</a>
             </p>
         </footer>
+    </div>
+
+    <!-- Modal for enlarged image view -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeModal">&times;</span>
+            <span class="modal-nav modal-prev" id="prevImage">&#10094;</span>
+            <img id="modalImage" class="modal-image" src="" alt="">
+            <div class="modal-title" id="modalTitle"></div>
+            <span class="modal-nav modal-next" id="nextImage">&#10095;</span>
+        </div>
     </div>
 
     <script>
@@ -155,7 +325,16 @@
 
         const gallery = document.getElementById('gallery');
         const baseUrl = 'https://raw.githubusercontent.com/LyndsayM/ThirtyDayChartChallenge2026/main/img/';
+        const imageModal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalTitle = document.getElementById('modalTitle');
+        const closeBtn = document.getElementById('closeModal');
+        const prevBtn = document.getElementById('prevImage');
+        const nextBtn = document.getElementById('nextImage');
 
+        let currentImageIndex = 0;
+
+        // Populate gallery
         images.forEach((image, index) => {
             const item = document.createElement('div');
             item.className = 'gallery-item';
@@ -163,13 +342,68 @@
             const dayNumber = image.match(/day(\d+)/)[1];
             
             item.innerHTML = `
-                <img src="${baseUrl}${image}" alt="Day ${dayNumber}">
+                <div class="gallery-item-image-container">
+                    <img src="${baseUrl}${image}" alt="Day ${dayNumber}">
+                </div>
                 <div class="gallery-item-info">
                     <div class="gallery-item-title">Day ${dayNumber}</div>
                 </div>
             `;
             
+            item.addEventListener('click', () => openModal(index));
             gallery.appendChild(item);
+        });
+
+        // Modal functions
+        function openModal(index) {
+            currentImageIndex = index;
+            updateModalImage();
+            imageModal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            imageModal.classList.remove('open');
+            document.body.style.overflow = 'auto';
+        }
+
+        function updateModalImage() {
+            const image = images[currentImageIndex];
+            const dayNumber = image.match(/day(\d+)/)[1];
+            modalImage.src = baseUrl + image;
+            modalImage.alt = `Day ${dayNumber}`;
+            modalTitle.textContent = `Day ${dayNumber}`;
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            updateModalImage();
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            updateModalImage();
+        }
+
+        // Event listeners
+        closeBtn.addEventListener('click', closeModal);
+        nextBtn.addEventListener('click', nextImage);
+        prevBtn.addEventListener('click', prevImage);
+
+        // Close modal when clicking outside the content
+        imageModal.addEventListener('click', (e) => {
+            if (e.target === imageModal) {
+                closeModal();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (imageModal.classList.contains('open')) {
+                if (e.key === 'ArrowRight') nextImage();
+                if (e.key === 'ArrowLeft') prevImage();
+                if (e.key === 'Escape') closeModal();
+            }
         });
     </script>
 </body>
