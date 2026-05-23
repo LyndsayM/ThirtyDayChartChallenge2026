@@ -89,9 +89,7 @@ gbbo_long <- gbbo %>%
   )
 # Check group sizes
 gbbo_long %>% count(star_baker_group, finalist)
-```
 
-```{r}
 library(ggplot2)
 library(tibble)
 
@@ -101,7 +99,11 @@ windowsFonts(georgia = windowsFont("Georgia"))
 pictogram_data <- tibble(
   x = rep(1:6, times = 5),
   y = rep(5:1, each = 6),
-  group = c(rep("Won Star Baker", 29), "Never Won Star Baker")
+  
+  label = c(
+    rep("<span style='color:#E75480;'>🧁</span>", n_won),
+    rep("<span style='color:#6CA0DC;'>🧁</span>", n_never)
+  )
 )
 
 p <- ggplot(pictogram_data, aes(x = x, y = y, color = group)) +
@@ -128,6 +130,82 @@ p <- ggplot(pictogram_data, aes(x = x, y = y, color = group)) +
     plot.background       = element_rect(fill = "#EAF4FB", color = NA),
     panel.background      = element_rect(fill = "#EAF4FB", color = NA),
     legend.position = "bottom"
+  )
+
+ggsave("img/cc_2026_day10.png", p, width = 16, height = 7, dpi = 300,
+       device = ragg::agg_png)
+```
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(ggtext)
+
+# ── Data wrangling ────────────────────────────────────────────────────────────
+gbbo <- df
+
+gbbo_finalists <- gbbo %>%
+  mutate(
+    star_baker_group = if_else(Star_Bakers > 0, "Won Star Baker", "Never Won Star Baker"),
+    finalist = if_else(
+      grepl("WINNER|Runnerup", Round_10, ignore.case = TRUE), "Finalist",
+      if_else(grepl("WINNER|Runnerup", Round_9, ignore.case = TRUE), "Finalist", "Eliminated")
+    )
+  ) %>%
+  filter(finalist == "Finalist") %>%
+  distinct(Baker, series, star_baker_group)
+
+# Quick check
+gbbo_finalists %>% count(star_baker_group)
+
+# ── Counts ────────────────────────────────────────────────────────────────────
+n_won   <- gbbo_finalists %>% filter(star_baker_group == "Won Star Baker") %>% nrow()
+n_never <- gbbo_finalists %>% filter(star_baker_group == "Never Won Star Baker")  %>% nrow()
+n_total <- n_won + n_never
+
+# ── Build pictogram grid ──────────────────────────────────────────────────────
+n_cols <- 6
+n_rows <- ceiling(n_total / n_cols)
+
+pictogram_data <- tibble(
+  id    = 1:n_total,
+  x     = rep(1:n_cols, times = n_rows)[1:n_total],
+  y     = rep(n_rows:1, each = n_cols)[1:n_total],
+  label = c(
+    rep("🧁", n_won),
+    rep("🍰", n_never)
+  )
+)
+
+# ── Plot ──────────────────────────────────────────────────────────────────────
+p <- ggplot(pictogram_data, aes(x = x, y = y)) +
+  geom_text(
+    aes(label = label),
+    size = 14
+  ) +
+  scale_y_continuous(expand = expansion(mult = 0.15)) +
+  scale_x_continuous(expand = expansion(mult = 0.1)) +
+  labs(
+    title    = "To Get That Cake Plate, You Have to Win Star Baker",
+    subtitle = paste0(
+      "Each cupcake = 1 Finalist in Great British Bake Off, Series 5–14<br>",
+      "🧁 Won Star Baker",
+      "&nbsp;&nbsp;&nbsp;",
+      "🍰 Never Won Star Baker"
+    ),
+    caption  = "Data: Kaggle GBBO | #30DayChartChallenge Day 10\nCreated by: Lyndsay Miles"
+  ) +
+  theme_void(base_size = 12) +
+  theme(
+    plot.title       = element_text(hjust = 0.5, size = 20, face = "bold",
+                                    margin = margin(b = 6)),
+    plot.subtitle    = element_markdown(hjust = 0.5, size = 13,
+                                        margin = margin(b = 10)),
+    plot.caption     = element_text(hjust = 0.5, size = 10,
+                                    margin = margin(t = 10)),
+    plot.background  = element_rect(fill = "#EAF4FB", color = NA),
+    panel.background = element_rect(fill = "#EAF4FB", color = NA),
+    plot.margin      = margin(20, 20, 20, 20)
   )
 
 ggsave("img/cc_2026_day10.png", p, width = 16, height = 7, dpi = 300,
