@@ -334,19 +334,30 @@
 
         let currentImageIndex = 0;
 
+        // Function to extract day label from filename
+        function getDayLabel(filename) {
+            // Special case for day15_16
+            if (filename.includes('day15_16')) {
+                return 'Day 15 & 16';
+            }
+            // Extract day number for other files
+            const match = filename.match(/day(\d+)/);
+            return match ? `Day ${match[1]}` : 'Unknown';
+        }
+
         // Populate gallery
         images.forEach((image, index) => {
             const item = document.createElement('div');
             item.className = 'gallery-item';
             
-            const dayNumber = image.match(/day(\d+)/)[1];
+            const dayLabel = getDayLabel(image);
             
             item.innerHTML = `
                 <div class="gallery-item-image-container">
-                    <img src="${baseUrl}${image}" alt="Day ${dayNumber}">
+                    <img src="${baseUrl}${image}" alt="${dayLabel}">
                 </div>
                 <div class="gallery-item-info">
-                    <div class="gallery-item-title">Day ${dayNumber}</div>
+                    <div class="gallery-item-title">${dayLabel}</div>
                 </div>
             `;
             
@@ -369,10 +380,10 @@
 
         function updateModalImage() {
             const image = images[currentImageIndex];
-            const dayNumber = image.match(/day(\d+)/)[1];
+            const dayLabel = getDayLabel(image);
             modalImage.src = baseUrl + image;
-            modalImage.alt = `Day ${dayNumber}`;
-            modalTitle.textContent = `Day ${dayNumber}`;
+            modalImage.alt = dayLabel;
+            modalTitle.textContent = dayLabel;
         }
 
         function nextImage() {
