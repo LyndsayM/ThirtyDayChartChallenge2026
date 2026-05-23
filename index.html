@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyndsay Miles - 30 Day Chart Challenge 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-item-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .gallery-item-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        .github-link {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid white;
+        }
+
+        .github-link:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>30 Day Chart Challenge 2026</h1>
+            <p class="subtitle">A collection of data visualizations and charts</p>
+        </header>
+
+        <div class="gallery" id="gallery"></div>
+
+        <footer>
+            <p>&copy; 2026 <strong>Lyndsay Miles</strong> | 
+                <a href="https://github.com/LyndsayM/ThirtyDayChartChallenge2026" class="github-link">View on GitHub</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // List of image files in the img folder
+        const images = [
+            'cc_2026_day1.png',
+            'cc_2026_day2.png',
+            'cc_2026_day3.png',
+            'cc_2026_day4.png',
+            'cc_2026_day5.png',
+            'cc_2026_day6.png',
+            'cc_2026_day7.png',
+            'cc_2026_day8.png',
+            'cc_2026_day9.png',
+            'cc_2026_day10.png',
+            'cc_2026_day11.png',
+            'cc_2026_day12.png',
+            'cc_2026_day13.png',
+            'cc_2026_day14.png',
+            'cc_2026_day15_16.png',
+            'cc_2026_day17.png',
+            'cc_2026_day18.png',
+            'cc_2026_day19.png',
+            'cc_2026_day20.png',
+            'cc_2026_day21.png',
+            'cc_2026_day22_datawrapper.png',
+            'cc_2026_day23.png',
+            'cc_2026_day24.png',
+            'cc_2026_day25.png',
+            'cc_2026_day26.png',
+            'cc_2026_day27.gif',
+            'cc_2026_day28.png',
+            'cc_2026_day29.gif',
+            'cc_2026_day29.png',
+            'cc_2026_day30.png'
+        ];
+
+        const gallery = document.getElementById('gallery');
+        const baseUrl = 'https://raw.githubusercontent.com/LyndsayM/ThirtyDayChartChallenge2026/main/img/';
+
+        images.forEach((image, index) => {
+            const item = document.createElement('div');
+            item.className = 'gallery-item';
+            
+            const dayNumber = image.match(/day(\d+)/)[1];
+            
+            item.innerHTML = `
+                <img src="${baseUrl}${image}" alt="Day ${dayNumber}">
+                <div class="gallery-item-info">
+                    <div class="gallery-item-title">Day ${dayNumber}</div>
+                </div>
+            `;
+            
+            gallery.appendChild(item);
+        });
+    </script>
+</body>
+</html>
